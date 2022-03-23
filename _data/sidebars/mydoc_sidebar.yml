@@ -127,7 +127,11 @@ entries:
       url: /mydoc_script_os.html
       output: web, pdf
 
+<<<<<<< HEAD
     - title: Extraer información de un sistema Linux
+=======
+    - title: Recopilar información sistema Linux
+>>>>>>> 63d96594a2557a4ad04d91e99e28f22ca03c06a0
       url: /mydoc_script_sacarInfoLinux.html
       output: web, pdf
 
