@@ -1,5 +1,5 @@
 ---
-title: "Inicio."
+title: "Inicio"
 keywords: inicio
 sidebar: mydoc_sidebar
 permalink: index.html
