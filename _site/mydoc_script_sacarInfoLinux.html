@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Script para extraer información de un sistema Linux">
-<meta name="keywords" content="scriptLinux,  script, Linux, so">
+<meta name="keywords" content="scriptlinux,  script, Linux, so">
 <title>Script para extraer información de un sistema Linux | Meizoso</title>
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -631,7 +631,15 @@ find / <span class="nt">-perm</span> <span class="nt">-2000</span> <span class="
     <strong>cat /etc/crontab &amp;&amp; ls -als /etc/cron</strong>* → Trabajos de CRON<br /><br />
     <strong>find /etc/cron* -type f -perm -o+w -exec ls -l {} \;</strong> → Trabajos CRON World-Writeable<br /><br />
     <strong>find / -perm -2000 -type f 2&gt;/dev/null</strong> → Archivos GUID<br /><br />
+    <strong>df</strong> → Sistemas de archivos<br /><br />
+    <strong>lastlog</strong> → Últimos inicios de sesión<br /><br />
+    <strong>cat /etc/passwd | cut -f 1,3,4 -d “:” | grep 0:0</strong> → Usuarios con permisos de administrador<br /><br />
+    <strong>sudoers</strong> → Archivo sudoers<br /><br />
+    <strong>cat /etc/crontab &amp;&amp; ls -als /etc/cron</strong>* → Trabajos de CRON<br /><br />
+    <strong>find /etc/cron* -type f -perm -o+w -exec ls -l {} \;</strong> → Trabajos CRON World-Writeable<br /><br />
+    <strong>find / -perm -2000 -type f 2&gt;/dev/null</strong> → Archivos GUID<br /><br />
     <strong>df</strong> → Sistemas de archivos<br /></p>
+
 
 
     <div class="tags">
@@ -643,6 +651,8 @@ find / <span class="nt">-perm</span> <span class="nt">-2000</span> <span class="
         <a href="tag_script.html" class="btn btn-default navbar-btn cursorNorm" role="button">script</a>
         
         
+        
+        <a href="tag_linux.html" class="btn btn-default navbar-btn cursorNorm" role="button">linux</a>
         
         
         

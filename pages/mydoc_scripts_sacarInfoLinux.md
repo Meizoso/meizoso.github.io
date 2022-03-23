@@ -1,6 +1,6 @@
 ---
 title: Script para extraer información de un sistema Linux
-tags: [script, Linux]
+tags: [script, linux]
 keywords: script, Linux, so
 summary: "Script para extraer información de un sistema Linux"
 sidebar: mydoc_sidebar
@@ -126,18 +126,19 @@ df
 
 ## 2. Explicación
 
-<<<<<<< HEAD
 &nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/issue && cat /etc/\*-release** → Ver información del sistema operativo<br/><br/>
-=======
-{% include callout.html content="
-&nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/issue && cat /etc/*-release** → Ver información del sistema operativo<br/><br/>
->>>>>>> 63d96594a2557a4ad04d91e99e28f22ca03c06a0
 &nbsp;&nbsp;&nbsp;&nbsp;**uname -a** → Ver información del Kernel<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ip addr** → Configuración de red<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**route -n** → Tabla de enrutamiento<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/passwd** → Usuarios<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**for user in $(cat /etc/passwd | cut -f1 -d":"); do id $user; done** → Usuarios con UID y GID<br/><br/>
-<<<<<<< HEAD
+&nbsp;&nbsp;&nbsp;&nbsp;**lastlog** → Últimos inicios de sesión<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/passwd | cut -f 1,3,4 -d ":" | grep 0:0** → Usuarios con permisos de administrador<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sudoers** → Archivo sudoers<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/crontab && ls -als /etc/cron*** → Trabajos de CRON<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**find /etc/cron* -type f -perm -o+w -exec ls -l {} \;** → Trabajos CRON World-Writeable<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**find / -perm -2000 -type f 2>/dev/null** → Archivos GUID<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**df** → Sistemas de archivos<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**lastlog** → Últimos inicios de sesión<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/passwd | cut -f 1,3,4 -d ":" | grep 0:0** → Usuarios con permisos de administrador<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sudoers** → Archivo sudoers<br/><br/>
@@ -145,14 +146,4 @@ df
 &nbsp;&nbsp;&nbsp;&nbsp;**find /etc/cron* -type f -perm -o+w -exec ls -l {} \;** → Trabajos CRON World-Writeable<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**find / -perm -2000 -type f 2>/dev/null** → Archivos GUID<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**df** → Sistemas de archivos<br/>
-=======
-&nbsp;&nbsp;&nbsp;&nbsp;**lastlog** → Últimos inicios de sesión<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/passwd | cut -f 1,3,4 -d ":" | grep 0:0** → Usuarios con permisos de administrador<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sudoers** → Archivo sudoers<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**cat /etc/crontab && ls -als /etc/cron*** → Trabajos de CRON<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**find /etc/cron* -type f -perm -o+w -exec ls -l {} \;** → Trabajos CRON World-Writeable<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**find / -perm -2000 -type f 2>/dev/null** → Archivos GUID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**df** → Sistemas de archivos<br/>
-" type="primary" %}
 
->>>>>>> 63d96594a2557a4ad04d91e99e28f22ca03c06a0
