@@ -62,7 +62,9 @@ permalink: index.html
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├ Scripts<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;└ <a href="https://meizoso.github.io/mydoc_script_os.html">Detectar sistema operativo (TTL)</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;├ <a href="https://meizoso.github.io/mydoc_script_os.html">Detectar sistema operativo (TTL)</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;└ <a href="https://meizoso.github.io/mydoc_script_sacarInfoLinux.html">Extraer información sistema Linux</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├ OverTheWire<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>
@@ -78,6 +80,8 @@ permalink: index.html
 </div><br/>
 
 ## Últimas 5 actualizaciones
+<u>23/03/2022</u><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Extraer información sistema Linux".<br/><br/>
 <u>22/03/2022</u><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Detectar sistemas operativo por TTL".<br/><br/>
 <u>21/03/2022</u><br/>
@@ -86,8 +90,6 @@ permalink: index.html
 &nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Reconocimiento del objetivo: Escaneos con NMAP".<br/><br/>
 <u>16/03/2022</u><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Reconocimiento del objetivo: Escaneos con NMAP".<br/><br/>
-<u>15/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida página con teoría sobre programación python: "Programación Orientada a Objetos".<br/><br/>
 
 <a href="https://meizoso.github.io/mydoc_actualizaciones.html">Ver todas las actualizaciones</a><br/>
 

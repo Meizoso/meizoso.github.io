@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Explicación de las diferentes tipologías de red.">
-<meta name="keywords" content="teoria,  teoria, topologías, red">
-<title>Topologías de red | Meizoso</title>
+<meta name="description" content="Script para extraer información de un sistema Linux">
+<meta name="keywords" content="scriptLinux,  script, Linux, so">
+<title>Script para extraer información de un sistema Linux | Meizoso</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -157,7 +157,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Topologías de red">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Script para extraer información de un sistema Linux">{title}</a></li>',
                     noResultsText: 'No hay ningún resultado.',
                             limit: 10,
                             fuzzy: true,
@@ -220,7 +220,7 @@
           
           
           
-          <li class="active"><a title="Topologías de red" href="mydoc_teoria_topologias_red.html">Topologías de red</a></li>
+          <li><a title="Topologías de red" href="mydoc_teoria_topologias_red.html">Topologías de red</a></li>
           
           
           
@@ -389,7 +389,7 @@
           
           
           
-          <li><a title="Extraer información de un sistema Linux" href="mydoc_script_sacarInfoLinux.html">Extraer información de un sistema Linux</a></li>
+          <li class="active"><a title="Extraer información de un sistema Linux" href="mydoc_script_sacarInfoLinux.html">Extraer información de un sistema Linux</a></li>
           
           
           
@@ -457,7 +457,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Topologías de red</h1>
+   <h1 class="post-title-main">Script para extraer información de un sistema Linux</h1>
 </div>
 
 
@@ -465,7 +465,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Explicación de las diferentes tipologías de red.</div>
+    <div class="summary">Script para extraer información de un sistema Linux</div>
    
 
     
@@ -498,56 +498,140 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <!--<a target="_blank" rel="noopener" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/mydoc_teoria_topologias_red.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
+    <!--<a target="_blank" rel="noopener" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/mydoc_scripts_sacarInfoLinux.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
 
     
 
-   <h2 id="1-tipos-de-tipologías">1. Tipos de tipologías</h2>
-<center><img with="450px" src="images/topologias_de_red/topologias.png" /></center>
+   <h2 id="1-código">1. Código</h2>
 
-<h3 id="bus">Bus</h3>
-<p>Tiene un único bus de comunicaciones al cual se conectanlos diferentes dispositivos. De esta forma todos los dispositivos comparten el mismo canal.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## SISTEMA OPERATIVO ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/issue <span class="o">&amp;&amp;</span> <span class="nb">cat</span> /etc/<span class="k">*</span><span class="nt">-release</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'############'</span>
+<span class="nb">echo</span> <span class="s1">'## KERNEL ##'</span>
+<span class="nb">echo</span> <span class="s1">'############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">uname</span> <span class="nt">-a</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## CONFIGURACION RED ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+ip addr
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'########################'</span>
+<span class="nb">echo</span> <span class="s1">'## TABLA ENRUTAMIENTO ##'</span>
+<span class="nb">echo</span> <span class="s1">'########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+route <span class="nt">-n</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'##############'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS ##'</span>
+<span class="nb">echo</span> <span class="s1">'##############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/passwd
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'############################'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS CON UID Y GID ##'</span>
+<span class="nb">echo</span> <span class="s1">'############################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="k">for </span>user <span class="k">in</span> <span class="si">$(</span><span class="nb">cat</span> /etc/passwd | <span class="nb">cut</span> <span class="nt">-f1</span> <span class="nt">-d</span><span class="s2">":"</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span><span class="nb">id</span> <span class="nv">$user</span><span class="p">;</span> <span class="k">done
+</span><span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## INICIOS DE SESION ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+lastlog
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'################################'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS CON PERMISOS ROOT ##'</span>
+<span class="nb">echo</span> <span class="s1">'################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/passwd | <span class="nb">cut</span> <span class="nt">-f</span> 1,3,4 <span class="nt">-d</span> <span class="s2">":"</span> | <span class="nb">grep </span>0:0
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#############'</span>
+<span class="nb">echo</span> <span class="s1">'## SUDOERS ##'</span>
+<span class="nb">echo</span> <span class="s1">'#############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/sudoers
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">'## TRABAJOS CRON ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/crontab <span class="o">&amp;&amp;</span> <span class="nb">ls</span> <span class="nt">-als</span> /etc/cron<span class="k">*</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################################'</span>
+<span class="nb">echo</span> <span class="s1">'## TRABAJOS CRON WORLD-WRITEABLE ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find /etc/cron<span class="k">*</span> <span class="nt">-type</span> f <span class="nt">-perm</span> <span class="nt">-o</span>+w <span class="nt">-exec</span> <span class="nb">ls</span> <span class="nt">-l</span> <span class="o">{}</span> <span class="se">\;</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###########################'</span>
+<span class="nb">echo</span> <span class="s1">'## PROCESOS EN EJECUCIÓN ##'</span>
+<span class="nb">echo</span> <span class="s1">'###########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+ps auxwww
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#####################################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS SUID CON PERMISOS ROOT ##'</span>
+<span class="nb">echo</span> <span class="s1">'#####################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find / <span class="nt">-uid</span> 0 <span class="nt">-perm</span> <span class="nt">-4000</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###########################################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS CON PERMISOS WORLD-WRITEABLE ##'</span>
+<span class="nb">echo</span> <span class="s1">'###########################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find <span class="nt">-perm</span> <span class="nt">-2</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS GUID ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find / <span class="nt">-perm</span> <span class="nt">-2000</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'##########################'</span>
+<span class="nb">echo</span> <span class="s1">'## SISTEMAS DE ARCHIVOS ##'</span>
+<span class="nb">echo</span> <span class="s1">'##########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">df</span>
+</code></pre></div></div>
 
-<h3 id="estrella">Estrella</h3>
-<p>Toda los host de la red están conectados a un único punto central y todas las comunicaciones se hacen a través de este punto. Los dispositivos no están conectados entre si.</p>
+<h2 id="2-explicación">2. Explicación</h2>
 
-<h3 id="anillo">Anillo</h3>
-<p>Cada nodo esta conectado a otros dos nodos, formando una única ruta continua. Los datos viajan de un nodo a otro y cada nodo maneja cada paquete.</p>
-
-<h3 id="doble-anillo">Doble anillo</h3>
-<p>Es igual que la de anillo simple pero hay una red más para proporcionar fiabilidad y flexibilidad.</p>
-
-<h3 id="árbol">Árbol</h3>
-<p>Es como si unieramos varias topologías de estrella pero sin un nodo central.</p>
-
-<h3 id="malla">Malla</h3>
-<p>Los nodos estan interconectados entre si.</p>
-
-<h3 id="totalmente-conexa">Totalmente Conexa</h3>
-<p>Como la topología en maya pero aqui <strong>todos</strong> los nodos están interconectados entre si.</p>
-
-<h2 id="2-usos">2. Usos</h2>
-
-<h3 id="bus-1">Bus</h3>
-<p>Negocios pequeños y redes domésticas.</p>
-
-<h3 id="estrella-1">Estrella</h3>
-<p>Redes locales (LAN).</p>
-
-<h3 id="anillo-1">Anillo</h3>
-<p>Fábricas, plantas indutriales.</p>
-
-<h3 id="doble-anillo-1">Doble anillo</h3>
-<p>Fábricas, plantas industriales.</p>
-
-<h3 id="árbol-1">Árbol</h3>
-<p>Grandes redes donde todos los nodos necesitan recibir la información en el mismo momento.</p>
-
-<h3 id="malla-1">Malla</h3>
-<p>Grandes empresas que tienen muchos nodos que necesitan comunicarse entre si.</p>
-
-<h3 id="totalmente-conexa-1">Totalmente conexa</h3>
-<p>Grandes empresas que tienen muchos nodos que necesitan comunicarse entre si.</p>
+<p>    <strong>cat /etc/issue &amp;&amp; cat /etc/*-release</strong> → Ver información del sistema operativo<br /><br />
+    <strong>uname -a</strong> → Ver información del Kernel<br /><br />
+    <strong>ip addr</strong> → Configuración de red<br /><br />
+    <strong>route -n</strong> → Tabla de enrutamiento<br /><br />
+    <strong>cat /etc/passwd</strong> → Usuarios<br /><br />
+    <strong>for user in $(cat /etc/passwd | cut -f1 -d”:”); do id $user; done</strong> → Usuarios con UID y GID<br /><br />
+    <strong>lastlog</strong> → Últimos inicios de sesión<br /><br />
+    <strong>cat /etc/passwd | cut -f 1,3,4 -d “:” | grep 0:0</strong> → Usuarios con permisos de administrador<br /><br />
+    <strong>sudoers</strong> → Archivo sudoers<br /><br />
+    <strong>cat /etc/crontab &amp;&amp; ls -als /etc/cron</strong>* → Trabajos de CRON<br /><br />
+    <strong>find /etc/cron* -type f -perm -o+w -exec ls -l {} \;</strong> → Trabajos CRON World-Writeable<br /><br />
+    <strong>find / -perm -2000 -type f 2&gt;/dev/null</strong> → Archivos GUID<br /><br />
+    <strong>df</strong> → Sistemas de archivos<br /></p>
 
 
     <div class="tags">
@@ -556,7 +640,9 @@ $('#toc').on('click', 'a', function() {
         
         
         
-        <a href="tag_teoria.html" class="btn btn-default navbar-btn cursorNorm" role="button">teoria</a>
+        <a href="tag_script.html" class="btn btn-default navbar-btn cursorNorm" role="button">script</a>
+        
+        
         
         
         

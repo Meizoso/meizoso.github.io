@@ -10,6 +10,8 @@ topnav: topnav
 ---
 
 <ol reversed>
+	<li><u>23/03/2022</u></li>
+	&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Extraer información sistema Linux".<br/>
 	<li><u>22/03/2022</u></li>
 	&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Detectar sistemas operativo por TTL".<br/>
 	<li><u>21/03/2022</u></li>
