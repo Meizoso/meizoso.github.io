@@ -127,6 +127,10 @@ entries:
       url: /mydoc_script_os.html
       output: web, pdf
 
+    - title: Recopilar información sistema Linux
+      url: /mydoc_script_sacarInfoLinux.html
+      output: web, pdf
+
   - title: OverTheWire
     output: web, pdf
     folderitems:
