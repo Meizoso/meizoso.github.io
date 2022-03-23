@@ -1,0 +1,150 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Menu
+  version: 
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Linux
+    output: web, pdf
+    folderitems:
+
+    - title: Instalar Arch
+      url: /mydoc_instalarArch.html
+      output: web, pdf
+
+  - title: Teoría
+    output: web, pdf
+    folderitems:
+
+    - title: IP
+      url: /mydoc_teoria_IP.html
+      output: web, pdf
+
+    - title: Topologías de red
+      url: /mydoc_teoria_topologias_red.html
+      output: web, pdf
+
+  - title: Python
+    output: web, pdf
+    folderitems:
+
+    - title: Conceptos básicos
+      url: /mydoc_python_basico.html
+      output: web, pdf
+
+    - title: Cadenas de carácteres
+      url: /mydoc_python_cadenas.html
+      output: web, pdf
+
+    - title: Listas y tuplas
+      url: /mydoc_python_listas_tuplas.html
+      output: web, pdf
+
+    - title: Ingresar datos por teclado
+      url: /mydoc_python_datos_teclado.html
+      output: web, pdf
+
+    - title: Operadores aritméticos
+      url: /mydoc_python_operadores_aritmeticos.html
+      output: web, pdf
+
+    - title: Operadores de asignaciones
+      url: /mydoc_python_operadores_asignaciones.html
+      output: web, pdf
+
+    - title: Operadores relacionales
+      url: /mydoc_python_operadores_relacionales.html
+      output: web, pdf
+
+    - title: Operadores lógicos
+      url: /mydoc_python_operadores_logicos.html
+      output: web, pdf
+
+    - title: Estructuras de control
+      url: /mydoc_python_estructuras_control.html
+      output: web, pdf
+
+    - title: Conjuntos
+      url: /mydoc_python_conjuntos.html
+      output: web, pdf
+
+    - title: Diccionarios
+      url: /mydoc_python_diccionarios.html
+      output: web, pdf
+
+    - title: Funciones
+      url: /mydoc_python_funciones.html
+      output: web, pdf
+
+    - title: Errores
+      url: /mydoc_python_errores.html
+      output: web, pdf
+
+    - title: Programación Orientada a Objetos
+      url: /mydoc_python_poo.html
+      output: web, pdf
+
+    - title: Aprende python
+      url: /mydoc_python_aprender.html
+      output: web, pdf
+
+  - title: Reconocimiento del objetivo
+    output: web, pdf
+    folderitems:
+
+    - title: Nmap
+      url: /mydoc_reco_nmap.html
+      output: web, pdf
+
+  - title: Hacking
+    output: web, pdf
+    folderitems:
+
+    - title: Scribd
+      url: /mydoc_hacking_scribd.html
+      output: web, pdf
+
+  - title: Scripts
+    output: web, pdf
+    folderitems:
+
+    - title: Detectar Sistema Operativo (TTL)
+      url: /mydoc_script_os.html
+      output: web, pdf
+
+  - title: OverTheWire
+    output: web, pdf
+    folderitems:
+
+    - title: Bandit (Nivel 0 a 14)
+      url: /mydoc_otw_bandit.html
+      output: web, pdf
+
+    - title: Krypton (Nivel 0 a 2)
+      url: /mydoc_otw_krypton.html
+      output: web, pdf
+
+  - title: Otros
+    output: web, pdf
+    folderitems:
+
+    - title: Páginas web de interés
+      url: /mydoc_otros_paginas_interes.html
+      output: web, pdf
+
+# Copyright 2021 Google LLC

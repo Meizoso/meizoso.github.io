@@ -1,0 +1,50 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Menu
+  version: 
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Linux
+    output: web, pdf
+    folderitems:
+
+    - title: Instalar Arch
+      url: /mydoc_instalarArch.html
+      output: web, pdf
+
+  - title: Teoría
+    output: web, pdf
+    folderitems:
+
+    - title: IP
+      url: /mydoc_teoria_IP.html
+      output: web, pdf
+
+  - title: OverTheWire
+    output: web, pdf
+    folderitems:
+
+    - title: Bandit (Nivel 0 a 14)
+      url: /mydoc_otw_bandit.html
+      output: web, pdf
+
+    - title: Krypton (Nivel 0 a 2)
+      url: /mydoc_otw_krypton.html
+      output: web, pdf
+
+# Copyright 2021 Google LLC

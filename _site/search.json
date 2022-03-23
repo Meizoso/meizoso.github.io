@@ -1,0 +1,363 @@
+[
+
+
+
+
+{
+"title": "Inicio",
+"tags": "",
+"keywords": "inicio",
+"url": "index.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "OverTheWire - Bandit",
+"tags": "laboratoriooverthewire",
+"keywords": "laboratorio, overthewire",
+"url": "mydoc_otw_bandit.html",
+"summary": "Cómo resolver el laboratorio Bandit de OVerTheWire"
+}
+,
+
+
+
+{
+"title": "OverTheWire - Krypton",
+"tags": "laboratoriooverthewire",
+"keywords": "laboratorio, overthewire",
+"url": "mydoc_otw_krypton.html",
+"summary": "Cómo resolver el laboratorio Bandit de OVerTheWire"
+}
+,
+
+
+
+{
+"title": "Todas las actualizaciones",
+"tags": "",
+"keywords": "actualizaciones",
+"url": "mydoc_actualizaciones.html",
+"summary": "Listado con todas las actualizaciones."
+}
+,
+
+
+
+{
+"title": "Descargando documentos de Scribd",
+"tags": "hackingscribd",
+"keywords": "hacking, scribd",
+"url": "mydoc_hacking_scribd.html",
+"summary": "En esta ocasión veremos como es posible descargar PDFs de la web Scribd sin registrarse."
+}
+,
+
+
+
+{
+"title": "Instalar Arch",
+"tags": "linuxarch",
+"keywords": "instalacion, arch, archlinux, sistemas, operativos, sistemas operativos",
+"url": "mydoc_instalarArch.html",
+"summary": "Como realizar la instalación de Arch a través de su instalador."
+}
+,
+
+
+
+{
+"title": "Páginas de interés",
+"tags": "",
+"keywords": "paginas, web, recursos",
+"url": "mydoc_otros_paginas_interes.html",
+"summary": "Listado de páginas web donde encontrar recursos de hacking."
+}
+,
+
+
+
+{
+"title": "Aprender a programar en Python",
+"tags": "programacionpython",
+"keywords": "programación, python",
+"url": "mydoc_python_aprender.html",
+"summary": "Enlaces para aprender a programar en python"
+}
+,
+
+
+
+{
+"title": "Conceptos básicos de python",
+"tags": "programacionpython",
+"keywords": "programación, python",
+"url": "mydoc_python_basico.html",
+"summary": "Conceptos básicos de python"
+}
+,
+
+
+
+{
+"title": "Cadenas de carácteres",
+"tags": "programacionpython",
+"keywords": "programación, python, cadenas",
+"url": "mydoc_python_cadenas.html",
+"summary": "Cadenas en python"
+}
+,
+
+
+
+{
+"title": "Conjuntos",
+"tags": "programacionpython",
+"keywords": "programación, python, conjuntos",
+"url": "mydoc_python_conjuntos.html",
+"summary": "Conjuntos en python"
+}
+,
+
+
+
+{
+"title": "Ingresar datos por teclado",
+"tags": "programacionpython",
+"keywords": "programación, python, teclado",
+"url": "mydoc_python_datos_teclado.html",
+"summary": "Como ingresar datos por teclado en python"
+}
+,
+
+
+
+{
+"title": "Diccionarios en python",
+"tags": "programacionpython",
+"keywords": "programación, python, diccionarios",
+"url": "mydoc_python_diccionarios.html",
+"summary": "Diccionarios en python"
+}
+,
+
+
+
+{
+"title": "Errores en python",
+"tags": "programacionpython",
+"keywords": "programación, python, errores",
+"url": "mydoc_python_errores.html",
+"summary": "Captura de errores en python"
+}
+,
+
+
+
+{
+"title": "Estructuras de control y bucles",
+"tags": "programacionpython",
+"keywords": "programación, python, estructuras, control, bucles",
+"url": "mydoc_python_estructuras_control.html",
+"summary": "Estructuras de control y bucles de python"
+}
+,
+
+
+
+{
+"title": "Funciones en python",
+"tags": "programacionpython",
+"keywords": "programación, python, funciones",
+"url": "mydoc_python_funciones.html",
+"summary": "Funciones en python"
+}
+,
+
+
+
+{
+"title": "Listas y tuplas",
+"tags": "programacionpython",
+"keywords": "programación, python, listas, tuplas",
+"url": "mydoc_python_listas_tuplas.html",
+"summary": "Listas y tuplas en python"
+}
+,
+
+
+
+{
+"title": "Operadores aritméticos",
+"tags": "programacionpython",
+"keywords": "programación, python, operadores, aritméticos",
+"url": "mydoc_python_operadores_aritmeticos.html",
+"summary": "Operadores aritméticos de python"
+}
+,
+
+
+
+{
+"title": "Operadores de asignaciones",
+"tags": "programacionpython",
+"keywords": "programación, python, operadores, asignaciones",
+"url": "mydoc_python_operadores_asignaciones.html",
+"summary": "Operadores de asignación de python"
+}
+,
+
+
+
+{
+"title": "Operadores lógicos",
+"tags": "programacionpython",
+"keywords": "programación, python, operadores, logicos",
+"url": "mydoc_python_operadores_logicos.html",
+"summary": "Operadores lógicos de python"
+}
+,
+
+
+
+{
+"title": "Operadores relacionales",
+"tags": "programacionpython",
+"keywords": "programación, python, operadores, relacionales",
+"url": "mydoc_python_operadores_relacionales.html",
+"summary": "Operadores relacionales de python"
+}
+,
+
+
+
+{
+"title": "Programación orientada a objetos python",
+"tags": "programacionpython",
+"keywords": "programación, python, clases, poo, objetos",
+"url": "mydoc_python_poo.html",
+"summary": "Programación orientada a objetos python"
+}
+,
+
+
+
+{
+"title": "Nmap",
+"tags": "softwarenmap",
+"keywords": "software, nmap",
+"url": "mydoc_reco_nmap.html",
+"summary": "Como usar Nmap."
+}
+,
+
+
+
+{
+"title": "Script para detectar sistema operativo (TTL)",
+"tags": "scriptttl",
+"keywords": "script, ttl, so",
+"url": "mydoc_script_os.html",
+"summary": "Script para descubrir el sistema operativo de una máquina según su ttl"
+}
+,
+
+
+
+{
+"title": "Tags",
+"tags": "navigation",
+"keywords": "tags, navigation, buttons, links, association",
+"url": "mydoc_tags.html",
+"summary": "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
+}
+,
+
+
+
+{
+"title": "Teoría sobre IPs",
+"tags": "teoria",
+"keywords": "teoria, ip",
+"url": "mydoc_teoria_IP.html",
+"summary": "Teoría sobre las IPs."
+}
+,
+
+
+
+{
+"title": "Topologías de red",
+"tags": "teoria",
+"keywords": "teoria, topologías, red",
+"url": "mydoc_teoria_topologias_red.html",
+"summary": "Explicación de las diferentes tipologías de red."
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Sample post",
+"tags": "newsgetting_started",
+"keywords": "",
+"url": "samplepost.html",
+"summary": "This is some summary frontmatter for my sample post."
+}
+,
+
+
+{
+"title": "Welcome to Jekyll!",
+"tags": "news",
+"keywords": "",
+"url": "myupdate.html",
+"summary": ""
+}
+,
+
+
+{
+"title": "Test post from last year",
+"tags": "news",
+"keywords": "",
+"url": "test-post-from-last-year.html",
+"summary": ""
+}
+
+
+
+]

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Diccionarios en python">
+<meta name="keywords" content="programacionpython,  programación, python, diccionarios">
+<title>Diccionarios en python | Meizoso</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Javier Meizoso</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="index.html">Inicio</a></li>
+                
+                
+                
+                <li><a href="https://github.com/Verabelik" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:meizoso404@gmail.com?subject=Javier Meizoso Web&body='"><i class="fa fa-envelope-o"></i> Contacto</a>
+
+</li>
+
+
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Buscar...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Diccionarios en python">{title}</a></li>',
+                    noResultsText: 'No hay ningún resultado.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Menu </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Linux" href="#">Linux</a>
+      <ul>
+          
+          
+          
+          <li><a title="Instalar Arch" href="mydoc_instalarArch.html">Instalar Arch</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Teoría" href="#">Teoría</a>
+      <ul>
+          
+          
+          
+          <li><a title="IP" href="mydoc_teoria_IP.html">IP</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Topologías de red" href="mydoc_teoria_topologias_red.html">Topologías de red</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Python" href="#">Python</a>
+      <ul>
+          
+          
+          
+          <li><a title="Conceptos básicos" href="mydoc_python_basico.html">Conceptos básicos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Cadenas de carácteres" href="mydoc_python_cadenas.html">Cadenas de carácteres</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Listas y tuplas" href="mydoc_python_listas_tuplas.html">Listas y tuplas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Ingresar datos por teclado" href="mydoc_python_datos_teclado.html">Ingresar datos por teclado</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores aritméticos" href="mydoc_python_operadores_aritmeticos.html">Operadores aritméticos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores de asignaciones" href="mydoc_python_operadores_asignaciones.html">Operadores de asignaciones</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores relacionales" href="mydoc_python_operadores_relacionales.html">Operadores relacionales</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores lógicos" href="mydoc_python_operadores_logicos.html">Operadores lógicos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Estructuras de control" href="mydoc_python_estructuras_control.html">Estructuras de control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conjuntos" href="mydoc_python_conjuntos.html">Conjuntos</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Diccionarios" href="mydoc_python_diccionarios.html">Diccionarios</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Funciones" href="mydoc_python_funciones.html">Funciones</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Errores" href="mydoc_python_errores.html">Errores</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Programación Orientada a Objetos" href="mydoc_python_poo.html">Programación Orientada a Objetos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Aprende python" href="mydoc_python_aprender.html">Aprende python</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Reconocimiento del objetivo" href="#">Reconocimiento del objetivo</a>
+      <ul>
+          
+          
+          
+          <li><a title="Nmap" href="mydoc_reco_nmap.html">Nmap</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Hacking" href="#">Hacking</a>
+      <ul>
+          
+          
+          
+          <li><a title="Scribd" href="mydoc_hacking_scribd.html">Scribd</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripts" href="#">Scripts</a>
+      <ul>
+          
+          
+          
+          <li><a title="Detectar Sistema Operativo (TTL)" href="mydoc_script_os.html">Detectar Sistema Operativo (TTL)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="OverTheWire" href="#">OverTheWire</a>
+      <ul>
+          
+          
+          
+          <li><a title="Bandit (Nivel 0 a 14)" href="mydoc_otw_bandit.html">Bandit (Nivel 0 a 14)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Krypton (Nivel 0 a 2)" href="mydoc_otw_krypton.html">Krypton (Nivel 0 a 2)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Otros" href="#">Otros</a>
+      <ul>
+          
+          
+          
+          <li><a title="Páginas web de interés" href="mydoc_otros_paginas_interes.html">Páginas web de interés</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Diccionarios en python</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Diccionarios en python</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+
+
+    
+
+
+    
+
+    <!--<a target="_blank" rel="noopener" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/mydoc_python_diccionarios.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
+
+    
+
+   <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-qué-son-los-diccionarios">1. Qué son los diccionarios</h2>
+<p>Los diccionarios son variables que nos permiten almacenar elementos identificados por una clave (key).</p>
+
+<h2 id="2-como-usar-un-diccionario">2. Como usar un diccionario</h2>
+<div class="bs-callout bs-callout-primary">nombre_variable = { ‘key’ : ‘valor’ }</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">'ciudad'</span><span class="p">:</span><span class="s">'Avilés'</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'nombre'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'edad'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'ciudad'</span><span class="p">])</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python diccionario.py<br />
+Pepe<br />
+25<br />
+Avilés<br /></div>
+<p><br /></p>
+
+<h2 id="3-recorrer-un-diccionario">3. Recorrer un diccionario</h2>
+<div class="bs-callout bs-callout-primary">nombre_variable = { ‘key’ : ‘valor’ }</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">'ciudad'</span><span class="p">:</span><span class="s">'Avilés'</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">diccionario</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">':'</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python recorrer_diccionario.py<br />
+nombre : Pepe<br />
+edad : 25<br />
+ciudad : Avilés<br /></div>
+<p><br /></p>
+
+<h2 id="4-métodos-de-los-diccionarios">4. Métodos de los diccionarios</h2>
+<h3 id="dict">dict()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro una representación de un diccionario y si es factible, devuelve un diccionario de datos
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python dict.py<br />
+{'nombre': 'Pepe', 'edad': 30}<br /></div>
+<p><br /></p>
+
+<h3 id="zip">zip()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro dos elementos iterables, ya sea una cadena, una lista o una tupla. Ambos parámetros deben tener el mismo número de elementos.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="s">'nombre'</span><span class="p">,</span><span class="s">'edad'</span><span class="p">),[</span><span class="s">'pepe'</span><span class="p">,</span><span class="s">'50'</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python zip.py<br />
+{'nombre': 'pepe', 'edad': '50'}<br /></div>
+<p><br /></p>
+
+<h3 id="items">items()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de tuplas, cada tupla se compone de dos elementos: el primero será la clave y el segundo, su valor.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">dic</span><span class="p">.</span><span class="n">items</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python items.py<br />
+dict_items([('nombre', 'pepe'), ('edad', 20)])<br /></div>
+<p><br /></p>
+
+<h3 id="keys">keys()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de las claves de nuestro diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">claves</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">claves</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python keys.py<br />
+dict_keys(['nombre', 'edad'])<br /></div>
+<p><br /></p>
+
+<h3 id="values">values()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de los valores de nuestro diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">valores</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">values</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python values.py<br />
+dict_values(['pepe', 20])<br /></div>
+<p><br /></p>
+
+<h3 id="clear">clear()</h3>
+<div class="bs-callout bs-callout-primary">
+Elimina todos los elementos de un diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+<span class="n">diccionario</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clear.py<br />
+{'nombre': 'pepe', 'edad': 20}<br />
+{}<br /></div>
+<p><br /></p>
+
+<h3 id="copy">copy()</h3>
+<div class="bs-callout bs-callout-primary">
+Copia un diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">diccionario2</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario2</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python copy.py<br />
+{'nombre': 'pepe', 'edad': 20}<br /></div>
+<p><br /></p>
+
+<h3 id="fromkeys">fromkeys()</h3>
+<div class="bs-callout bs-callout-primary">Recibe un parámetro iterable (lista, tupla) y un valor, devolviendo un diccionario que contiene como claves los elementos del iterable con el valor ingresado. Si el valor no es ingresado devolverá <strong>none</strong> para todas las claves.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">.</span><span class="n">fromkeys</span><span class="p">([</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python fromkeys.py<br />
+{'a': 1, 'b': 1, 'c': 1}<br /></div>
+<p><br /></p>
+
+<h3 id="get">get()</h3>
+<div class="bs-callout bs-callout-primary">Recibe como parámetro una clave y devuelve el valor de esa clave.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'b'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"El valor es: "</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python get.py<br />
+El valor es: 2<br /></div>
+<p><br /></p>
+
+<h3 id="pop">pop()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro una clave, elimina esta y devuelve su valor. Si no lo encuentra devuelve error.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El diccionario antes de pop(): '</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">)</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El valor es: '</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El diccionario después de pop(): '</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python pop.py<br />
+El diccionario antes de pop():  {'a': 1, 'b': 2}<br />
+El valor es:  1<br />
+El diccionario después de pop():  {'b': 2}<br /></div>
+<p><br /></p>
+
+<h3 id="setdefault">setdefault()</h3>
+<div class="bs-callout bs-callout-primary">
+Se puede usar de dos formas. En la primera como get.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python setdefault.py<br />
+1<br /></div>
+<p><br /></p>
+
+<div class="bs-callout bs-callout-primary">
+Y en la segunda forma, nos sirve para agregar un nuevo elemento.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'c'</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python setdefault.py<br />
+{'a': 1, 'b': 2, 'c': 8}<br /></div>
+<p><br /></p>
+
+<h3 id="update">update()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro otro diccionario. Si tienen claves iguales, actualiza el varlor de la clave repetida; si no hay claves iguales, este par clave-valor es agregado al diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">diccionario2</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'c'</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+<span class="n">diccionario</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">diccionario2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python update.py<br />
+{'a': 1, 'b': 4, 'c': 7}<br /></div>
+<p><br /></p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_programacion.html" class="btn btn-default navbar-btn cursorNorm" role="button">programacion</a>
+        
+        
+        
+        <a href="tag_python.html" class="btn btn-default navbar-btn cursorNorm" role="button">python</a>
+        
+        
+        
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2022 Meizoso. All rights reserved. <br />
+ Última actualización: 23 March 2022 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+
+
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
+
+

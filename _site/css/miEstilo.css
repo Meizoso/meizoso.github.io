@@ -1,0 +1,25 @@
+#terminal{
+	color: limegreen;
+	background: black;
+	padding: 10px;
+	/*font-weight: bold;*/
+	font-family: monospace;
+	margin-top: -0px;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+#barra{
+	color: white;
+	background: #2f343f;
+	max-height: 26px;
+	min-height: 26px;
+}
+#botones{
+	margin-top: 0px;
+}
+#texto_barra{
+	margin-top: -26px;
+}
+#tree{
+    line-height : 15px;
+}
