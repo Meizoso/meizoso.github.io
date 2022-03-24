@@ -10,6 +10,9 @@ topnav: topnav
 ---
 
 <ol reversed>
+	<li><u>24/03/2022</u></li>
+	&nbsp;&nbsp;&nbsp;&nbsp;Añadidas páginas a "Otros: Páginas de interes".<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Añadida información Python<br/>
 	<li><u>23/03/2022</u></li>
 	&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Extraer información sistema Linux".<br/>
 	<li><u>22/03/2022</u></li>

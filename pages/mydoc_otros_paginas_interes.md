@@ -24,6 +24,9 @@ topnav: topnav
 
 <a href="https://www.kitploit.com">KitPloit</a>
 
+## Guias e informes
+<a href="https://concienciat.gva.es/tutoriales/"> Centro Seguridad TIC de la Comunidad Valenciana
+
 ## Herramientas variadas
 
 <a href="https://elcodigoascii.com.ar/codigos-ascii-extendidos/doble-linea-vertical-empalme-derecha-recuadro-grafico-codigo-ascii-204.html">elcodigoascii.com.ar:</a> Tabla con todos los carácteres ascii.

@@ -122,10 +122,33 @@ PORT      STATE SERVICE<br/>
 Nmap done: 255 IP addresses (3 hosts up) scanned in 41.44 seconds<br/></div>
 <br/>
 
+## 4. Escaneo TCP SYN
+
+Este comando comprueba si el puerto objetivo está escuchando. Mediante este comando se puede llevar a cabo una técnica conocida como escaneo **half-opening**, esta comienza como una conexión normal pero no llega a establecerse un handshake por ambas partes, sino que enviamos un único paquete SYN y esperamos la respuesta.
+
+{% include callout.html content="nmap -sS [IP]" type="primary" %}
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css">
+<div id="barra"><img src="images/terminal/botones.png" id="botones"><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+>$ nmap -sS 127.0.0.1 <br/>
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-25 00:04 CET<br/>
+Nmap scan report for localhost (127.0.0.1)<br/>
+Host is up (0.024s latency).<br/>
+Not shown: 998 closed tcp ports (reset)<br/>
+PORT     STATE SERVICE<br/>
+4000/tcp open  remoteanything<br/>
+8888/tcp open  sun-answerbook<br/><br/>
+
+Nmap done: 1 IP address (1 host up) scanned in 1.16 seconds<br/></div>
+<br/>
+
 ## Resumen de los escaneos de NMAP
 
 | Comando | Explicación |
 |--------|--------|
-| <b>nmap -sP -n 192.168.0.1/24</b> | Escaneo ICMP sin resolución de nombres |
-| <b>nmap -p- -sV 192.168.0.20</b> | Escaneo de todos los puertos y la versión de todos los servicios |
+| <b>nmap -sP -n [IP]/24</b> | Escaneo ICMP sin resolución de nombres |
+| <b>nmap -p- -sV [IP]</b> | Escaneo de todos los puertos y la versión de todos los servicios |
 | <b>nmap 192.168.0.*</b> | Escaneo de toda la red |
+| <b>nmap -sS [IP]</b> | Escaneo TCP SYN (half-opening)|
