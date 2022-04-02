@@ -56,9 +56,9 @@ permalink: index.html
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;└ <a href="https://meizoso.github.io/mydoc_reco_nmap.html">Nmap</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├ Hacking<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├ Write-ups<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;└ <a href="https://meizoso.github.io/mydoc_hacking_scribd.html">Scribd</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;└ <a href="https://meizoso.github.io/mydoc_writeup_scribd.html">Scribd</a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├ Scripts<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│<br/>

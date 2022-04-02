@@ -111,12 +111,12 @@ entries:
       url: /mydoc_reco_nmap.html
       output: web, pdf
 
-  - title: Hacking
+  - title: Write-ups
     output: web, pdf
     folderitems:
 
     - title: Scribd
-      url: /mydoc_hacking_scribd.html
+      url: /mydoc_writeup_scribd.html
       output: web, pdf
 
   - title: Scripts

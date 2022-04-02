@@ -48,17 +48,6 @@
 
 
 {
-"title": "Descargando documentos de Scribd",
-"tags": "hackingscribd",
-"keywords": "hacking, scribd",
-"url": "mydoc_hacking_scribd.html",
-"summary": "En esta ocasión veremos como es posible descargar PDFs de la web Scribd sin registrarse."
-}
-,
-
-
-
-{
 "title": "Instalar Arch",
 "tags": "linuxarch",
 "keywords": "instalacion, arch, archlinux, sistemas, operativos, sistemas operativos",
@@ -306,6 +295,17 @@
 "keywords": "teoria, topologías, red",
 "url": "mydoc_teoria_topologias_red.html",
 "summary": "Explicación de las diferentes tipologías de red."
+}
+,
+
+
+
+{
+"title": "Descargando documentos de Scribd",
+"tags": "hackingscribd",
+"keywords": "hacking, scribd",
+"url": "mydoc_writeup_scribd.html",
+"summary": "En esta ocasión veremos como es posible ver documentos de la web Scribd sin registrarse."
 }
 ,
 
