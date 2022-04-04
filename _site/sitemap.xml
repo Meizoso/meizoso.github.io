@@ -3,19 +3,19 @@
   
   
   <url>
-    <loc>/samplepost.html</loc>
+    <loc>http://localhost:4000/samplepost.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/myupdate.html</loc>
+    <loc>http://localhost:4000/myupdate.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/test-post-from-last-year.html</loc>
+    <loc>http://localhost:4000/test-post-from-last-year.html</loc>
   </url>
   
   
@@ -26,169 +26,169 @@
   
   
   <url>
-    <loc>/index.html</loc>
+    <loc>http://localhost:4000/index.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_otw_bandit.html</loc>
+    <loc>http://localhost:4000/mydoc_otw_bandit.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_otw_krypton.html</loc>
+    <loc>http://localhost:4000/mydoc_otw_krypton.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_actualizaciones.html</loc>
+    <loc>http://localhost:4000/mydoc_actualizaciones.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_instalarArch.html</loc>
+    <loc>http://localhost:4000/mydoc_instalarArch.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_otros_paginas_interes.html</loc>
+    <loc>http://localhost:4000/mydoc_otros_paginas_interes.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_aprender.html</loc>
+    <loc>http://localhost:4000/mydoc_python_aprender.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_basico.html</loc>
+    <loc>http://localhost:4000/mydoc_python_basico.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_cadenas.html</loc>
+    <loc>http://localhost:4000/mydoc_python_cadenas.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_conjuntos.html</loc>
+    <loc>http://localhost:4000/mydoc_python_conjuntos.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_datos_teclado.html</loc>
+    <loc>http://localhost:4000/mydoc_python_datos_teclado.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_diccionarios.html</loc>
+    <loc>http://localhost:4000/mydoc_python_diccionarios.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_errores.html</loc>
+    <loc>http://localhost:4000/mydoc_python_errores.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_estructuras_control.html</loc>
+    <loc>http://localhost:4000/mydoc_python_estructuras_control.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_funciones.html</loc>
+    <loc>http://localhost:4000/mydoc_python_funciones.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_listas_tuplas.html</loc>
+    <loc>http://localhost:4000/mydoc_python_listas_tuplas.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_operadores_aritmeticos.html</loc>
+    <loc>http://localhost:4000/mydoc_python_operadores_aritmeticos.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_operadores_asignaciones.html</loc>
+    <loc>http://localhost:4000/mydoc_python_operadores_asignaciones.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_operadores_logicos.html</loc>
+    <loc>http://localhost:4000/mydoc_python_operadores_logicos.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_operadores_relacionales.html</loc>
+    <loc>http://localhost:4000/mydoc_python_operadores_relacionales.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_python_poo.html</loc>
+    <loc>http://localhost:4000/mydoc_python_poo.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_reco_nmap.html</loc>
+    <loc>http://localhost:4000/mydoc_reco_nmap.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_script_os.html</loc>
+    <loc>http://localhost:4000/mydoc_script_os.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_script_sacarInfoLinux.html</loc>
+    <loc>http://localhost:4000/mydoc_script_sacarInfoLinux.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_tags.html</loc>
+    <loc>http://localhost:4000/mydoc_tags.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_teoria_IP.html</loc>
+    <loc>http://localhost:4000/mydoc_teoria_IP.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_teoria_topologias_red.html</loc>
+    <loc>http://localhost:4000/mydoc_teoria_topologias_red.html</loc>
   </url>
   
   
   
   <url>
-    <loc>/mydoc_writeup_scribd.html</loc>
+    <loc>http://localhost:4000/mydoc_writeup_scribd.html</loc>
   </url>
   
   

@@ -79,19 +79,4 @@ permalink: index.html
 &nbsp;&nbsp;&nbsp;&nbsp;└ <a href="https://github.com/meizoso">GitHub</a><br/>
 </div><br/>
 
-## Últimas 5 actualizaciones
-<u>24/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadidas páginas a "Otros: Páginas de interes".<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida información Python.<br/><br/>
-<u>23/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Extraer información sistema Linux".<br/><br/>
-<u>22/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Scripts: Detectar sistemas operativo por TTL".<br/><br/>
-<u>21/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Hacking: Scribd".<br/><br/>
-<u>17/03/2022</u><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Añadida página "Reconocimiento del objetivo: Escaneos con NMAP".<br/><br/>
-
-<a href="https://meizoso.github.io/mydoc_actualizaciones.html">Ver todas las actualizaciones</a><br/>
-
 {% include links.html %}
