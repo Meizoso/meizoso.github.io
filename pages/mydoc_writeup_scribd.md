@@ -12,6 +12,8 @@ topnav: topnav
 
 {% include warning.html content="Todas las técnicas aqui usadas son solo con el propósito de educar. En ningún caso se incita al lector a usarlas con fines maliciosos o ilegales."%}
 
+<center><img src="images/construccion.jpg"></center>
+
 ## 1. Explicación del caso
 
 Todos conocemos el popular sitio **scribd.com** en el cual se pueden visualizar libros y documentos. Esta vez me centraré en los documentos. Estos documentos suelen estar protegidos y solo puedes ver unas pocas primeras páginas, también se te da la opción de subir un archivo propio y acambio te habilitan la lectura y descarga del mismo, pero... ¿Y si te dijera que se pueden ver los documentos enteros sin registrarse ni usar páginas con mil anuncios?
