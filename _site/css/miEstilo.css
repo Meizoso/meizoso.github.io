@@ -23,3 +23,15 @@
 #tree{
     line-height : 15px;
 }
+
+#terminal-pre{
+        color: limegreen;
+        background: black;
+        padding: 10px;
+        /*font-weight: bold;*/
+        font-family: monospace;
+        margin-top: -0px;
+        overflow-x: auto;
+        border: 0px;
+        /*white-space: nowrap;*/
+}

@@ -197,22 +197,104 @@ topnav: topnav
 | <b>p / P</b> |  | Activa / desactiva la traza de paquetes (--pack-trace) |  |
 | <b>?</b> |  | Muestra la pantalla de ayuda de interacción en timepo de ejecución. |  |
 
-## Ejemplos de uso
-### Escaneo básico
-{% include callout.html content="nmap 192.168.1.56" type="primary" %}
+## Resumen de mis comandos más usados
+### Ver interfaces y rutas locales
+{% include callout.html content="nmap <b>-iflist</b>" type="primary" %}
 
 <!--TERMINAL-->
 <link href="css/miEstilo.css" rel="stylesheet" type="text/css">
 <div id="barra"><img src="images/terminal/botones.png" id="botones"><center id="texto_barra">meizoso.github.io</center></div>
-<div id="terminal">
->$ nmap 192.168.1.56<br/>
-Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-04 13:13 CEST<br/>
-Nmap scan report for mx.home (192.168.1.56)<br/>
-Host is up (0.000099s latency).<br/><br/>
-Not shown: 998 closed ports<br/>
-PORT     STATE SERVICE<br/>
-111/tcp  open  rpcbind<br/>
-6566/tcp open  sane-port<br/>
+<div id="terminal"><pre id="terminal-pre">
+>$ nmap -iflist<br/>
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 07:46 CEST<br/>
+************************INTERFACES************************<br/>
+DEV   (SHORT) IP/MASK                      TYPE     UP MTU   MAC<br/>
+lo    (lo)    127.0.0.1/8                  loopback up 65536<br/>
+lo    (lo)    ::1/128                      loopback up 65536<br/>
+eth0  (eth0)  (none)/0                     ethernet up 1500  20:1A:06:35:51:B4<br/>
+wlan0 (wlan0) 192.168.43.236/24            ethernet up 1500  0C:D2:92:83:0C:ED<br/>
+wlan0 (wlan0) fe80::c1cb:1f9f:c6de:1956/64 ethernet up 1500  0C:D2:92:83:0C:ED<br/>
 
-Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds<br/></div>
+**************************ROUTES**************************<br/>
+DST/MASK                      DEV   METRIC GATEWAY<br/>
+192.168.43.0/24               wlan0 600<br/>
+0.0.0.0/0                     wlan0 600    192.168.43.1<br/>
+::1/128                       lo    0<br/>
+fe80::c1cb:1f9f:c6de:1956/128 wlan0 0<br/>
+fe80::/64                     wlan0 600<br/>
+ff00::/8                      wlan0 256<br/></pre></div>
+<br/>
+
+### Escanear enrutadores Cisco
+{% include callout.html content="nmap -p1-25,80,512-515,2001,4001,6001,9001 [IP]]" type="primary" %}
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css">
+<div id="barra"><img src="images/terminal/botones.png" id="botones"><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+>$ nmap -p1-25,80,512-515,2001,4001,6001,9001 127.0.0.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 09:19 CEST
+Nmap scan report for .........
+Host is up (0.32s latency).
+
+PORT     STATE SERVICE
+1/tcp    open  tcpmux
+2/tcp    open  compressnet
+3/tcp    open  compressnet
+4/tcp    open  unknown
+5/tcp    open  rje
+6/tcp    open  unknown
+7/tcp    open  echo
+8/tcp    open  unknown
+9/tcp    open  discard
+10/tcp   open  unknown
+11/tcp   open  systat
+12/tcp   open  unknown
+13/tcp   open  daytime
+14/tcp   open  unknown
+15/tcp   open  netstat
+16/tcp   open  unknown
+17/tcp   open  qotd
+18/tcp   open  msp
+19/tcp   open  chargen
+20/tcp   open  ftp-data
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+24/tcp   open  priv-mail
+25/tcp   open  smtp
+80/tcp   open  http
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+515/tcp  open  printer
+2001/tcp open  dc
+4001/tcp open  newoak
+6001/tcp open  X11:1
+9001/tcp open  tor-orport
+
+Nmap done: 1 IP address (1 host up) scanned in 1.52 seconds
+<br/></pre></div>
+<br/>
+
+### Escanear TFTP enrutador
+{% include callout.html content="sudo nmap -sV -sC -sU -p 69 [IP]" type="primary" %}
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css">
+<div id="barra"><img src="images/terminal/botones.png" id="botones"><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+>$ sudo nmap -sV -sC -sU -p 69 127.0.0.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 09:47 CEST
+Nmap scan report for ............
+Host is up (0.22s latency).
+
+PORT   STATE SERVICE VERSION
+69/udp open  tftp    Plan 9 tftpd
+Service Info: OS: Plan 9; CPE: cpe:/o:belllabs:plan_9
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.30 seconds
+
+<br/></pre></div>
 <br/>
