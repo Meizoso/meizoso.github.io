@@ -1,0 +1,73 @@
+I"Y<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Todas las técnicas aqui usadas son solo con el propósito de educar. En ningún caso se incita al lector a usarlas con fines maliciosos o ilegales.</div>
+
+<center><img src="images/construccion.jpg" /></center>
+
+<h2 id="1-explicación-del-caso">1. Explicación del caso</h2>
+
+<p>Todos conocemos el popular sitio <strong>scribd.com</strong> en el cual se pueden visualizar libros y documentos. Esta vez me centraré en los documentos. Estos documentos suelen estar protegidos y solo puedes ver unas pocas primeras páginas, también se te da la opción de subir un archivo propio y acambio te habilitan la lectura y descarga del mismo, pero… ¿Y si te dijera que se pueden ver los documentos enteros sin registrarse ni usar páginas con mil anuncios?</p>
+
+<p><img src="/images/scribd/scribd1.png" /><br /><br /><br /></p>
+
+<h2 id="2-en-la-url-esta-el-secreto">2. En la url esta el secreto</h2>
+
+<p>Después de visitar varias páginas que te transforman un enlace de Scribd a un documento pdf (todo con un fin científico) me puse a la tarea de investigar como estas páginas funcionaban.</p>
+
+<p>Halle que con modificar un poco la url se puede ver el PDF en forma de imágenes. Tan solo debemos apuntar el número del documento y modificar la url de la siguiente forma: <strong>https://www.scribd.com/embeds/NUMERO-DOC/content?start_page=1</strong></p>
+
+<p><img src="/images/scribd/scribd2.png" /><br /><br /><br /></p>
+
+<h2 id="3-descargando-la-página">3. Descargando la página</h2>
+
+<p>Vale, ahora ya podemos ver el documento completo, pero sigue estando en la web y no simpre vamos a tener internet por lo que supongamos que queremos descargarlo. Yo he creado el siguiente script para facilitarme la vida:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="k">case</span> <span class="nv">$1</span> <span class="k">in</span>
+    <span class="s2">"-d"</span><span class="p">)</span>
+        wget <span class="nt">-O</span> <span class="nv">$3</span> <span class="nt">--header</span><span class="o">=</span><span class="s2">"Accept: text/html"</span> <span class="nt">--user-agent</span><span class="o">=</span><span class="s2">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0"</span> <span class="nt">--referer</span> <span class="s1">'html.scribdassets.com'</span> https://www.scribd.com/embeds/<span class="nv">$2</span>/content?start_page<span class="o">=</span>1 <span class="p">;;</span>
+    <span class="s2">"-o"</span><span class="p">)</span>
+        open <span class="s2">"https://www.scribd.com/embeds/</span><span class="nv">$2</span><span class="s2">/content?start_page=1"</span> <span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div></div>
+<h3 id="explicación-del-comando-wget">Explicación del comando <strong>wget</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parámetros</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>-O</b></center></td>
+      <td>Indica el nombre con el que se guarda el archivo.</td>
+    </tr>
+    <tr>
+      <td><center><b>--header</b></center></td>
+      <td>Modificamos la cabecera para indicar el tipo de contenido que puede comprender el cliente.</td>
+    </tr>
+    <tr>
+      <td><center><b>--user-agent</b></center></td>
+      <td>Modificamos la cabecera para darle a entender a la página que somos un sistema y software en específico.</td>
+    </tr>
+    <tr>
+      <td><center><b>--referer</b></center></td>
+      <td>Solución contra protección de enlaces activos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dónde-podemos-encontrar-el-referer-de-una-web">Dónde podemos encontrar el <strong>–referer</strong> de una web</h3>
+
+<p>Primero le damos clic derecho en la web y pulsamos <strong>inspeccionar</strong>.</p>
+
+<p>Una vez abierto el menú vamos a la pestaña <strong>Network</strong> y pulsamos <strong>F5</strong> para recargar la web.</p>
+
+<p>Ahora en la lista que nos aparace buscamos un recurso que este en la web, una imagen por ejemplo.</p>
+
+<p><img src="/images/scribd/scribd3.png" /><br /><br /><br /></p>
+
+<p>Podemos verlo abajo en <strong>Request Headers</strong> &gt; <strong>Host</strong></p>
+
+<p><img src="/images/scribd/scribd4.png" /><br /><br /><br /></p>
+:ET

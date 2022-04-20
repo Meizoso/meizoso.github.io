@@ -1,0 +1,110 @@
+I"61<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-crear-una-clase">1. Crear una clase</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Coche</span><span class="p">():</span>
+    <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<h2 id="2-estado-inicial-de-un-objeto">2. Estado inicial de un objeto</h2>
+<div class="bs-callout bs-callout-primary">El método especial <strong>__init__()</strong> le da unas propiedades iniciales al objeto.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Coche</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ruedas</span><span class="p">,</span> <span class="n">puertas</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span> <span class="o">=</span> <span class="n">ruedas</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span> <span class="o">=</span> <span class="n">puertas</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Creamos el coche con {} ruedas y {} puertas."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span><span class="p">))</span>
+
+<span class="n">objeto</span> <span class="o">=</span> <span class="n">Coche</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clases.py<br />
+Creamos el coche con 4 ruedas y 5 puertas.<br /></div>
+<p><br /></p>
+
+<h2 id="3-definir-métodos">3. Definir métodos</h2>
+<div class="bs-callout bs-callout-primary">Las funciones que van dentro de una clase se denominan <strong>‘métodos’</strong>.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Coche</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ruedas</span><span class="p">,</span> <span class="n">puertas</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span> <span class="o">=</span> <span class="n">ruedas</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span> <span class="o">=</span> <span class="n">puertas</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Creamos el coche con {} ruedas y {} puertas."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">color</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Pintamos el cohe de color {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">color</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">resumenPedido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Creamos un coche con {} ruedas, {} puertas y de color {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">color</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h2 id="4-crear-instancia-de-la-clase">4. Crear instancia de la clase</h2>
+<div class="bs-callout bs-callout-primary">Para instanciar la clase solo necesitamos crear una variable que contenga la clase. Ejemplo: <strong>var = clase()</strong>. Para llamar a los métodos lo haremos con el nombre del objeto creado, un punto y el nombre del método. Ejemplo: <strong>objeto.metodo()</strong></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Coche</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ruedas</span><span class="p">,</span> <span class="n">puertas</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span> <span class="o">=</span> <span class="n">ruedas</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span> <span class="o">=</span> <span class="n">puertas</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Creamos el coche con {} ruedas y {} puertas."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">color</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Pintamos el cohe de color {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">color</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">resumenPedido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Creamos un coche con {} ruedas, {} puertas y de color {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">ruedas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">puertas</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">color</span><span class="p">))</span>
+
+<span class="n">objeto</span> <span class="o">=</span> <span class="n">Coche</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">objeto</span><span class="p">.</span><span class="n">color</span><span class="p">(</span><span class="s">"Rojo"</span><span class="p">)</span>
+<span class="n">objeto</span><span class="p">.</span><span class="n">resumenPedido</span><span class="p">()</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clases.py<br />
+Creamos el coche con 4 ruedas y 5 puertas.<br />
+Pintamos el cohe de color Rojo.<br />
+Creamos un coche con 4 ruedas, 5 puertas y de color Rojo.<br /></div>
+<p><br /></p>
+
+<h2 id="5-herencia">5. Herencia</h2>
+<div class="bs-callout bs-callout-primary">En el siguiente código podemos ver como la clase <strong>Rectangulo</strong> y la clase <strong>Triangulo</strong> heredan las propiedades de la clase <strong>Poligono</strong></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Poligono</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">base</span><span class="o">=</span><span class="n">base</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">altura</span><span class="o">=</span><span class="n">altura</span>
+
+<span class="k">class</span> <span class="nc">Rectangulo</span><span class="p">(</span><span class="n">Poligono</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">base</span><span class="o">*</span><span class="bp">self</span><span class="p">.</span><span class="n">altura</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"El área del rectángulo es:"</span><span class="p">,</span><span class="n">area</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Triangulo</span><span class="p">(</span><span class="n">Poligono</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">base</span><span class="o">*</span><span class="bp">self</span><span class="p">.</span><span class="n">altura</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"El área del triángulo es:"</span><span class="p">,</span><span class="n">area</span><span class="p">)</span>
+
+<span class="n">rectangulo</span> <span class="o">=</span> <span class="n">Rectangulo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">triangulo</span> <span class="o">=</span> <span class="n">Triangulo</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">rectangulo</span><span class="p">.</span><span class="n">area</span><span class="p">()</span>
+<span class="n">triangulo</span><span class="p">.</span><span class="n">area</span><span class="p">()</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clases.py<br />
+El área del rectángulo es: 200<br />
+El área del triángulo es: 50.0<br /></div>
+<p><br /></p>
+:ET

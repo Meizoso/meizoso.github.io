@@ -1,0 +1,58 @@
+I"P<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-qué-hace-range">1. ¿Qué hace Range?</h2>
+<p><strong>Range</strong> nos permite crear una lista inmutable de número enteros en sucesión aritmética.</p>
+
+<h2 id="2-ejemplos">2. Ejemplos</h2>
+<h3 id="crear-lista">Crear lista</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lista</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python range.py
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre></div>
+
+<h3 id="bucle-for">Bucle for</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'numero = '</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python range.py
+numero =  0
+numero =  1
+numero =  2
+numero =  3
+numero =  4
+numero =  5
+numero =  6
+numero =  7
+numero =  8
+numero =  9</pre></div>
+
+<h3 id="cambiar-operación-que-se-realiza">Cambiar operación que se realiza</h3>
+<p>Si añadirmos un tercer parámetro a range podemos definir cuantos saltos queremos dar entre números.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="c1">#Imprimirá los números del 0 al 9 saltando de 2 en 2
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">'numero = '</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python range.py
+numero =  0
+numero =  2
+numero =  4
+numero =  6
+numero =  8</pre></div>
+:ET

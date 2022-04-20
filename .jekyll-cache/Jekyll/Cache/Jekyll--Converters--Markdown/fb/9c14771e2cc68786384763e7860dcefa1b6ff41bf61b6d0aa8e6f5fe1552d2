@@ -1,0 +1,100 @@
+I"<h2 id="1-qué-es-una-ip">1. ¿Qué es una IP?</h2>
+<p>Una IP es un número <strong>único</strong> que identifica cada dispositivo que esta conectado a una red.</p>
+
+<p>El formato usado es un código de cuatro números separados por puntos:</p>
+
+<p>    192.168.1.5</p>
+
+<p>Cada número puede ir desde los 0 hasta 255:</p>
+
+<p><strong>IP correcta:</strong> 192.168.0.14<br />
+<strong>IP incorrecta:</strong> 321.168.0.14 [El primer número supera el 255]</p>
+
+<p>Estos valores también se escriben de forma binaria quedándonos 4 octetos separados por puntos:</p>
+
+<p>00000000.00000000.00000000.00000000</p>
+
+<p>Si quisieramos representar la IP 192.168.1.5 pasaríamos cada número a bianario y los escribiriamos de la siguiente forma:</p>
+
+<p>192 = 11000000<br />
+168 = 10101000<br />
+001 = 00000001<br />
+005 = 00000101<br /></p>
+
+<p>IP = 11000000.10101000.00000001.00000101</p>
+
+<h2 id="2-ip-privada-e-ip-pública">2. IP privada e IP pública</h2>
+<p>La dirección IP <strong>privada</strong> es un número único que nos identifica <strong>dentro</strong> de nuesta red interna.
+En linux podemos verla con el comando <strong>ifconfig</strong>:
+<!--TERMINAL--></p>
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ifconfig<br />
+enp34s0: flags=4163&lt;-UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inet <b>192.168.1.30</b>  netmask 255.255.255.0  broadcast 192.168.1.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inet6 fe80::65ae:bf60:8cc2:ff83  prefixlen 64  scopeid 0x20<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ether 2c:f0:5d:27:84:e1  txqueuelen 1000  (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX packets 31718  bytes 38900576 (37.0 MiB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX errors 0  dropped 0  overruns 0  frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX packets 12469  bytes 1507266 (1.4 MiB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device interrupt 39  base 0xd000<br /></div>
+<p><br /></p>
+
+<p>La dirección IP <strong>pública</strong> es un número único que identifica nuestra red interna con el exterior. En linux la podemos ver con <strong>curl</strong>
+<!--TERMINAL--></p>
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$curl ifconfig.me<br />
+<b>90.68.45.2</b><br /></div>
+
+<p><br /></p>
+<h2 id="3-clases-de-ips">3. Clases de IPs</h2>
+<p><u><b>Clase A</b></u></p>
+
+<p>El primer bit del primer octeto siempre es 0. Por lo tanto, el primer octeto varía de 000000001 a 01111111, es decir de 1 a 127. Las direcciones 127.x.x.x están reservadas para loopback por lo que diremos que la Clase A abarca desde 1 a 126.</p>
+
+<p>La máscara de subred predeterminada para la clase es 255.0.0.0</p>
+
+<p>Formato Clase A = 0NNNNNNN.HHHHHHHH.HHHHHHHH.HHHHHHHH</p>
+
+<p>N = Network ID<br />
+H = Host
+<br /><br /></p>
+
+<p><u><b>Clase B</b></u></p>
+
+<p>La clase B tiene 10 en los dos primeros bits del primer octeto, varía de 10000000 a 10111111, es decir de 128 a 191</p>
+
+<p>La máscara de subred predeterminada para la clase es 255.255.0.0</p>
+
+<p>Formato Clase B = 10NNNNNN.HHHHHHHH.HHHHHHHH.HHHHHHHH</p>
+
+<p>N = Network ID<br />
+H = Host
+<br /><br /></p>
+
+<p><u><b>Clase C</b></u></p>
+
+<p>El primer octeto de la clase C es 110, varía de 11000000 a 11011111, es decir de 192 a 223
+La máscara de subred predeterminada para la clase es 255.255.255.0</p>
+
+<p>Formato Clase C = 110NNNNNN.HHHHHHHH.HHHHHHHH.HHHHHHHH</p>
+
+<p>N = Network ID<br />
+H = Host</p>
+
+<p><u><b>Clase D</b></u></p>
+
+<p>El primer octeto de la clase D es 1110, varía de 11100000 a 11101111, es decir de 224 a 239. La clase D se utilizan para identificar grupos de multidifusión de forma única.
+<br /><br /></p>
+
+<p><u><b>Clase E</b></u></p>
+
+<p>Esta clase varía de 240.0.0.0 a 255.255.255.254. Esta clase esta reservada para fines experimentales.
+<br /><br /></p>
+:ET

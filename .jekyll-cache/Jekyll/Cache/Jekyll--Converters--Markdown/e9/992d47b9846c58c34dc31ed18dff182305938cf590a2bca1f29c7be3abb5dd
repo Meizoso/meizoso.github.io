@@ -1,0 +1,277 @@
+I"�M<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-qué-son-los-diccionarios">1. Qué son los diccionarios</h2>
+<p>Los diccionarios son variables que nos permiten almacenar elementos identificados por una clave (key).</p>
+
+<h2 id="2-como-usar-un-diccionario">2. Como usar un diccionario</h2>
+<div class="bs-callout bs-callout-primary">nombre_variable = { ‘key’ : ‘valor’ }</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">'ciudad'</span><span class="p">:</span><span class="s">'Avilés'</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'nombre'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'edad'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s">'ciudad'</span><span class="p">])</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python diccionario.py<br />
+Pepe<br />
+25<br />
+Avilés<br /></div>
+<p><br /></p>
+
+<h2 id="3-recorrer-un-diccionario">3. Recorrer un diccionario</h2>
+<div class="bs-callout bs-callout-primary">nombre_variable = { ‘key’ : ‘valor’ }</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">'ciudad'</span><span class="p">:</span><span class="s">'Avilés'</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">diccionario</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">':'</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python recorrer_diccionario.py<br />
+nombre : Pepe<br />
+edad : 25<br />
+ciudad : Avilés<br /></div>
+<p><br /></p>
+
+<h2 id="4-métodos-de-los-diccionarios">4. Métodos de los diccionarios</h2>
+<h3 id="dict">dict()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro una representación de un diccionario y si es factible, devuelve un diccionario de datos
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s">'Pepe'</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python dict.py<br />
+{'nombre': 'Pepe', 'edad': 30}<br /></div>
+<p><br /></p>
+
+<h3 id="zip">zip()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro dos elementos iterables, ya sea una cadena, una lista o una tupla. Ambos parámetros deben tener el mismo número de elementos.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="s">'nombre'</span><span class="p">,</span><span class="s">'edad'</span><span class="p">),[</span><span class="s">'pepe'</span><span class="p">,</span><span class="s">'50'</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python zip.py<br />
+{'nombre': 'pepe', 'edad': '50'}<br /></div>
+<p><br /></p>
+
+<h3 id="items">items()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de tuplas, cada tupla se compone de dos elementos: el primero será la clave y el segundo, su valor.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">dic</span><span class="p">.</span><span class="n">items</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python items.py<br />
+dict_items([('nombre', 'pepe'), ('edad', 20)])<br /></div>
+<p><br /></p>
+
+<h3 id="keys">keys()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de las claves de nuestro diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">claves</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">claves</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python keys.py<br />
+dict_keys(['nombre', 'edad'])<br /></div>
+<p><br /></p>
+
+<h3 id="values">values()</h3>
+<div class="bs-callout bs-callout-primary">
+Devuelve una lista de los valores de nuestro diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">valores</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">values</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python values.py<br />
+dict_values(['pepe', 20])<br /></div>
+<p><br /></p>
+
+<h3 id="clear">clear()</h3>
+<div class="bs-callout bs-callout-primary">
+Elimina todos los elementos de un diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+<span class="n">diccionario</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clear.py<br />
+{'nombre': 'pepe', 'edad': 20}<br />
+{}<br /></div>
+<p><br /></p>
+
+<h3 id="copy">copy()</h3>
+<div class="bs-callout bs-callout-primary">
+Copia un diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'nombre'</span><span class="p">:</span><span class="s">'pepe'</span><span class="p">,</span> <span class="s">'edad'</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="n">diccionario2</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario2</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python copy.py<br />
+{'nombre': 'pepe', 'edad': 20}<br /></div>
+<p><br /></p>
+
+<h3 id="fromkeys">fromkeys()</h3>
+<div class="bs-callout bs-callout-primary">Recibe un parámetro iterable (lista, tupla) y un valor, devolviendo un diccionario que contiene como claves los elementos del iterable con el valor ingresado. Si el valor no es ingresado devolverá <strong>none</strong> para todas las claves.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">.</span><span class="n">fromkeys</span><span class="p">([</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python fromkeys.py<br />
+{'a': 1, 'b': 1, 'c': 1}<br /></div>
+<p><br /></p>
+
+<h3 id="get">get()</h3>
+<div class="bs-callout bs-callout-primary">Recibe como parámetro una clave y devuelve el valor de esa clave.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'b'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"El valor es: "</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python get.py<br />
+El valor es: 2<br /></div>
+<p><br /></p>
+
+<h3 id="pop">pop()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro una clave, elimina esta y devuelve su valor. Si no lo encuentra devuelve error.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El diccionario antes de pop(): '</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">)</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El valor es: '</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'El diccionario después de pop(): '</span><span class="p">,</span> <span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python pop.py<br />
+El diccionario antes de pop():  {'a': 1, 'b': 2}<br />
+El valor es:  1<br />
+El diccionario después de pop():  {'b': 2}<br /></div>
+<p><br /></p>
+
+<h3 id="setdefault">setdefault()</h3>
+<div class="bs-callout bs-callout-primary">
+Se puede usar de dos formas. En la primera como get.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python setdefault.py<br />
+1<br /></div>
+<p><br /></p>
+
+<div class="bs-callout bs-callout-primary">
+Y en la segunda forma, nos sirve para agregar un nuevo elemento.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'c'</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python setdefault.py<br />
+{'a': 1, 'b': 2, 'c': 8}<br /></div>
+<p><br /></p>
+
+<h3 id="update">update()</h3>
+<div class="bs-callout bs-callout-primary">
+Recibe como parámetro otro diccionario. Si tienen claves iguales, actualiza el varlor de la clave repetida; si no hay claves iguales, este par clave-valor es agregado al diccionario.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">diccionario2</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'c'</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+<span class="n">diccionario</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">diccionario2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python update.py<br />
+{'a': 1, 'b': 4, 'c': 7}<br /></div>
+<p><br /></p>
+:ET

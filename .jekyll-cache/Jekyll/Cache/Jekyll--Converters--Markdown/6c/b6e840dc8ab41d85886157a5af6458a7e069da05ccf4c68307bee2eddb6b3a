@@ -1,0 +1,102 @@
+I"�<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-carácteres-especiales">1. Carácteres especiales</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Carácteres</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>'''texto'''</center></td>
+      <td>Texto que puede ocupar varias líneas.</td>
+    </tr>
+    <tr>
+      <td><center>\"</center></td>
+      <td>Escribir comillas dobles dentro de una cadena.</td>
+    </tr>
+    <tr>
+      <td><center>\'</center></td>
+      <td>Escribir comillas simples dentro de una cadena.</td>
+    </tr>
+    <tr>
+      <td><center>\n</center></td>
+      <td>Salto de línea.</td>
+    </tr>
+    <tr>
+      <td><center>\t</center></td>
+      <td>Tabulador.</td>
+    </tr>
+    <tr>
+      <td><center>\</center></td>
+      <td>Partir cadena en varias líneas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-cadenas-f">2. Cadenas f</h2>
+
+<p>Se usan para imprimir variables dentro de cadenas de texto.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nombre</span> <span class="o">=</span> <span class="s">"Pepe"</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Me llamo </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s"> y tengo </span><span class="si">{</span><span class="n">edad</span><span class="si">}</span><span class="s"> años."</span><span class="p">)</span>
+<span class="n">Me</span> <span class="n">llamo</span> <span class="n">Pepe</span> <span class="n">y</span> <span class="n">tengo</span> <span class="mi">25</span> <span class="n">años</span><span class="p">.</span>
+</code></pre></div></div>
+
+<p><strong>➥ Si se quieren imprimir los carácteres { } se deben escribir duplicados.</strong></p>
+
+<h2 id="3-cadenas-en-bruto-raw">3. Cadenas en bruto (raw)</h2>
+<p>Si añadimos una <strong>r</strong> antes de las comillas la cadena se imprimirá tal y como este escrita, sin interpretar los carácteres especiales.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nombre</span> <span class="o">=</span> <span class="s">"Pepe"</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s">"Me llamo {nombre} y tengo {edad} años."</span><span class="p">)</span>
+<span class="n">Me</span> <span class="n">llamo</span> <span class="p">{</span><span class="n">nombre</span><span class="p">}</span> <span class="n">y</span> <span class="n">tengo</span> <span class="p">{</span><span class="n">edad</span><span class="p">}</span> <span class="n">años</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h2 id="4-concatenar-cadenas-y-variables">4. Concatenar cadenas y variables</h2>
+<p>Para concatenar cadenas usamos el carácter <strong>’+’</strong>.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">frase1</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="n">frase2</span> <span class="o">=</span> <span class="s">"tengo 25 años."</span>
+<span class="k">print</span><span class="p">(</span><span class="n">frase1</span><span class="o">+</span><span class="s">" y "</span><span class="o">+</span><span class="n">frase2</span><span class="p">)</span>
+<span class="n">Me</span> <span class="n">llamo</span> <span class="n">Pepe</span> <span class="n">y</span> <span class="n">tengo</span> <span class="mi">25</span> <span class="n">años</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h2 id="5-imprimir-carácteres-de-una-string">5. Imprimir carácteres de una string</h2>
+<p>Podemos imprimir carácteres de una string señalando la posición con [ ]</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">l</span>
+</code></pre></div></div>
+
+<p>Para empezar a contar desde el final de la cadena podemos añadir <strong>’-‘</strong> delante del índice:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">p</span>
+</code></pre></div></div>
+<p>Para imprimir un grupo de carácteres usaremos <strong>’:’</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+<span class="n">llamo</span>
+</code></pre></div></div>
+<p>Para imprimir un grupo de carácteres desde el principio hasta una posición usaremos <strong>‘:X’</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">[:</span><span class="mi">8</span><span class="p">])</span>
+<span class="n">Me</span> <span class="n">llamo</span>
+</code></pre></div></div>
+<p>Para imprimir un grupo de carácteres desde una posición hasta el final usaremos <strong>‘X:’</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">8</span><span class="p">:])</span>
+ <span class="n">Pepe</span>
+</code></pre></div></div>
+<h2 id="6-longitud-de-una-cadena">6. Longitud de una cadena</h2>
+<p>Para saber la longitud de una cadena podemos usar la función <strong>len()</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Me llamo Pepe"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<span class="mi">13</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,87 @@
+I"_<h2 id="1---bootear-arch-desde-un-pendrive">1 - Bootear Arch desde un pendrive</h2>
+<p><img src="images/InstalarArch/01.png" alt="Image text" /></p>
+
+<h2 id="2---archinstall">2 - Archinstall</h2>
+<p>Usar el comando <strong>archinstall</strong> para comenzar la instalación.
+<img src="images/InstalarArch/02.png" alt="Image text" /></p>
+
+<h2 id="3---idioma-del-teclado">3 - Idioma del teclado</h2>
+<p>Elegiremos el idioma de nuestro teclado escribiendo el número que aparece al lado de las iniciales del país.
+<img src="images/InstalarArch/03.png" alt="Image text" /></p>
+
+<h2 id="4---seleccionar-espejo">4 - Seleccionar espejo</h2>
+<p>Seleccionar el espejo desde el que queremos realizar las descargas. Elegiremos el país más cercano, en mi caso España.
+<img src="images/InstalarArch/04.png" alt="Image text" /></p>
+
+<h2 id="5---discos">5 - Discos</h2>
+<p>Seleccionamos el disco donde queremos hacer la instalación.
+<img src="images/InstalarArch/05.png" alt="Image text" /></p>
+
+<h2 id="6---eliminar-disco">6 - Eliminar disco</h2>
+<p>Seleccionamos que queremos eliminar el disco completo.
+<img src="images/InstalarArch/06.png" alt="Image text" /></p>
+
+<h2 id="7---sistema-de-ficheros">7 - Sistema de ficheros</h2>
+<p>Escogemos que sistema de ficheros queremos usar.
+<img src="images/InstalarArch/07.png" alt="Image text" /></p>
+
+<h2 id="8---estructura">8 - Estructura</h2>
+<p>Le decimos que queremos una estructura por defecto del sistema escogido.
+<img src="images/InstalarArch/08.png" alt="Image text" /></p>
+
+<h2 id="9---encriptación">9 - Encriptación</h2>
+<p>Si queremos podemos encriptar el sistema añadiendo una contraseña. Podemos dejarlo en blanco para que no lo encripte.
+<img src="images/InstalarArch/09.png" alt="Image text" /></p>
+
+<h2 id="10---swap">10 - Swap</h2>
+<p>Dependiendo de la potencia de nuestro equipo podemos utilizar una partición de swap.
+<img src="images/InstalarArch/10.png" alt="Image text" /></p>
+
+<h2 id="11---nombre-de-la-máquina">11 - Nombre de la máquina</h2>
+<p>Escogemos un nombre para nuestra máquina.
+<img src="images/InstalarArch/11.png" alt="Image text" /></p>
+
+<h2 id="12---contraseña-root">12 - Contraseña root</h2>
+<p>Escribimos la contraseña para el usuario root.
+<img src="images/InstalarArch/12.png" alt="Image text" /></p>
+
+<h2 id="13---nuevo-usuario">13 - Nuevo usuario</h2>
+<p>Añadimos un nombre y una contraseña para crear nuestro usuario.
+<img src="images/InstalarArch/13.png" alt="Image text" /></p>
+
+<h2 id="14---sudoers">14 - Sudoers</h2>
+<p>Escribimos Y para añadir el nuevo usuario a la lista de superusuarios.
+<img src="images/InstalarArch/14.png" alt="Image text" /></p>
+
+<h2 id="15---instalación-mínima">15 - Instalación mínima</h2>
+<p>Seleccionamos la opción 3 para tener una instalación de software mínima.
+<img src="images/InstalarArch/15.png" alt="Image text" /></p>
+
+<h2 id="16---drivers">16 - Drivers</h2>
+<p>Instalamos los drivers de nuestra tarjeta grafica y de la tarjeta de sonido.
+<img src="images/InstalarArch/16.png" alt="Image text" />
+<img src="images/InstalarArch/16_2.png" alt="Image text" /></p>
+
+<h2 id="17---kernel">17 - Kernel</h2>
+<p>Escogemos el kernel que queremos instalar.
+<img src="images/InstalarArch/17.png" alt="Image text" /></p>
+
+<h2 id="18---software">18 - Software</h2>
+<p>Si queremos añadir algún otro programa podemos escribirlo en este moento, separado por comas. Yo aprovecho para instalar un navegador web.
+<img src="images/InstalarArch/18.png" alt="Image text" /></p>
+
+<h2 id="19---internet">19 - Internet</h2>
+<p>Necesitamos escoger la interfaz de internet. Tenemos 3 posibilidades: Copiar la misma configuración que tenemos ahora mismo en la instalación, usar NetworkManager para seleccionar una red de forma gráfica, o seleccionar la red enp0s3 que en mi caso es la red cableada.
+<img src="images/InstalarArch/19.png" alt="Image text" /></p>
+
+<h2 id="20---hora">20 - Hora</h2>
+<p>Seleccionamos la zona horaria y le decimos que la actualice automaticamente.
+<img src="images/InstalarArch/20.png" alt="Image text" /></p>
+
+<h2 id="21---resumen">21 - Resumen</h2>
+<p>Ahora nos mostrará un resumen con toda las configuraciones que hemos seleccionado.Una vez estemos conformes y le demos enter comenzará la instalación.
+<img src="images/InstalarArch/21.png" alt="Image text" /></p>
+
+<h2 id="22---reiniciar-el-sistema">22 - Reiniciar el sistema</h2>
+<p><img src="images/InstalarArch/22.png" alt="Image text" /></p>
+:ET

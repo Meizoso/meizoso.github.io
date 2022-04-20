@@ -1,0 +1,387 @@
+I"e<h2 id="nivel-0"><strong>Nivel 0</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> Debemos conectarnos al laboratorio mediante una conexion SSH. <br />
+    <strong>→ Host:</strong> bandit.labs.overthewire.org<br />
+    <strong>→ Puerto:</strong> 2220<br />
+    <strong>→ Usuario:</strong> bandit0<br />
+    <strong>→ Contraseña:</strong> bandit0<br />
+</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ssh</div>
+
+<div class="bs-callout bs-callout-primary">Para conectarme mediante ssh solo necesito saber que el comando <strong>ssh</strong> funciona de la siguiente manera:<br />    →	ssh usuario@[host] -p [puerto]<br /><strong>Ejemplo:</strong> ssh admin@mi.conexion.org -p 2222</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+ssh bandit0@bandit.labs.overthewire.org -p 2220<br />
+bandit0@bandit.labs.overthewire.org's password: bandit0<br />
+bandit0@bandit:~$
+</div>
+<p><br /></p>
+
+<h2 id="nivel-0--nivel-1"><strong>Nivel 0 → Nivel 1</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña del siguiente nivel esta almacenada en un archivo llamado <strong>readme</strong> localizado en el directorio <strong>home</strong>.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat</div>
+
+<div class="bs-callout bs-callout-primary">Realizo un <strong>ls</strong> para ver el contenido de la carpeta y un <strong>cat [archivo]</strong> para imprimir el contenido del archivo:</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit0@bandit.labs.overthewire.org -p 2220<br />
+bandit0@bandit:~$ ls<br />
+readme<br />
+bandit0@bandit:~$ cat readme<br />
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> boJ9jbbUNNfktd78OOpsqOltutMc3MY1</div>
+
+<h2 id="nivel-1--nivel-2"><strong>Nivel 1 → Nivel 2</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña del siguiente nivel esta almacenada en un archivo llamado <strong>-</strong> localizado en el directorio <strong>home</strong>.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat</div>
+
+<div class="bs-callout bs-callout-primary">Hago un <strong>ls</strong> para ver el contenido de la carpeta y un <strong>cat ./[archivo]</strong> para imprimir el contenido del archivo:</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit1@bandit.labs.overthewire.org -p 2220<br />
+bandit1@bandit:~$ ls<br />
+-<br />
+bandit1@bandit:~$ cat ./-<br />
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9</div>
+
+<h2 id="nivel-2--nivel-3"><strong>Nivel 2 → Nivel 3</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña del siguiente nivel esta almacenada en un archivo llamado <strong>spaces in this filename</strong> localizado en el directorio <strong>home</strong>.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat</div>
+
+<div class="bs-callout bs-callout-primary">Hago un <strong>ls</strong> para ver el contenido de la carpeta y un <strong>cat ‘archivo’</strong> para imprimir el contenido del archivo:</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit2@bandit.labs.overthewire.org -p 2220<br />
+bandit2@bandit:~$ ls<br />
+spaces in this filename<br />
+bandit2@bandit:~$ cat "spaces in this filename"<br />
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</div>
+
+<h2 id="nivel-3--nivel-4"><strong>Nivel 3 → Nivel 4</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña del siguiente nivel esta almacenada en un archivo oculto localizado en el directorio <strong>inhere</strong>.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat</div>
+
+<div class="bs-callout bs-callout-primary">Hago un <strong>ls -la</strong> para ver el contenido oculto de la carpeta y un <strong>cat ‘direccion_archivo’</strong> para imprimir el contenido del archivo:</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit3@bandit.labs.overthewire.org -p 2220<br />
+bandit3@bandit:~$ ls -la inhere/<br />
+total 12<br />
+drwxr-xr-x 2 root    root    4096 May  7  2020 .<br />
+drwxr-xr-x 3 root    root    4096 May  7  2020 ..<br />
+-rw-r----- 1 bandit4 bandit3   33 May  7  2020 .hidden<br />
+bandit3@bandit:~$ cat inhere/.hidden <br />
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> pIwrPrtPN36QITSp3EQaw936yaFoFgAB</div>
+
+<h2 id="nivel-4--nivel-5"><strong>Nivel 4 → Nivel 5</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña del siguiente nivel esta almacenada en un archivo legible por humanos en el directorio <strong>inhere</strong>.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat, file</div>
+
+<div class="bs-callout bs-callout-primary">Hago un <strong>ls</strong> para ver el contenido de la carpeta y un <strong>file inhere/</strong>* para ver los tipos de archivos. Una vez que ya se que archivo necesito, uso un <strong>cat</strong> para ver su contenido:</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit4@bandit.labs.overthewire.org -p 2220<br />
+bandit4@bandit:~$ ls inhere/<br />
+-file00  -file02  -file04  -file06  -file08<br />
+-file01  -file03  -file05  -file07  -file09<br />
+bandit4@bandit:~$ file inhere/*<br />
+inhere/-file00: data<br />
+inhere/-file01: data<br />
+inhere/-file02: data<br />
+inhere/-file03: data<br />
+inhere/-file04: data<br />
+inhere/-file05: data<br />
+inhere/-file06: data<br />
+inhere/-file07: ASCII text<br />
+inhere/-file08: data<br />
+inhere/-file09: data<br />
+bandit4@bandit:~$ cat inhere/-file07<br />
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br />
+</div>
+
+<h2 id="nivel-5--nivel-6"><strong>Nivel 5 → Nivel 6</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el siguiente nivel esta alojada en un archivo en alguna parte del directorio <strong>inhere</strong> y tiene las siguientes propiedades:<br />
+    <strong>→</strong> Legible por humanos<br />
+    <strong>→</strong> 1033 bytes de tamaño<br />
+    <strong>→</strong> No ejecutable<br /></div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat, find</div>
+
+<div class="bs-callout bs-callout-primary">Hago un <strong>ls</strong> para ver el contenido del fichero <strong>inhere</strong>. Para buscar el archivo uso el comando <strong>find</strong> con los parámetros <strong>-type f</strong> y <strong>-size 1033c</strong>.<br /><br />Con el parámetro <strong>-type f</strong> le decimos que tiene que ser un archivo.<br /><br />Con el parámetro <strong>-size 1033c</strong> le indicamos que tiene un peso de 1033 bytes</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit5@bandit.labs.overthewire.org -p 2220<br />
+bandit5@bandit:~$ ls<br />
+inhere<br />
+bandit5@bandit:~$ find inhere/* -type f -size 1033c<br />
+inhere/maybehere07/.file2<br />
+bandit5@bandit:~$ cat inhere/maybehere07/.file2<br />
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7<br />
+</div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> DXjZPULLxYr17uwoI01bNLQbtFemEgo7</div>
+
+<h2 id="nivel-6--nivel-7"><strong>Nivel 6 → Nivel 7</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el siguiente nivel esta alojada en un algún lugar del servidor y tiene las siguientes propiedades:<br />
+    <strong>→</strong> Usuario propietario: bandit7<br />
+    <strong>→</strong> Grupo propietario: bandit6<br />
+    <strong>→</strong> Tamaño 33 bytes<br /></div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> cat, find</div>
+
+<div class="bs-callout bs-callout-primary">Uso el comando find con los parámetros <strong>-user</strong>, <strong>-group</strong> y <strong>size</strong>. Además le añado <strong>2&gt;/dev/null</strong> para desviar los fallos y que no se impriman por pantalla<br /><br />Con el parámetro <strong>-user</strong> le decimos el usuario propietario del archivo.<br /><br />Con el parámetro <strong>-group</strong> le indicamos el grupo propietario del archivo.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit6@bandit.labs.overthewire.org -p 2220<br />
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c 2&gt;/dev/null<br />
+/var/lib/dpkg/info/bandit7.password<br />
+bandit6@bandit:~$ cat /var/lib/dpkg/info/bandit7.password<br />
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs</div>
+
+<h2 id="nivel-7--nivel-8"><strong>Nivel 7 → Nivel 8</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña esta alojada en un archivo llamado <strong>data.txt</strong>, al lado de la palabra <strong>millionth</strong></div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, grep</div>
+
+<div class="bs-callout bs-callout-primary">Con el comando <strong>grep</strong> podemos buscar lineas de texto en un archivo. Lo uso de la siguiente manera: <br /><br />    <strong>grep</strong> [palabra_a_buscar] [archivo]</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit7@bandit.labs.overthewire.org -p 2220<br />
+bandit7@bandit:~$ ls<br />
+data.txt<br />
+bandit7@bandit:~$ grep millionth data.txt<br />
+millionth	cvX2JJa4CFALtqS87jk27qwqGhBM9plV<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> cvX2JJa4CFALtqS87jk27qwqGhBM9plV</div>
+
+<h2 id="nivel-8--nivel-9"><strong>Nivel 8 → Nivel 9</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña esta alojada en un archivo llamado <strong>data.txt</strong>. Es la única línea que solo se repite una vez.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ls, cat, sort, uniq</div>
+
+<div class="bs-callout bs-callout-primary">Primero uso <strong>cat</strong> para imprimir las lineas del archivo, esa salida la llevo a traves de una tuberia ( <strong>|</strong> ) al comando <strong>sort</strong>, el cual ordena las lineas de texto de forma alfabética. Esa salida la paso por <strong>uniq -u</strong> que solo imprime las líneas que no se repiten.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit8@bandit.labs.overthewire.org -p 2220<br />
+bandit8@bandit:~$ ls<br />
+data.txt<br />
+bandit8@bandit:~$ cat data.txt | sort | uniq -u<br />
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR</div>
+
+<h2 id="nivel-9--nivel-10"><strong>Nivel 9 → Nivel 10</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña esta alojada en un archivo llamado <strong>data.txt</strong> en una de las líneas legibles por humanos, precedida de varios ‘<strong>=</strong>’</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> strings, grep</div>
+
+<div class="bs-callout bs-callout-primary">Con el comando <strong>strings</strong> podemos extraer todas las líneas legibles por humanos y con el comando <strong>grep</strong> le pedimos que solo nos muestre las que tienen varios <strong>=</strong></div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit9@bandit.labs.overthewire.org -p 2220<br />
+bandit9@bandit:~$ strings data.txt | grep '======'
+========== the*2i"4<br />
+========== password<br />
+Z)========== is<br />
+&amp;========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk</div>
+
+<h2 id="nivel-10--nivel-11"><strong>Nivel 10 → Nivel 11</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña esta alojada en un archivo llamado <strong>data.txt</strong> que contiene información condificada en base64</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> base64</div>
+
+<div class="bs-callout bs-callout-primary">Para decodificar base64 basta con usar el comando <strong>base64 -d [archivo]</strong>.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit10@bandit.labs.overthewire.org -p 2220<br />
+bandit10@bandit:~$ base64 -d data.txt<br />
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR</div>
+
+<h2 id="nivel-11--nivel-12"><strong>Nivel 11 → Nivel 12</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el siguiente nivel esta alojada en el archivo <strong>data.txt</strong>, tanto las minúsculas como las mayúsculas han sido rotadas 13 posiciones.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> cat, tr</div>
+
+<div class="bs-callout bs-callout-primary">Claramente el enunciado hace renferencia al algoritmo ROT13 dónde cada letra del abecedario toma el valor de la 13º letra desde su posición. Por ejemplo, si tomamos la letra A y la rotamos 13 posiciones veriamos que nos da un valor de N. Sabiendo esto solo necesitamos un comando que nos cambie las A por N, B por O, C por P, etc. Esto lo podemos conseguir con el comando <strong>tr</strong> de la siguiente forma:<br /><br />
+     <strong>echo</strong> [texto] | <strong>tr</strong> [a-zA-Z] [n-za-mN-ZA-M]<br />
+<br /><strong>[a-zA-Z]</strong> <strong>→</strong> Le indica que queremos usar todos los carácteres que se encuentran entre la <strong>A</strong> y la <strong>Z</strong>.<br /><br />
+<strong>[n-za-mN-ZA-M]</strong> <strong>→</strong> Le indica que debe empezar como si el abecedario comenzara por <strong>n</strong> y terminara en <strong>m</strong>.<br />
+</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit11@bandit.labs.overthewire.org -p 2220<br />
+bandit11@bandit:~$ cat data.txt <br />
+Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh<br />
+bandit11@bandit:~$ cat data.txt | tr [a-zA-Z] [n-za-mN-ZA-M]<br />
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu</div>
+
+<h2 id="nivel-12--nivel-13"><strong>Nivel 12 → Nivel 13</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el siguiente nivel esta alojada en el archivo <strong>data.txt</strong>, este archivo es un registro hexadecimal comprimido varias veces.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> mkdir, cp, cat, xxd, file, gzip, bzip2, tar.</div>
+
+<div class="bs-callout bs-callout-primary">Primero creo una carpeta temporal y copio el archivo. Cambio al directorio que antes cree y para pasar del registro hexadecimal al archivo original uso el comando <strong>xxd -r</strong> y vuelco el nuevo contenido en un archivo llamado <strong>data</strong>. Con el comando <strong>file</strong> compruebo el tipo de archivo.<br /><br />
+Podemos ver que es un archivo comprimido con gzip, para descomprimirlo primero le cambiamos la extensión a gz y luego usamos el comando <strong>gzip -d</strong><br /><br />Volvemos a repetir el procedimiento con <strong>file</strong> y vemos que ahora tenemos un archivo <strong>bzip2</strong>. Continuar descomprimiendo hasta tener un archivo de texto plano.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit12@bandit.labs.overthewire.org -p 2220<br />
+#Creo el directorio, copio el archivo y me muevo al directorio creado.<br />
+bandit12@bandit:~$ mkdir /tmp/meizoso<br />
+bandit12@bandit:~$ cp data.txt /tmp/meizoso<br />
+bandit12@bandit:~$ cd /tmp/meizoso<br />
+<br />#Con cat leo el archivo y se lo paso al comando xxd el cual volcara ĺa salida al archivo data<br />
+bandit12@bandit:/tmp/meizoso$ cat "data.txt" | xxd -r &gt; data<br />
+<br />#Compruebo el tipo de archivo<br />
+bandit12@bandit:/tmp/meizoso$ file data<br />
+data: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix<br />
+<br />#Cambio la extensión a .gz<br />
+bandit12@bandit:/tmp/meizoso$ mv data data.gz<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data.gz  data.txt<br />
+<br />#Descomprimo el archivo con gzip<br />
+bandit12@bandit:/tmp/meizoso$ gzip -d data.gz<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data  data.txt<br />
+<br />#Descomprimo el archivo con bzip2<br />
+bandit12@bandit:/tmp/meizoso$ file data<br />
+data: bzip2 compressed data, block size = 900k<br />
+bandit12@bandit:/tmp/meizoso$ mv data data.bz<br />
+bandit12@bandit:/tmp/meizoso$ bzip2 -d data.bz<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data  data.txt<br />
+<br />#Descomprimo el archivo con gzip<br />
+bandit12@bandit:/tmp/meizoso$ file data<br />
+data: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix<br />
+bandit12@bandit:/tmp/meizoso$ mv data data.gz<br />
+bandit12@bandit:/tmp/meizoso$ gzip -d data.gz <br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data  data.txt<br />
+<br />#Descomprimo el archivo con tar<br />
+bandit12@bandit:/tmp/meizoso$ file data<br />
+data: POSIX tar archive (GNU)<br />
+bandit12@bandit:/tmp/meizoso$ mv data data.tar<br />
+bandit12@bandit:/tmp/meizoso$ tar -xf data.tar<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data5.bin  data.tar  data.txt<br />
+<br />#Descomprimo el archivo con tar<br />
+bandit12@bandit:/tmp/meizoso$ file data5.bin<br />
+data5.bin: POSIX tar archive (GNU)<br />
+bandit12@bandit:/tmp/meizoso$ mv data5.bin data5.tar<br />
+bandit12@bandit:/tmp/meizoso$ tar -xf data5.tar<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data5.tar  data6.bin  data.tar  data.txt<br />
+<br />#Descomprimo el archivo con bzip2<br />
+bandit12@bandit:/tmp/meizoso$ file data6.bin <br />
+data6.bin: bzip2 compressed data, block size = 900k<br />
+bandit12@bandit:/tmp/meizoso$ mv data6.bin data6.bz<br />
+bandit12@bandit:/tmp/meizoso$ bzip2 -d data6.bz<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data5.tar  data6  data.tar  data.txt<br />
+<br />#Descomprimo el archivo con tar<br />
+bandit12@bandit:/tmp/meizoso$ file data6<br />
+data6: POSIX tar archive (GNU)<br />
+bandit12@bandit:/tmp/meizoso$ mv data6 data6.tar<br />
+bandit12@bandit:/tmp/meizoso$ tar -xf data6.tar<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data5.tar  data6.tar  data8.bin  data.tar  data.txt<br />
+<br />#Descomprimo el archivo con gzip<br />
+bandit12@bandit:/tmp/meizoso$ file data8.bin <br />
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix<br />
+bandit12@bandit:/tmp/meizoso$ mv data8.bin data8.gz<br />
+bandit12@bandit:/tmp/meizoso$ gzip -d data8.gz<br />
+bandit12@bandit:/tmp/meizoso$ ls<br />
+data5.tar  data6.tar  data8  data.tar  data.txt<br />
+<br />#Leo el archivo en texto plano<br />
+bandit12@bandit:/tmp/meizoso$ file data8<br />
+data8: ASCII text<br />
+bandit12@bandit:/tmp/meizoso$ cat data8<br />
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL</div>
+
+<h2 id="nivel-13--nivel-14"><strong>Nivel 13 → Nivel 14</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el siguiente nivel esta alojada en <strong>/etc/bandit_pass/bandit14</strong> y solo puede ser leido por el usuario <strong>bandit14</strong>. En este nivel no se obtiene una contraseña si no una <strong>llave ssh</strong> que puede ser usada para logearse en el siguiente nivel. <br /><br /><strong>NOTA:</strong> <strong>localhost</strong> es el hostname de la maquina en la que estamos trabajando. </div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> ssh, cat</div>
+
+<div class="bs-callout bs-callout-primary">Este es un nivel muy sencillo, basta con conectarnos desde bandit13 a bandit14 con la llave ssh que encontramos en el home de bandit13. Una vez logeados como bandit14 leemos la ruta que nos indican.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit13@bandit.labs.overthewire.org -p 2220<br />
+bandit13@bandit:~$ ls<br />
+sshkey.private<br />
+bandit13@bandit:~$ ssh bandit14@localhost -i sshkey.private<br />
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14<br />
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</div>
+
+<h2 id="nivel-14--nivel-15"><strong>Nivel 14 → Nivel 15</strong></h2>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> Para ver la contraseña del próximo nivel es necesario enviar la contraseña del nivel actual al localhost por el puerto 30000.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> echo, nc</div>
+
+<div class="bs-callout bs-callout-primary">Para enviar la contraseña lo que haré es un <strong>echo</strong> con la contraseña concatenado con <strong>nc</strong> el cual hará el envio y el servidor nos contestará con la nueva contraseña.</div>
+
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh bandit14@bandit.labs.overthewire.org -p 2220<br />
+bandit14@bandit:~$ echo '4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e' | nc<br />localhost 30000<br />
+Correct!<br />
+BfMYroe26WYalil77FoDi9qh59eK5xNr<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> BfMYroe26WYalil77FoDi9qh59eK5xNr</div>
+
+:ET

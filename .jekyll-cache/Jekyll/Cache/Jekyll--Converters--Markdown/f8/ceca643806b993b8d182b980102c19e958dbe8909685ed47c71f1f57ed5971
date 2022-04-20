@@ -1,0 +1,47 @@
+I"�<h2 id="nivel-0--nivel-1"><strong>Nivel 0 → Nivel 1</strong></h2>
+<!--OBJETIVO-->
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La siguiente cadena de texto es la contraseña del próximo nivel, esta encriptada en base64: <strong>S1JZUFRPTklTR1JFQVQ=</strong></div>
+
+<!--COMANDOS-->
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> echo, base64</div>
+
+<!--EXPLICACION-->
+<div class="bs-callout bs-callout-primary">Paso la cadena de texto con un <strong>echo</strong> al comando <strong>base64 -d</strong> para desencriptarlo.</div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">echo 'S1JZUFRPTklTR1JFQVQ=' | base64 -d<br />
+KRYPTONISGREAT<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> KRYPTONISGREAT</div>
+
+<h2 id="nivel-1--nivel-2"><strong>Nivel 1 → Nivel 2</strong></h2>
+<!--OBJETIVO-->
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Objetivo:</b> La contraseña para el nivel 2 esta en la carpeta krypton2. La contraseña esta encritada con un simple sistema de rotación. Cuando se utilizan caracteres alfabéticos para texto cifrado, es normal agrupar las letras en grupos de 5 letras, independientemente de los límites de las palabras. Esto ayuda a ofuscar cualquier patrón. Este archivo ha mantenido los límites de las palabras del texto sin formato y los ha llevado al texto cifrado.</div>
+
+<!--COMANDOS-->
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Comandos:</b> cat, tr</div>
+
+<!--EXPLICACION-->
+<div class="bs-callout bs-callout-primary">Claramente en el enunciado (‘simple sistema de rotación’) hace renferencia al algoritmo ROT13 dónde cada letra del abecedario toma el valor de la 13º letra desde su posición. Por ejemplo, si tomamos la letra A y la rotamos 13 posiciones veriamos que nos da un valor de N. Sabiendo esto solo necesitamos un comando que nos cambie las A por N, B por O, C por P, etc. Esto lo podemos conseguir con el comando <strong>tr</strong> de la siguiente forma:<br /><br />
+     <strong>cat</strong> [archivo] | <strong>tr</strong> [a-zA-Z] [n-za-mN-ZA-M]<br />
+<br /><strong>[a-zA-Z]</strong> <strong>→</strong> Le indica que queremos usar todos los carácteres que se encuentran entre la <strong>A</strong> y la <strong>Z</strong>.<br /><br />
+<strong>[n-za-mN-ZA-M]</strong> <strong>→</strong> Le indica que debe empezar como si el abecedario comenzara por <strong>n</strong> y terminara en <strong>m</strong>.<br /></div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">ssh krypton1@krypton.labs.overthewire.org -p 2231<br />
+krypton1@krypton:~$ cd /krypton/krypton1<br />
+krypton1@krypton:/krypton/krypton1$ cat README<br />
+krypton1@krypton:/krypton/krypton1$ cat krypton2<br />
+YRIRY GJB CNFFJBEQ EBGGRA<br />
+krypton1@krypton:/krypton/krypton1$ cat krypton2 | tr [A-Za-z] [N-ZA-Mn-za-m]<br />
+LEVEL TWO PASSWORD ROTTEN<br />
+</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Solución:</b> ROTTEN</div>
+
+:ET

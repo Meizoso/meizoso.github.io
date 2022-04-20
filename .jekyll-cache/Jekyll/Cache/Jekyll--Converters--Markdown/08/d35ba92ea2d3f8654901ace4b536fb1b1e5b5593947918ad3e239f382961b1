@@ -1,0 +1,70 @@
+I"�&<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-diferencia-listas-y-tuplas">1. Diferencia listas y tuplas</h2>
+<p>Las listas permiten ser moidificadas después de crearlas, en cambio las tuplas no pueden ser modificadas.</p>
+
+<h2 id="2-como-se-usa-una-lista">2. Como se usa una lista</h2>
+<h3 id="crear-lista">Crear lista</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">"uno"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">]</span>
+</code></pre></div></div>
+<h3 id="imprimir-un-elemento-de-la-lista">Imprimir un elemento de la lista</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">"uno"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">uno</span>
+</code></pre></div></div>
+<h3 id="imprimir-un-elemento-de-la-lista-indice-negativo">Imprimir un elemento de la lista indice negativo</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">"uno"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tres</span>
+</code></pre></div></div>
+<h3 id="imprimir-conjunto-de-elementos-de-la-lista">Imprimir conjunto de elementos de la lista</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">"uno"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div></div>
+<h3 id="añadir-un-elemento-a-la-lista-append">Añadir un elemento a la lista (append)</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">"uno"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'tres'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'tres'</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+<h3 id="eliminar-un-elemento-por-su-índice-pop">Eliminar un elemento por su índice (pop)</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'tres'</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="s">'tres'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+<h3 id="eliminar-un-elemento-por-su-valor-remove">Eliminar un elemento por su valor (remove)</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'uno'</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div></div>
+<h2 id="3-como-se-usa-una-tupla">3. Como se usa una tupla</h2>
+<h3 id="crear-tupla">Crear tupla</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'tres'</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="imprimir-un-elemento-de-la-tupla">Imprimir un elemento de la tupla</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="mi">1</span>
+</code></pre></div></div>
+<h3 id="imprimir-un-elemento-de-la-tupla-indice-negativo">Imprimir un elemento de la tupla indice negativo</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tres</span>
+</code></pre></div></div>
+<h3 id="imprimir-conjunto-de-elementos-de-la-tupla">Imprimir conjunto de elementos de la tupla</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"tres"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,1032 @@
+I"k<h2 id="1-descubrimiento-de-equipos">1. Descubrimiento de equipos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-Pn</b></td>
+      <td>No ping</td>
+      <td>No realiza ninguna técnica de descubrimiento. Pasa directamente al análisis de puertos.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sL</b></td>
+      <td>List scan</td>
+      <td>Sólo lista quipos. No envía ningún paquete a los objetivos.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sn</b></td>
+      <td>Ping sweep</td>
+      <td>Implica un -PE + -PA 80 + -PS 443.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-PR</b></td>
+      <td>Ping ARP</td>
+      <td>Envía un ARP Request.</td>
+      <td>Sólo para objetivos en nuestra red local</td>
+    </tr>
+    <tr>
+      <td><b>-PS[puertos]</b></td>
+      <td>Ping TCP SYN</td>
+      <td>Envia un SYN. Se puede indicar lista de puertos.</td>
+      <td>Por defecto lo hace al puerto 80.</td>
+    </tr>
+    <tr>
+      <td><b>-PA[puertos]</b></td>
+      <td>Ping TCP ACK</td>
+      <td>Envia un ACK vacío. Se puede indicar lista de puertos.</td>
+      <td>Por defecto lo hace al puerto 80.</td>
+    </tr>
+    <tr>
+      <td><b>-PU[puertos]</b></td>
+      <td>Ping UDP</td>
+      <td>Envia un UDP vacío. Se puede indicar a que puerto. Por defecto lo hace al puerto 31338.</td>
+      <td>Traspasa cortafuegos que sólo filtran TCP.</td>
+    </tr>
+    <tr>
+      <td><b>-PY[puertos]</b></td>
+      <td>Ping SCTP</td>
+      <td>Envía un paquete SCTP INIT. Se puede indicar lista de puertos</td>
+      <td>Por defecto envía al puerto 80.</td>
+    </tr>
+    <tr>
+      <td><b>-PE</b></td>
+      <td>Ping ICMP echo</td>
+      <td>Envía un ICMP Echo Request.</td>
+      <td>Poco fiable. Filtrado en la mayoría de firewalls</td>
+    </tr>
+    <tr>
+      <td><b>-PP</b></td>
+      <td>Ping ICMP Timestamp</td>
+      <td>Envía un ICMP Timestamp Request</td>
+      <td>Muchos cortafuegos no filtran este ICMP</td>
+    </tr>
+    <tr>
+      <td><b>-PM</b></td>
+      <td>Ping ICMP Address mask</td>
+      <td>Envía un ICMP Address Mask Request.</td>
+      <td>Muchos cortafuegos no filtran este ICMP</td>
+    </tr>
+    <tr>
+      <td><b>-PO[proto]</b></td>
+      <td>IP protocol ping</td>
+      <td>Envia diferentes paquetes usando los portocolos IP 1, 2 y 4</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-modificadores">2. Modificadores</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-n</b></td>
+      <td>DNS</td>
+      <td>No realiza resolución inversa de DNS</td>
+      <td>Más sigiloso y rápido.</td>
+    </tr>
+    <tr>
+      <td><b>-R</b></td>
+      <td>DNS</td>
+      <td>Realiza un resolución DNS incluso a objetivos que aparecen como “down”.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–dns-servers[servers]</b></td>
+      <td>DNS</td>
+      <td>Especifica la lista de servidores DNS a utilizar para hacer la resolución.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–system-dns</b></td>
+      <td>DNS</td>
+      <td>Utiliza el sistema de resolución DNS del sistema operativo.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–traceroute</b></td>
+      <td>Ruta</td>
+      <td>Descubre la ruta seguida por los paquetes hasta el equipo objetivo.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="3-análisis-de-puertos">3. Análisis de puertos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-sT</b></td>
+      <td>Connect</td>
+      <td>Envia un SYN, luego un RST para cerrar la conexión.</td>
+      <td>Se utilizan llamadas del SO. Menos eficiente que SYN Stealth</td>
+    </tr>
+    <tr>
+      <td><b>-sS</b></td>
+      <td>SYN Stealth/Half-open scan</td>
+      <td>Envía un SYN.</td>
+      <td>Técnica usada por defecto. Rápida, fiable y relativamente sigilosa.</td>
+    </tr>
+    <tr>
+      <td><b>-sU</b></td>
+      <td>UPD Scan</td>
+      <td>Envía un UPD vacío.</td>
+      <td>Más lento que un análisis TCP. Se puede realizar en paralelo a otras técnicas. Para diferenciar entre OPEN y FILTERED se puede usar el detector de versiones (-sV).</td>
+    </tr>
+    <tr>
+      <td><b>-sI</b></td>
+      <td>Idle Scan</td>
+      <td>Usa IP origen de un equipo intermedio (Zombie) para analizar el objetivo. Según los cambios en el IPID del zombie, se deduce el setado de los puertos del objetivo.</td>
+      <td>Técnica avanzada y sigilosa. No queda registro de ningún paquete directo al objetivo.</td>
+    </tr>
+    <tr>
+      <td><b>-sA</b></td>
+      <td>TCP ACK</td>
+      <td>Envía ACK vacío.</td>
+      <td>Solo determina si los puertos están o no filtrados.</td>
+    </tr>
+    <tr>
+      <td><b>-sN</b></td>
+      <td>TCP NULL</td>
+      <td>Envía TCP con todos los flags a 0.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sF</b></td>
+      <td>TCP FIN</td>
+      <td>Envía TCP con el flag FIN a 1.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sX</b></td>
+      <td>XMas Scan</td>
+      <td>Envía TCP con los flags FIN, PSH y URG a 1.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sM</b></td>
+      <td>TCP Maimon</td>
+      <td>Envía un ACK con el flag FIN a 1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-sW</b></td>
+      <td>TCP Window</td>
+      <td>Envía ACK vacío. Dieferencia entre puertos open y closed.</td>
+      <td>No siempre es fiable.</td>
+    </tr>
+    <tr>
+      <td><b>–scanflags[flags]</b></td>
+      <td>TCP Personal</td>
+      <td>Envía TCP con los flags que se indiquen. Por defecto, trata estado de puertos como lo hace -sS, pero se puede especificar otro scan.</td>
+      <td>Flags posibles: URG, ACK, PSH, RST, SYN y FIN.</td>
+    </tr>
+    <tr>
+      <td><b>-sO</b></td>
+      <td>IP Protocol</td>
+      <td>Envía paquetes IP con una cabecera vacía (excepto para TCP, UDP y ICMP) iterando sobre el campo IP Protocol.</td>
+      <td>Determina los protocolos de transporte soportados por el objetivo.</td>
+    </tr>
+    <tr>
+      <td><b>-sY</b></td>
+      <td>SCTP INIT</td>
+      <td>Envía paquetes SCTP INIT (inicio conexión).</td>
+      <td>Equivalente a TCP SYN</td>
+    </tr>
+    <tr>
+      <td><b>-sZ</b></td>
+      <td>SCTP Cookie Echo</td>
+      <td>Envía paquetes SCTP Cookie Echo (3ª fase de conexión).</td>
+      <td>Útil si hay cortafuegos sin estado.</td>
+    </tr>
+    <tr>
+      <td><b>-b [ftpsrv]</b></td>
+      <td>FTP Bounce</td>
+      <td>Usa la funcionalidad Proxy-FTP para recorrer puertos del objetivo. Las respuestas FTP indican estado del puerto. Parámetro: username:pwd@server:port</td>
+      <td>Explota las conexiones Proxy-FTP, poco extendidas. Se usa para traspasar cortafuegos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="4-especificación-de-puertos">4. Especificación de puertos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-F</b></td>
+      <td>Fast mode</td>
+      <td>Escanea los puertos más comunes.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-r</b></td>
+      <td> </td>
+      <td>Los puertos se escanean en orden secuencial creciente.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-p[rango]</b></td>
+      <td> </td>
+      <td>Especifica el rango de puertos a escanear. -p- escanea todos los puertos. U: indica sólo UDP; T: sólo TCP; S: sólo SCTP</td>
+      <td>Ej: -p U:53,111,T:21-25,80,139,S:9</td>
+    </tr>
+    <tr>
+      <td><b>–top-ports[num]</b></td>
+      <td> </td>
+      <td>Escanea los [num] puertosmás comunes.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–port-ratio[ratio]</b></td>
+      <td> </td>
+      <td>Escanea los puertos cuyo ratio de uso se superio a [ratio]</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-detección-de-versiones">5. Detección de versiones</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-sV</b></td>
+      <td> </td>
+      <td>Interroga al conjunto de puertos abiertos detectados para tratar de descubrir servicios y versiones en puertos abiertos.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–allports</b></td>
+      <td> </td>
+      <td>Incluye todos los puertos en la fase de detección de versiones. Por defecto se excluyen algunos.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–version-intensity[num]</b></td>
+      <td> </td>
+      <td>Intensidad con que se realizan pruebas para comprobar servicios y versiones disponibles. Valores de 0 (ligera) a 9 (todas las pruebas disponibles).</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–version-light</b></td>
+      <td> </td>
+      <td>Alias de –version-intensity 2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–version-all</b></td>
+      <td> </td>
+      <td>Alias de –version-intensity 9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–versión-trace</b></td>
+      <td> </td>
+      <td>Muestra traza de actividad del análisis de versiones y servicios.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="6-detección-de-sistema-operativo">6. Detección de sistema operativo</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-O</b></td>
+      <td> </td>
+      <td>Envía paquetes TCP y UDP al objetivo. Analiza las respuestas para conocer qué tipo de implementación de la pila TCP/IP tiene el objetivo.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–osscan-limit</b></td>
+      <td> </td>
+      <td>Limita la detección del SO a objetivos prometedores.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–osscan-guess</b></td>
+      <td> </td>
+      <td>Realiza un proceso más agresivo para la detección del SO.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–max-os-tries</b></td>
+      <td> </td>
+      <td>Fija máximo de intentos para detectar el SO.</td>
+      <td>Por defecto 5 intentos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="7-evasión-de-cortafuegosids-y-spoofing">7. Evasión de cortafuegos/IDS y Spoofing</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-f</b></td>
+      <td>Fragmentar paquetes</td>
+      <td>Divide los paquetes en fragmentos de 8 bytes después de la cabecera IP. Cada f extra aumenta en 8 bytes más el tamaño de los fragmentos.</td>
+      <td>Usado para dividir las cabeceras TCP y complcar su análisis.</td>
+    </tr>
+    <tr>
+      <td><b>–mtu</b></td>
+      <td>Fragmentar paquetes</td>
+      <td>Especifica el tamaño desedo. En múltiplos de 8 bytes.</td>
+      <td>Usado para dividir las cabeceras TCP y complcar su análisis.</td>
+    </tr>
+    <tr>
+      <td><b>–data-length</b></td>
+      <td>Tamaño del paquete</td>
+      <td>Añade datos aleatorios a los paquetes enviados. Por defecto las sondas se manda vacías.</td>
+      <td>Usado debido a que un paquete no vacío es menos sospechoso.</td>
+    </tr>
+    <tr>
+      <td><b>–radomize-hosts</b></td>
+      <td>Objetivos aleatorios</td>
+      <td>Divide la lista de objetivos en grupos de hasta 16384 equipos y los analiza en un orden aleatorio.</td>
+      <td>Evita flujo de paquetes hacia IP consecutivas (suele se sospechoso).</td>
+    </tr>
+    <tr>
+      <td><b>-D[host1][,[hostN]]</b></td>
+      <td>Señuelos</td>
+      <td>Permite especificar un conjunto de IP válidas que se usarán como dirección origen en el análisis a modo de señuelos. Las respuestas de los objetivos llegarán también a los señuelos</td>
+      <td>Usado para enmascarar la propia IP en el escaneo y dificultar la traza de origen. Los señuelos deben estar activos.</td>
+    </tr>
+    <tr>
+      <td><b>-S [IP]</b></td>
+      <td>Falsear dirección de origen</td>
+      <td>Envía paquetes IP con la dirección de origen especificada.</td>
+      <td>Algunos ISP filtran las IP de origen falseadas. No se reciben respuestas.</td>
+    </tr>
+    <tr>
+      <td><b>–spoof-mac [mac]</b></td>
+      <td>Falsear dirección de origen</td>
+      <td>Envía tramas Ethernet con la dirección de origen especificada. Si no se especifica completa el resto se completa de forma aleatoria.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-g [port]</b></td>
+      <td>Falsear puerto de origen</td>
+      <td>Envía paquetes usando el puerto especificado, cuando sea posible.</td>
+      <td>Usado porque muchos cortafuegos aceptan conexiones entrantes a puertos típicos como TCP20 ó UDP53.</td>
+    </tr>
+    <tr>
+      <td><b>–source port</b></td>
+      <td>Falsear puerto de origen</td>
+      <td>Envía paquetes usando el puerto especificado, cuando sea posible.</td>
+      <td>Usado porque muchos cortafuegos aceptan conexiones entrantes a puertos típicos como TCP20 ó UDP53.</td>
+    </tr>
+    <tr>
+      <td><b>-e [iface]</b></td>
+      <td>Definir interfaz</td>
+      <td>Define la interfaz de red en caso de existir múltiples.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–ip-options[opt]</b></td>
+      <td>Opciones IP</td>
+      <td>Permite fijar opciones del protocolo IP. Routers bloquean muchas de ellas. Útil para definir o reconocer rutas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–ttl [valor]</b></td>
+      <td>TTL</td>
+      <td>Fija el tiempo de vida de las sondas enviadas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–badsum</b></td>
+      <td>Checksums incorrectos</td>
+      <td>Usa checksum inválidos para TCP, UDP y SCTP.</td>
+      <td>Usado porque muchos cortafuegos/IDS no procesan este campo y los objetivos si.</td>
+    </tr>
+    <tr>
+      <td><b>–adler32</b></td>
+      <td>SCTP Checksum</td>
+      <td>Utiliza metodo de cálculo de resumen Adler32, en lugar del actual CRC-32C, para paquetes SCTP.</td>
+      <td>Útil para obtener respuestas de implementaciones SCTP antiguas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="8-temporización-y-rendimiento">8. Temporización y rendimiento</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>–min-hostgroup [num]</b></td>
+      <td>Objetivos en paralelo</td>
+      <td>Establece los límites mínimo y máximo que se pueden analizar de forma concurrente.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–max-hostgroup [num]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–min-parallelism [num]</b></td>
+      <td>Pruebas en paralelo</td>
+      <td>Establece los límites mínimo y máximo de pruebas que pueden estar llevándose a cabo de forma concurrente.</td>
+      <td>Útil en redes o equipos lentos. Valor demasiado alto puede afectar a la precisión.</td>
+    </tr>
+    <tr>
+      <td><b>–max-parallelism [num]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–min-rtt-timeout [time]</b></td>
+      <td>Tiempo de respuesta de las sondas</td>
+      <td>Modifica el tiempo de espera de respuestas enviadas a sondas enviadas. Si vence el tiempo de espera, Nmap considera que no hay respuesta y sigue con la siguiente sonda. Por defecto valor dinámico basado en el tiempo de sondas anteriores.</td>
+      <td>Útil en redes rápidas o cuando muchos puertos están cerrados.</td>
+    </tr>
+    <tr>
+      <td><b>–max-rtt-timeout [time]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–initial-rtt-timeout [time]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–max-retries [num]</b></td>
+      <td>Retransmisiones</td>
+      <td>Especifica el número de retransmisiones para cada sonda.</td>
+      <td>Por defecto 10 reintentos.</td>
+    </tr>
+    <tr>
+      <td><b>–host-timeout [time]</b></td>
+      <td>Tiempo de análisis de equipo</td>
+      <td>Especifica el tiempo máximo que ocupa nmap en el análisis de un equipo completo. Si vence este tiempo, no se muestra nada sobre el mismo en el análisis final</td>
+      <td>Útil para análisis grandes en redes poco fiables o lentas, a costa de perder algunos resultados.</td>
+    </tr>
+    <tr>
+      <td><b>–scan-delay [time]</b></td>
+      <td>Tiempo entre sondas</td>
+      <td>Define el tiempo inicial y máximo que espera nmap entre cada prueba.</td>
+      <td>Útil si la red limita la tasa de transferencia o de respuestas.</td>
+    </tr>
+    <tr>
+      <td><b>–max-scan-delay [time]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–min-rate [num]</b></td>
+      <td>Tasa de envío de sondas</td>
+      <td>Controla la tasa de envío de sondas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–max-rate [num]</b></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–defeat-rst-ratelimit</b></td>
+      <td>Límite de respuestas RST</td>
+      <td>Muchos equipos limitan, además del número de ICMP, el número del RST que envían. Por defecto nmap se ajusta al límite. Este parámetro hace que nmap no tenga en cuenta este límite.</td>
+      <td>Puede reducir precisión.</td>
+    </tr>
+    <tr>
+      <td><b>–nsock-engine [motor]</b></td>
+      <td>Moto E/S nsock</td>
+      <td>Fuerza el uso de un motor de control de entrada salida.</td>
+      <td>Valores posibles: epoll y select</td>
+    </tr>
+    <tr>
+      <td><b>-T[plant]</b></td>
+      <td>Plantillas de tiempo</td>
+      <td>Define una plantilla genérica de tiempos, que configura varios de los parámetros vistos anteriormente.</td>
+      <td>Valores de + a - lento: paranoid(T0), sneaky(T1), polite(T2), normal(T3), aggressive(T4), insane(T5)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="9-scripting">9. Scripting</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-sC</b></td>
+      <td> </td>
+      <td>Incluye en el análisis actual el conjunto por defecto de scripts (algunos pueden ser intrusivos)</td>
+      <td>Equivalente a: –script default</td>
+    </tr>
+    <tr>
+      <td><b>–script [valor]</b></td>
+      <td> </td>
+      <td>Define los scripts a utilizar. Valor puede ser un nombre de fichero, categoria, directorio, expresión, etc. Alias all ejecuta todos los scripts (peligroso)</td>
+      <td>Valores separados por comas. Prefijo + hace que se ejecuten aunque no corresponda.</td>
+    </tr>
+    <tr>
+      <td><b>–script-args [args]</b></td>
+      <td> </td>
+      <td>Argumentos a pasar a lios scripts. Formato: [nombre]=[valor]</td>
+      <td>Argumentos separados por comas. Prioridad sobre los definidos en fichero.</td>
+    </tr>
+    <tr>
+      <td><b>–script-args-file [file]</b></td>
+      <td> </td>
+      <td>Carga argumentos de un fichero.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–scritp-help [valor]</b></td>
+      <td> </td>
+      <td>Muestra ayuda sobre los scripts.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–script-trace</b></td>
+      <td> </td>
+      <td>Símil de –packet-trace una capa ISO por encima. Muestra todas las comunicaciones realizadas por un script.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–script-updatedb</b></td>
+      <td> </td>
+      <td>Actualiza la base de datos de scripts.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="10-especificación-de-objetivos">10. Especificación de objetivos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-iL [fich]</b></td>
+      <td>Objetivos en fichero</td>
+      <td>Se pasan los objetivos en un fichero, cada uno en una línea.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-iR [num]</b></td>
+      <td>Objetivos aleatorios</td>
+      <td>Elige los objetivos de forma aleatoria.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–exclude [hosts]</b></td>
+      <td>Lista de exclusión</td>
+      <td>Indica equipos a excluir del análisis.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–exclude [fich]</b></td>
+      <td>Fichero de exclusión</td>
+      <td>Se pasan por un fichero los equipos a excluir del análisis.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="11-salida">11. Salida</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-oN [file]</b></td>
+      <td>Salida normal</td>
+      <td>Guarda en un fichero una salida muy similar a la mostrada por pantalla en modo interactivo.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-oX [file]</b></td>
+      <td>Salida XML</td>
+      <td>Guarda la salida en un fichero XML .</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-oS</b></td>
+      <td>Salida Script Kiddie</td>
+      <td>Salida muy similar a la del modo interactivo pero sustituyendo carácteres y capitalización.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-oG</b></td>
+      <td>Salida grepable</td>
+      <td>Salida facilmente tratable con el comando grep.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-oA [patrón]</b></td>
+      <td>Salida en todos los formatos.</td>
+      <td>Crea un fichero para todos los tipos de salida.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-v</b></td>
+      <td>Verbosidad</td>
+      <td>Aumenta la cantidad de información sobre el progreso del análisis que se muestra por pantalla.</td>
+      <td>Más v muestra una mayor verbosidad.</td>
+    </tr>
+    <tr>
+      <td><b>-d</b></td>
+      <td>Depuración</td>
+      <td>Añade información de depuración a la salida que Nmap muestra por pantalla.</td>
+      <td>Más p muestra más infroación</td>
+    </tr>
+    <tr>
+      <td><b>–reason</b></td>
+      <td>Razón</td>
+      <td>Indica la razón por la que se ha concluido el estado de un puerto o equipo.</td>
+      <td>Permite diferenciar el tipo de respuestas que ha generado un puerto cerrado.</td>
+    </tr>
+    <tr>
+      <td><b>–stats-every [time]</b></td>
+      <td>Estadísticas</td>
+      <td>Indica cada cuanto tiempo se imprimen estadísticas sobre el tiempo restante del análisis.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–packet-trace</b></td>
+      <td>Traza de paquetes</td>
+      <td>Imprime información sobre cada paquete que se envía o recibe.</td>
+      <td>Incluye información de –version-trace y –script-trace</td>
+    </tr>
+    <tr>
+      <td><b>–open</b></td>
+      <td>Puertos abiertos</td>
+      <td>Muestra solo los puertos que están abiertos.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–iflist</b></td>
+      <td>Interfaces y rutas</td>
+      <td>Muesta únicamente el listado de interfaces y de rutas detectado.</td>
+      <td>Útil para depuración.</td>
+    </tr>
+    <tr>
+      <td><b>–log-errors</b></td>
+      <td>Errores</td>
+      <td>Guarda los errores generados durante la ejecución y los muestra por pantalla.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–append-output</b></td>
+      <td>Ficheros de salida</td>
+      <td>Instruye a nmap para aladir los resultados del análisis actual a un fichero de salida existente, en lugar de borrar el contenido de dicho fichero.</td>
+      <td>Puede causar problemas con archivos XML.</td>
+    </tr>
+    <tr>
+      <td><b>–resume [file]</b></td>
+      <td>Continuar</td>
+      <td>Continúa un análisis en el punto en que se quedó, si se indica como parámetro un fichero generado con los modificadores -oN o -oG</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–stylesheet [file]</b></td>
+      <td>Hoja de estilos</td>
+      <td>Indica que hoja de estilos XSL incrutar en la salida XML.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–webxml</b></td>
+      <td>Hoja de estilos</td>
+      <td>Alias para –stylesheet http://nmap.org/svn/docs/nmap.xsl</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–no-stylesheet</b></td>
+      <td>Hoja de estilos</td>
+      <td>Indica que no se incruste ningún enlace a hoja d estilos en la salida XML.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="12-miscelánea">12. Miscelánea</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>-6</b></td>
+      <td>IPv6</td>
+      <td>Habilita el análisis de redes IPv6.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-A</b></td>
+      <td>Análisis agresivo</td>
+      <td>Alias para -O -sV -sC –traceroute.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–datadir [dir]</b></td>
+      <td>Directorio de datos</td>
+      <td>Indica el directorio donde Nmap lee algunos ficheros que necesita para su uso.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–servicedb [file]</b></td>
+      <td>Fichero de servicios</td>
+      <td>Indica una localización personalizada para el fichero donde Nmao obtiene la información sobre servicios.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–versiondb [file]</b></td>
+      <td>Fichero de versiones</td>
+      <td>Indica la ubicación del ficheri de donde Nmap obtiene las sondas que debe enviar para detectar servicios (-sV).</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–send-eth</b></td>
+      <td>Escribir en tramas ethernet</td>
+      <td>Escribe directamente tramas a nivel ethernet sin usar el API de red ni transporte.</td>
+      <td>Usado para evitar limitaciones de algunas implentaciones de la pila TCP/IP. Activada por defecto en la versión de windows.</td>
+    </tr>
+    <tr>
+      <td><b>–send-ip</b></td>
+      <td>Escribir tramas IP</td>
+      <td>Escribe paquetes a nivel IP, y los pasa al SO para que este se encarge de enviarlos.</td>
+      <td>Complementaria a la opción anterior.</td>
+    </tr>
+    <tr>
+      <td><b>–privileged</b></td>
+      <td>Modo privilegiado</td>
+      <td>Asume que tiene suficientes permisos para realizar operaciones que requieren elevación de privilegios.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–unprivileged</b></td>
+      <td>Modo sin privilegios</td>
+      <td>Opuesto a –privileged</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>–release-memory</b></td>
+      <td>Liberar memoria</td>
+      <td>Hace que Nmap libere toda su memoria antes de finalizar su ejecución.</td>
+      <td>Facilita el descubrimiento de filtraciones de memoria.</td>
+    </tr>
+    <tr>
+      <td><b>-v / –version</b></td>
+      <td>Versión</td>
+      <td>Imprime la versión de Nmap.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>-h / –help</b></td>
+      <td>Ayuda</td>
+      <td>Imprime la página de ayuda.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="13-interacción-en-tiempo-de-ejecución">13. Interacción en tiempo de ejecución</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opción</th>
+      <th>Nombre</th>
+      <th>Funcionamiento</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>v / V</b></td>
+      <td> </td>
+      <td>Aumenta / disminuye el nivel de verbosidad.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>d / D</b></td>
+      <td> </td>
+      <td>Aumenta / disminuye la cantidad de información de depuración que se muestra.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>p / P</b></td>
+      <td> </td>
+      <td>Activa / desactiva la traza de paquetes (–pack-trace)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><b>?</b></td>
+      <td> </td>
+      <td>Muestra la pantalla de ayuda de interacción en timepo de ejecución.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="resumen-de-mis-comandos-más-usados">Resumen de mis comandos más usados</h2>
+<h3 id="ver-interfaces-y-rutas-locales">Ver interfaces y rutas locales</h3>
+<div class="bs-callout bs-callout-primary">nmap <b>-iflist</b></div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ nmap -iflist<br />
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 07:46 CEST<br />
+************************INTERFACES************************<br />
+DEV   (SHORT) IP/MASK                      TYPE     UP MTU   MAC<br />
+lo    (lo)    127.0.0.1/8                  loopback up 65536<br />
+lo    (lo)    ::1/128                      loopback up 65536<br />
+eth0  (eth0)  (none)/0                     ethernet up 1500  20:1A:06:35:51:B4<br />
+wlan0 (wlan0) 192.168.43.236/24            ethernet up 1500  0C:D2:92:83:0C:ED<br />
+wlan0 (wlan0) fe80::c1cb:1f9f:c6de:1956/64 ethernet up 1500  0C:D2:92:83:0C:ED<br />
+
+**************************ROUTES**************************<br />
+DST/MASK                      DEV   METRIC GATEWAY<br />
+192.168.43.0/24               wlan0 600<br />
+0.0.0.0/0                     wlan0 600    192.168.43.1<br />
+::1/128                       lo    0<br />
+fe80::c1cb:1f9f:c6de:1956/128 wlan0 0<br />
+fe80::/64                     wlan0 600<br />
+ff00::/8                      wlan0 256<br /></pre></div>
+<p><br /></p>
+
+<h3 id="escanear-enrutadores-cisco">Escanear enrutadores Cisco</h3>
+<div class="bs-callout bs-callout-primary">nmap -p1-25,80,512-515,2001,4001,6001,9001 [IP]]</div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ nmap -p1-25,80,512-515,2001,4001,6001,9001 127.0.0.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 09:19 CEST
+Nmap scan report for .........
+Host is up (0.32s latency).
+
+PORT     STATE SERVICE
+1/tcp    open  tcpmux
+2/tcp    open  compressnet
+3/tcp    open  compressnet
+4/tcp    open  unknown
+5/tcp    open  rje
+6/tcp    open  unknown
+7/tcp    open  echo
+8/tcp    open  unknown
+9/tcp    open  discard
+10/tcp   open  unknown
+11/tcp   open  systat
+12/tcp   open  unknown
+13/tcp   open  daytime
+14/tcp   open  unknown
+15/tcp   open  netstat
+16/tcp   open  unknown
+17/tcp   open  qotd
+18/tcp   open  msp
+19/tcp   open  chargen
+20/tcp   open  ftp-data
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+24/tcp   open  priv-mail
+25/tcp   open  smtp
+80/tcp   open  http
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+515/tcp  open  printer
+2001/tcp open  dc
+4001/tcp open  newoak
+6001/tcp open  X11:1
+9001/tcp open  tor-orport
+
+Nmap done: 1 IP address (1 host up) scanned in 1.52 seconds
+<br /></pre></div>
+<p><br /></p>
+
+<h3 id="escanear-tftp-enrutador">Escanear TFTP enrutador</h3>
+<div class="bs-callout bs-callout-primary">sudo nmap -sV -sC -sU -p 69 [IP]</div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ sudo nmap -sV -sC -sU -p 69 127.0.0.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-15 09:47 CEST
+Nmap scan report for ............
+Host is up (0.22s latency).
+
+PORT   STATE SERVICE VERSION
+69/udp open  tftp    Plan 9 tftpd
+Service Info: OS: Plan 9; CPE: cpe:/o:belllabs:plan_9
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.30 seconds
+
+<br /></pre></div>
+<p><br /></p>
+:ET

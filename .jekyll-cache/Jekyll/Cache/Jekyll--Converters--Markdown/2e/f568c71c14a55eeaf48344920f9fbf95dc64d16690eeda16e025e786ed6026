@@ -1,0 +1,147 @@
+I"#<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="tabla-de-estructuras-de-control-y-bucles">Tabla de estructuras de control y bucles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Significado</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>if</b></center></td>
+      <td><strong>Si</strong> se cumple la expresión condicional se ejecuta el bloque de sentencias seguidas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>if else y elif</b></center></td>
+      <td><strong>De lo contrario Si</strong> se cumple la expresión condicional se ejecuta el bloque de sentencias seguidas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>else</b></center></td>
+      <td><strong>De lo contrario</strong> se cumple sin evaluar ninguna expresión condicional y ejecuta el bloque de sentencias seguidas.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>is</b></center></td>
+      <td>Se podría traducir por <strong>==</strong>. Comprueba si los dos valores son iguales.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>in</b></center></td>
+      <td>Comprueba si un valor esta en una colección de valores (Listas/Tuplas)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>not in</b></center></td>
+      <td>Comprueba si un valor <strong>no</strong> esta en una colección de valores (Listas/Tuplas)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>while</b></center></td>
+      <td><strong>Mientras</strong> la condición se cumpla se seguirá ejecutando el código</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>for</b></center></td>
+      <td>Se utiliza para recorrer los elementos de un objeto iterable (lista, tupla, conjunto, diccionario, …) y ejecutar un bloque de código</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="if">If</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">numero1</span> <span class="o">==</span> <span class="n">numero2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Son iguales"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="if-else-y-elif">if else y elif</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">numero1</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número 1 es distinto a 10"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero1</span> <span class="o">==</span> <span class="mi">30</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número 1 es igual a 30"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="else">else</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">numero1</span> <span class="o">==</span> <span class="n">numero2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número 1 es igual a Número 2"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número 1 es distinto a Número 2"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="is">is</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">n1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">n1</span> <span class="ow">is</span> <span class="n">n2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Son iguales"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Son distintos"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="in">in</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">15</span> <span class="ow">in</span> <span class="n">numero1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número encontrado"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Número no encontrado"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="not-in">not in</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">15</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numero1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"El número no esta en la lista"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"El número esta en la lista"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="while">while</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">numero1</span> <span class="o">&lt;</span> <span class="n">numero2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Tu número es: "</span><span class="p">,</span> <span class="n">numero1</span><span class="p">)</span>
+    <span class="n">numero1</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+<h4 id="salida-while">Salida while</h4>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python while.py<br />
+Tu número es:  0<br />
+Tu número es:  1<br />
+Tu número es:  2<br />
+Tu número es:  3<br />
+Tu número es:  4<br /></div>
+<p><br /></p>
+
+<h3 id="for">for</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numero1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Tu número es: "</span><span class="p">,</span><span class="n">n</span>
+</code></pre></div></div>
+<h4 id="salida-for">Salida for</h4>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python for.py<br />
+Tu número es:  0<br />
+Tu número es:  2<br />
+Tu número es:  5<br />
+Tu número es:  8<br /></div>
+<p><br /></p>
+:ET

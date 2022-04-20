@@ -1,0 +1,47 @@
+I"�<h2 id="1-tipos-de-tipologías">1. Tipos de tipologías</h2>
+<center><img with="450px" src="images/topologias_de_red/topologias.png" /></center>
+
+<h3 id="bus">Bus</h3>
+<p>Tiene un único bus de comunicaciones al cual se conectanlos diferentes dispositivos. De esta forma todos los dispositivos comparten el mismo canal.</p>
+
+<h3 id="estrella">Estrella</h3>
+<p>Toda los host de la red están conectados a un único punto central y todas las comunicaciones se hacen a través de este punto. Los dispositivos no están conectados entre si.</p>
+
+<h3 id="anillo">Anillo</h3>
+<p>Cada nodo esta conectado a otros dos nodos, formando una única ruta continua. Los datos viajan de un nodo a otro y cada nodo maneja cada paquete.</p>
+
+<h3 id="doble-anillo">Doble anillo</h3>
+<p>Es igual que la de anillo simple pero hay una red más para proporcionar fiabilidad y flexibilidad.</p>
+
+<h3 id="árbol">Árbol</h3>
+<p>Es como si unieramos varias topologías de estrella pero sin un nodo central.</p>
+
+<h3 id="malla">Malla</h3>
+<p>Los nodos estan interconectados entre si.</p>
+
+<h3 id="totalmente-conexa">Totalmente Conexa</h3>
+<p>Como la topología en maya pero aqui <strong>todos</strong> los nodos están interconectados entre si.</p>
+
+<h2 id="2-usos">2. Usos</h2>
+
+<h3 id="bus-1">Bus</h3>
+<p>Negocios pequeños y redes domésticas.</p>
+
+<h3 id="estrella-1">Estrella</h3>
+<p>Redes locales (LAN).</p>
+
+<h3 id="anillo-1">Anillo</h3>
+<p>Fábricas, plantas indutriales.</p>
+
+<h3 id="doble-anillo-1">Doble anillo</h3>
+<p>Fábricas, plantas industriales.</p>
+
+<h3 id="árbol-1">Árbol</h3>
+<p>Grandes redes donde todos los nodos necesitan recibir la información en el mismo momento.</p>
+
+<h3 id="malla-1">Malla</h3>
+<p>Grandes empresas que tienen muchos nodos que necesitan comunicarse entre si.</p>
+
+<h3 id="totalmente-conexa-1">Totalmente conexa</h3>
+<p>Grandes empresas que tienen muchos nodos que necesitan comunicarse entre si.</p>
+:ET

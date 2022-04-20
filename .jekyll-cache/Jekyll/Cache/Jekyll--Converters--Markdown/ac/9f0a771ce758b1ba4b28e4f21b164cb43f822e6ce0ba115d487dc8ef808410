@@ -1,0 +1,165 @@
+I"X <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-capturar-errores">1. Capturar errores</h2>
+<h3 id="código-sin-captura-del-error">Código sin captura del error</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">myFuncion</span><span class="p">():</span>
+    <span class="n">n_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Introduzca su número de identificación:"</span><span class="p">))</span>
+<span class="n">myFuncion</span><span class="p">()</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python errores.py<br />
+Introduzca su número de identificación:abc<br />
+Traceback (most recent call last):<br />
+  File "/home/meizoso/pruebas.py", line 4, in &lt;\module&gt;<br />
+    myFuncion()<br />
+  File "/home/meizoso/pruebas.py", line 2, in myFuncion<br />
+    n_id = int(input("Introduzca su número de identificación:"))<br />
+ValueError: invalid literal for int() with base 10: 'abc'<br /></div>
+<p><br /></p>
+
+<h3 id="código-con-captura-del-error">Código con captura del error</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">myFuncion</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Introduzca su número de identificación:"</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'ERROR: Debe introducir un número.'</span><span class="p">)</span>
+<span class="n">myFuncion</span><span class="p">()</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python errores.py<br />
+Introduzca su número de identificación: abc<br />
+ERROR: Debe introducir un número.<br /></div>
+<p><br /></p>
+
+<h3 id="código-con-captura-del-error-y-finally">Código con captura del error y finally</h3>
+<div class="bs-callout bs-callout-primary">El código escrito en <strong>finally:</strong> se ejecuta siempre, de un error o no.</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">myFuncion</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Introduzca su número de identificación:"</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'ERROR: Debe introducir un número.'</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">'Saliendo del programa....'</span><span class="p">)</span>
+<span class="n">myFuncion</span><span class="p">()</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python errores.py<br />
+Introduzca su número de identificación:asd<br />
+ERROR: Debe introducir un número.<br />
+Saliendo del programa....<br /><br />
+&gt;$ python errores.py<br />
+Introduzca su número de identificación:123<br />
+Saliendo del programa....<br /></div>
+<p><br /></p>
+
+<h2 id="2-capturar-el-error-según-su-tipo">2. Capturar el error según su tipo</h2>
+<h3 id="tabla-con-los-tipos-de-errores">Tabla con los tipos de errores</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo de error</th>
+      <th>Explicación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>ArithmeticError</b></td>
+      <td>Errores aritméticos en general</td>
+    </tr>
+    <tr>
+      <td><b>FloatingPointError</b></td>
+      <td>Error en una operación de coma flotante</td>
+    </tr>
+    <tr>
+      <td><b>OverflowError</b></td>
+      <td>Resultado demasiado grande para poder representarse</td>
+    </tr>
+    <tr>
+      <td><b>ZeroDivisionError</b></td>
+      <td>Se intenta dividir por cero</td>
+    </tr>
+    <tr>
+      <td><b>EOFError</b></td>
+      <td>Se intenta leer más allá del final de un fichero</td>
+    </tr>
+    <tr>
+      <td><b>ImportError</b></td>
+      <td>No se encuentra el módulo que se quiere importar</td>
+    </tr>
+    <tr>
+      <td><b>IndexError</b></td>
+      <td>El índice de la secuencia esta fuera del rango</td>
+    </tr>
+    <tr>
+      <td><b>KeyError</b></td>
+      <td>La clave no existe</td>
+    </tr>
+    <tr>
+      <td><b>Name Error</b></td>
+      <td>No se encuentran variables/funciones/otros elementos con el nombre indicado</td>
+    </tr>
+    <tr>
+      <td><b>RuntimeError</b></td>
+      <td>Error en un tiempo de ejecución no especificado</td>
+    </tr>
+    <tr>
+      <td><b>SyntaxError</b></td>
+      <td>Error interno del intérprete</td>
+    </tr>
+    <tr>
+      <td><b>TyeError</b></td>
+      <td>Tipo de argumento inapropiado</td>
+    </tr>
+    <tr>
+      <td><b>ValueError</b></td>
+      <td>Valor de arguemento inapropiado</td>
+    </tr>
+    <tr>
+      <td><b>KeyboardInterrupt</b></td>
+      <td>Programa interrumpido por el usuario</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ejmeplo-de-uso">Ejmeplo de uso</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">myFuncion</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Introduzca su número de identificación:"</span><span class="p">))</span>
+    <span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'ERROR: Debe introducir un número.'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Programa interrumpido por el usuario'</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">'Saliendo del programa....'</span><span class="p">)</span>
+<span class="n">myFuncion</span><span class="p">()</span>
+</code></pre></div></div>
+
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python errores.py<br />
+Introduzca su número de identificación:asd<br />
+ERROR: Debe introducir un número.<br />
+Saliendo del programa....<br /><br />
+&gt;$ python errores.py<br />
+Introduzca su número de identificación:^CPrograma interrumpido por el usuario<br />
+Saliendo del programa....<br /></div>
+<p><br /></p>
+:ET

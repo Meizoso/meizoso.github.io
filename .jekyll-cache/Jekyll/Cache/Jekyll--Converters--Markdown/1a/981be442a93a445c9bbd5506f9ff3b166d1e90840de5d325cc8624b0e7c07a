@@ -1,0 +1,51 @@
+I"�<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-qué-hace-el-encapsulamiento">1. ¿Qué hace el encapsulamiento?</h2>
+<p>El <strong>encapsulamiento</strong> hace que los atributos o métodos internos de una clase no se puedan acceder ni modificar desde fuera, sino que tan solo el propio objeto pueda acceder a ellos.</p>
+
+<h2 id="2-encapsulando-metódos-y-atributos">2. Encapsulando metódos y atributos</h2>
+<h3 id="código-sin-encapsulamiento">Código sin encapsulamiento</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Clase</span><span class="p">:</span>
+    <span class="n">atributo_clase</span> <span class="o">=</span> <span class="s">"Hola"</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atributo_instancia</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">atributo_instancia</span> <span class="o">=</span> <span class="n">atributo_instancia</span>
+
+<span class="n">mi_clase</span> <span class="o">=</span> <span class="n">Clase</span><span class="p">(</span><span class="s">"Mundo"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mi_clase</span><span class="p">.</span><span class="n">atributo_clase</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mi_clase</span><span class="p">.</span><span class="n">atributo_instancia</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python encapsulamiento.py
+Hola
+Mundo</pre></div>
+
+<p><br /></p>
+
+<h3 id="código-con-encapsulamiento">Código con encapsulamiento</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Clase</span><span class="p">:</span>
+    <span class="n">__atributo_clase</span> <span class="o">=</span> <span class="s">"Hola"</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atributo_instancia</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">atributo_instancia</span> <span class="o">=</span> <span class="n">atributo_instancia</span>
+
+<span class="n">mi_clase</span> <span class="o">=</span> <span class="n">Clase</span><span class="p">(</span><span class="s">"Mundo"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mi_clase</span><span class="p">.</span><span class="n">atributo_clase</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mi_clase</span><span class="p">.</span><span class="n">atributo_instancia</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python encapsulamiento.py
+Traceback (most recent call last):
+  File "/home/p4vlichenko/python/range.py", line 7, in <module>
+    print(mi_clase.atributo_clase)
+AttributeError: 'Clase' object has no attribute 'atributo_clase'
+&lt;/pre&gt;&lt;/div&gt;
+</module></pre></div>
+:ET

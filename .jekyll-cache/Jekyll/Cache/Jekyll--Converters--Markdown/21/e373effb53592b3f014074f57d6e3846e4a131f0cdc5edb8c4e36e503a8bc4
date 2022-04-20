@@ -1,0 +1,53 @@
+I"�<h2 id="1-código">1. Código</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nv">var</span><span class="o">=</span><span class="si">$(</span>ping <span class="nv">$1</span> <span class="nt">-c</span> 1 | <span class="nb">grep</span> <span class="s2">"ttl"</span> | <span class="nb">awk</span> <span class="s1">'{print $6}'</span> | <span class="nb">cut</span> <span class="nt">-d</span> <span class="s1">'='</span> <span class="nt">-f</span> 2<span class="si">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$var</span> <span class="nt">-lt</span> 65 <span class="o">]</span><span class="p">;</span><span class="k">then
+   </span><span class="nb">echo</span> <span class="s1">'Linux'</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$var</span> <span class="nt">-gt</span> 64 <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="nv">$var</span> <span class="nt">-lt</span> 129 <span class="o">]</span><span class="p">;</span><span class="k">then
+   </span><span class="nb">echo</span> <span class="s1">'Windows'</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$var</span> <span class="nt">-gt</span> 128 <span class="o">]</span><span class="p">;</span><span class="k">then
+   </span><span class="nb">echo</span> <span class="s1">'Desconocido'</span>
+<span class="k">else
+   </span><span class="nb">echo</span> <span class="s1">'Error'</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<h2 id="2-explicación">2. Explicación</h2>
+
+<h3 id="varping-1--c-1--grep-ttl--awk-print-6--cut--d---f">var=$(ping $1 -c 1 | grep “ttl” | awk ‘{print $6}’ | cut -d ‘=’ -f</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parámetros</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>ping $1 -c 1</b></center></td>
+      <td>Hacemos un ping a la ip del host.</td>
+    </tr>
+    <tr>
+      <td><center><b>-grep "ttl"</b></center></td>
+      <td>Filtramos el resultado con <strong>grep</strong> para mostrar solo la línea que nos interesa.</td>
+    </tr>
+    <tr>
+      <td><center><b>awk '{print $6}'</b></center></td>
+      <td>Extraemos el sexto argumento (que corresponde a <strong>ttl=xx</strong>).</td>
+    </tr>
+    <tr>
+      <td><center><b>cut -d '=' -f</b></center></td>
+      <td>Extraemos lo que hay después del <strong>=</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resto-de-script">Resto de script</h3>
+<div class="bs-callout bs-callout-primary">El resto del script simplemete comprueba si el número de <strong>TTL</strong> es menor de 65 o mayor de 64 y menor de 129 o mayor de 128.<br /><br />
+    <strong>Menor de 65</strong> → Linux<br /><br />
+    <strong>Mayor de 64 y menor de 129</strong> → Windows<br /><br />
+    <strong>Mayor de 129</strong> → Desconocido (pueden ser varios SO)<br /></div>
+
+:ET

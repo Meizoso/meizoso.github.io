@@ -1,0 +1,114 @@
+I"�<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="tabla-de-operadores-aritméticos">Tabla de operadores aritméticos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Significado</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>+</b></center></td>
+      <td>Suma</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>-</b></center></td>
+      <td>Resta</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>-</b></center></td>
+      <td>Negación</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>*</b></center></td>
+      <td>Multiplicación</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>**</b></center></td>
+      <td>Exponente</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>/</b></center></td>
+      <td>División</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>//</b></center></td>
+      <td>División entera</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center><b>%</b></center></td>
+      <td>Módulo</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="suma-">Suma +</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+<span class="mi">30</span>
+</code></pre></div></div>
+
+<h3 id="resta--">Resta -</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">-</span> <span class="n">numero2</span>
+<span class="o">-</span><span class="mi">10</span>
+</code></pre></div></div>
+
+<h3 id="negación--">Negación -</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">+</span> <span class="o">-</span><span class="n">numero2</span>
+<span class="o">-</span><span class="mi">10</span>
+</code></pre></div></div>
+
+<h3 id="multiplicación-">Multiplicación *</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span><span class="o">*</span><span class="n">numero2</span>
+<span class="mi">200</span>
+</code></pre></div></div>
+
+<h3 id="exponente-">Exponente **</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span><span class="o">**</span><span class="n">numero2</span>
+<span class="mi">100000000000000000000</span>
+</code></pre></div></div>
+
+<h3 id="división-">División /</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span><span class="o">/</span><span class="n">numero2</span>
+<span class="mf">0.5</span>
+</code></pre></div></div>
+
+<h3 id="división-entera-">División entera //</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span><span class="o">//</span><span class="n">numero2</span>
+<span class="mi">0</span>
+</code></pre></div></div>
+
+<h3 id="módulo-">Módulo %</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span><span class="o">%</span><span class="n">numero2</span>
+<span class="mi">10</span>
+</code></pre></div></div>
+:ET

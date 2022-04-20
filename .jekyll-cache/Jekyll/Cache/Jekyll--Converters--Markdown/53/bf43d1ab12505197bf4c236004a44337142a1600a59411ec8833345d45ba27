@@ -1,0 +1,28 @@
+I"�<table>
+  <thead>
+    <tr>
+      <th>Web</th>
+      <th>Información</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><a href="https://www.mclibre.org/consultar/python/index.html">mclibre.org</a></center></td>
+      <td>Introducción a la programación con Python</td>
+    </tr>
+    <tr>
+      <td><center><a href="https://www.youtube.com/watch?v=G2FCfQj-9ig&amp;list=PLU8oAlHdN5BlvPxziopYZRd55pdqFwkeS">Pildoras informáticas - Youtube</a></center></td>
+      <td>Curso completo sobre python</td>
+    </tr>
+    <tr>
+      <td><center><a href="https://www.youtube.com/watch?v=MUq8qSJludg&amp;list=PL2PZw96yQChwiVWeHugpor4Dre_tt7uq7">John Ortiz Ordoñez - YouTube</a></center></td>
+      <td>Ejercicios de programación Python</td>
+    </tr>
+    <tr>
+      <td><center><a href="https://entrenamiento-python-basico.readthedocs.io/es/latest/index.html">entrenamiento-python-basico.readthedocs.io</a></center></td>
+      <td>Programación en Python - Nivel básico</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

@@ -1,0 +1,40 @@
+I"0<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-como-ingresar-datos-por-teclado">1. Como ingresar datos por teclado</h2>
+<h3 id="código">Código</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Escriba su nombre: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Buenos dias "</span><span class="o">+</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="ejecución">Ejecución</h3>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+$python prueba_teclado.py <br />
+Escriba su nombre: Pepe<br />
+Buenos días Pepe<br />
+</div>
+
+<h2 id="2-conversión-de-tipos">2. Conversión de tipos</h2>
+<div class="bs-callout bs-callout-primary">Todos los datos adquiridos por el metodo input son guardados como strings.</div>
+
+<h3 id="pasar-string-a-int">Pasar string a int</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">edad</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Escriba su edad: "</span><span class="p">)</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="pasar-string-a-float">Pasar string a float</h3>
+<div class="bs-callout bs-callout-primary">Los número flotantes deben ser escritos con punto no con coma</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">peso</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Escriba su peso: "</span><span class="p">)</span>
+<span class="n">peso</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">peso</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="3-variables-como-argumento-de-la-función-input">3. Variables como argumento de la función input</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Escriba su nombre: "</span><span class="p">)</span>
+<span class="n">apellido</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s">"Escriba su apellido, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s">: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Buenos días, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">apellido</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

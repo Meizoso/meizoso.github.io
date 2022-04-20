@@ -1,0 +1,104 @@
+I"<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="tabla-de-operadores-de-asignaciones">Tabla de operadores de asignaciones</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>=</b></center></td>
+      <td>Asigna un valor a una variable</td>
+    </tr>
+    <tr>
+      <td><center><b>+=</b></center></td>
+      <td>Suma a la variable del lado izquierdo el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>-=</b></center></td>
+      <td>Resta a la variable del lado izquierdo el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>*=</b></center></td>
+      <td>Multiplica a la variable del lado izquierdo el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>/=</b></center></td>
+      <td>Divide a la variable del lado izquierdo el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>**=</b></center></td>
+      <td>Calcula el exponente a la variable del lado izquierdo con el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>//=</b></center></td>
+      <td>Calcula la división entera de la variable del lado izquierdo con el valor del lado derecho</td>
+    </tr>
+    <tr>
+      <td><center><b>%=</b></center></td>
+      <td>Devuelve el resto de la división de la variable del lado izquierdo con el valor del lado derecho</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="asignar-valor-">Asignar valor =</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span>
+<span class="mi">10</span>
+</code></pre></div></div>
+
+<h3 id="sumar-variable-">Sumar variable +=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="n">numero1</span>
+<span class="mi">15</span>
+</code></pre></div></div>
+
+<h3 id="restar-variable--">Restar variable -=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">-=</span> <span class="mi">2</span>
+<span class="n">numero1</span>
+<span class="mi">8</span>
+</code></pre></div></div>
+
+<h3 id="multiplicar-variable-">Multiplicar variable *=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="n">numero1</span>
+<span class="mi">20</span>
+</code></pre></div></div>
+
+<h3 id="dividir-variable-">Dividir variable /=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">/=</span> <span class="mi">2</span>
+<span class="n">numero1</span>
+<span class="mf">5.0</span>
+</code></pre></div></div>
+
+<h3 id="elevar-variable-">Elevar variable **=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">**=</span> <span class="mi">2</span>
+<span class="n">numero1</span>
+<span class="mi">100</span>
+</code></pre></div></div>
+
+<h3 id="división-entera-de-variable-">División entera de variable //=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">//=</span> <span class="mi">3</span>
+<span class="n">numero1</span>
+<span class="mi">3</span>
+</code></pre></div></div>
+
+<h3 id="módulo-variable-">Módulo variable %=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero1</span> <span class="o">%=</span> <span class="mi">3</span>
+<span class="n">numero1</span>
+<span class="mi">1</span>
+</code></pre></div></div>
+:ET

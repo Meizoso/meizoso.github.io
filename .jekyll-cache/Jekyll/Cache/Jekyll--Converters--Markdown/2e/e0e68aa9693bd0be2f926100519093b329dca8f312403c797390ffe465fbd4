@@ -1,0 +1,83 @@
+I",<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="tabla-de-operadores-relacionales">Tabla de operadores relacionales</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><b>==</b></center></td>
+      <td>Evalúa si los dos valores son <b>iguales</b></td>
+    </tr>
+    <tr>
+      <td><center><b>!=</b></center></td>
+      <td>Evalúa si los dos valores son <b>distintos</b></td>
+    </tr>
+    <tr>
+      <td><center><b>&lt;</b></center></td>
+      <td>Evalúa si el valor de la izquierda es <b>menor que</b> el de la derecha</td>
+    </tr>
+    <tr>
+      <td><center><b>&gt;</b></center></td>
+      <td>Evalúa si el valor de la izquierda es <b>mayor que</b> el de la derecha</td>
+    </tr>
+    <tr>
+      <td><center><b>&lt;=</b></center></td>
+      <td>Evalúa si el valor de la izquierda es <b>menor o igual que</b> el de la derecha</td>
+    </tr>
+    <tr>
+      <td><center><b>&gt;=</b></center></td>
+      <td>Evalúa si el valor de la izquierda es <b>mayor o igual que</b> el de la derecha</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="iguales-">Iguales ==</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">==</span> <span class="n">numero2</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="distintos-">Distintos !=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">!=</span> <span class="n">numero2</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="menor-que-">Menor que &lt;</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">&lt;</span> <span class="n">numero2</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="mayor-que-">Mayor que &gt;</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">&gt;</span> <span class="n">numero2</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="menor-o-igual-que-">Menor o igual que &lt;=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">&lt;=</span> <span class="n">numero2</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="mayor-o-igual-que-">Mayor o igual que &gt;=</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numero1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">numero1</span> <span class="o">&gt;=</span> <span class="n">numero2</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+:ET

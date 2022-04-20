@@ -1,0 +1,139 @@
+I"�(<h2 id="1-código">1. Código</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## SISTEMA OPERATIVO ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/issue <span class="o">&amp;&amp;</span> <span class="nb">cat</span> /etc/<span class="k">*</span><span class="nt">-release</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'############'</span>
+<span class="nb">echo</span> <span class="s1">'## KERNEL ##'</span>
+<span class="nb">echo</span> <span class="s1">'############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">uname</span> <span class="nt">-a</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## CONFIGURACION RED ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+ip addr
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'########################'</span>
+<span class="nb">echo</span> <span class="s1">'## TABLA ENRUTAMIENTO ##'</span>
+<span class="nb">echo</span> <span class="s1">'########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+route <span class="nt">-n</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'##############'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS ##'</span>
+<span class="nb">echo</span> <span class="s1">'##############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/passwd
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'############################'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS CON UID Y GID ##'</span>
+<span class="nb">echo</span> <span class="s1">'############################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="k">for </span>user <span class="k">in</span> <span class="si">$(</span><span class="nb">cat</span> /etc/passwd | <span class="nb">cut</span> <span class="nt">-f1</span> <span class="nt">-d</span><span class="s2">":"</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span><span class="nb">id</span> <span class="nv">$user</span><span class="p">;</span> <span class="k">done
+</span><span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">'## INICIOS DE SESION ##'</span>
+<span class="nb">echo</span> <span class="s1">'#######################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+lastlog
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'################################'</span>
+<span class="nb">echo</span> <span class="s1">'## USUARIOS CON PERMISOS ROOT ##'</span>
+<span class="nb">echo</span> <span class="s1">'################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/passwd | <span class="nb">cut</span> <span class="nt">-f</span> 1,3,4 <span class="nt">-d</span> <span class="s2">":"</span> | <span class="nb">grep </span>0:0
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#############'</span>
+<span class="nb">echo</span> <span class="s1">'## SUDOERS ##'</span>
+<span class="nb">echo</span> <span class="s1">'#############'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/sudoers
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">'## TRABAJOS CRON ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">cat</span> /etc/crontab <span class="o">&amp;&amp;</span> <span class="nb">ls</span> <span class="nt">-als</span> /etc/cron<span class="k">*</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################################'</span>
+<span class="nb">echo</span> <span class="s1">'## TRABAJOS CRON WORLD-WRITEABLE ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find /etc/cron<span class="k">*</span> <span class="nt">-type</span> f <span class="nt">-perm</span> <span class="nt">-o</span>+w <span class="nt">-exec</span> <span class="nb">ls</span> <span class="nt">-l</span> <span class="o">{}</span> <span class="se">\;</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###########################'</span>
+<span class="nb">echo</span> <span class="s1">'## PROCESOS EN EJECUCIÓN ##'</span>
+<span class="nb">echo</span> <span class="s1">'###########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+ps auxwww
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'#####################################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS SUID CON PERMISOS ROOT ##'</span>
+<span class="nb">echo</span> <span class="s1">'#####################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find / <span class="nt">-uid</span> 0 <span class="nt">-perm</span> <span class="nt">-4000</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###########################################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS CON PERMISOS WORLD-WRITEABLE ##'</span>
+<span class="nb">echo</span> <span class="s1">'###########################################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find <span class="nt">-perm</span> <span class="nt">-2</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">'## ARCHIVOS GUID ##'</span>
+<span class="nb">echo</span> <span class="s1">'###################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+find / <span class="nt">-perm</span> <span class="nt">-2000</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">echo</span> <span class="s1">'##########################'</span>
+<span class="nb">echo</span> <span class="s1">'## SISTEMAS DE ARCHIVOS ##'</span>
+<span class="nb">echo</span> <span class="s1">'##########################'</span>
+<span class="nb">echo</span> <span class="s1">''</span>
+<span class="nb">df</span>
+</code></pre></div></div>
+
+<h2 id="2-explicación">2. Explicación</h2>
+
+<p>    <strong>cat /etc/issue &amp;&amp; cat /etc/*-release</strong> → Ver información del sistema operativo<br /><br />
+    <strong>uname -a</strong> → Ver información del Kernel<br /><br />
+    <strong>ip addr</strong> → Configuración de red<br /><br />
+    <strong>route -n</strong> → Tabla de enrutamiento<br /><br />
+    <strong>cat /etc/passwd</strong> → Usuarios<br /><br />
+    <strong>for user in $(cat /etc/passwd | cut -f1 -d”:”); do id $user; done</strong> → Usuarios con UID y GID<br /><br />
+    <strong>lastlog</strong> → Últimos inicios de sesión<br /><br />
+    <strong>cat /etc/passwd | cut -f 1,3,4 -d “:” | grep 0:0</strong> → Usuarios con permisos de administrador<br /><br />
+    <strong>sudoers</strong> → Archivo sudoers<br /><br />
+    <strong>cat /etc/crontab &amp;&amp; ls -als /etc/cron</strong>* → Trabajos de CRON<br /><br />
+    <strong>find /etc/cron* -type f -perm -o+w -exec ls -l {} \;</strong> → Trabajos CRON World-Writeable<br /><br />
+    <strong>find / -perm -2000 -type f 2&gt;/dev/null</strong> → Archivos GUID<br /><br />
+    <strong>df</strong> → Sistemas de archivos<br /><br />
+    <strong>lastlog</strong> → Últimos inicios de sesión<br /><br />
+    <strong>cat /etc/passwd | cut -f 1,3,4 -d “:” | grep 0:0</strong> → Usuarios con permisos de administrador<br /><br />
+    <strong>sudoers</strong> → Archivo sudoers<br /><br />
+    <strong>cat /etc/crontab &amp;&amp; ls -als /etc/cron</strong>* → Trabajos de CRON<br /><br />
+    <strong>find /etc/cron* -type f -perm -o+w -exec ls -l {} \;</strong> → Trabajos CRON World-Writeable<br /><br />
+    <strong>find / -perm -2000 -type f 2&gt;/dev/null</strong> → Archivos GUID<br /><br />
+    <strong>df</strong> → Sistemas de archivos<br /></p>
+
+:ET

@@ -95,6 +95,14 @@ entries:
       url: /mydoc_python_errores.html
       output: web, pdf
 
+    - title: Range
+      url: /mydoc_python_range.html
+      output: web, pdf
+
+    - title: Continue y brake
+      url: /mydoc_python_continue_brake.html
+      output: web, pdf
+
     - title: Programación Orientada a Objetos
       url: /mydoc_python_poo.html
       output: web, pdf
@@ -142,6 +150,10 @@ entries:
     - title: Krypton (Nivel 0 a 2)
       url: /mydoc_otw_krypton.html
       output: web, pdf
+
+  - title: Hack The Box
+    output: web, pdf
+    folderitems:
 
   - title: Otros
     output: web, pdf

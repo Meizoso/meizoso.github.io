@@ -1,0 +1,223 @@
+I"�<table>
+  <tbody>
+    <tr>
+      <td><center><img src="images/logos_inicio/python.webp" width="50" height="50" /></center></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><center>Python</center></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="index">
+	<tr>
+		<td><center><img src="images/logos_inicio/python.webp" width="50" height="50" /></center></td>
+	</tr>
+	<tr>
+		<td><center>Python</center></td>
+	</tr>
+
+
+
+
+
+
+
+
+
+[titlepage]: titlepage.html
+
+
+
+
+[tocpage]: tocpage.html
+
+
+
+
+
+
+[mydoc_instalarArch]: mydoc_instalarArch.html
+
+
+
+
+
+
+[mydoc_teoria_IP]: mydoc_teoria_IP.html
+
+
+
+
+[mydoc_teoria_topologias_red]: mydoc_teoria_topologias_red.html
+
+
+
+
+
+
+[mydoc_python_basico]: mydoc_python_basico.html
+
+
+
+
+[mydoc_python_cadenas]: mydoc_python_cadenas.html
+
+
+
+
+[mydoc_python_listas_tuplas]: mydoc_python_listas_tuplas.html
+
+
+
+
+[mydoc_python_datos_teclado]: mydoc_python_datos_teclado.html
+
+
+
+
+[mydoc_python_operadores_aritmeticos]: mydoc_python_operadores_aritmeticos.html
+
+
+
+
+[mydoc_python_operadores_asignaciones]: mydoc_python_operadores_asignaciones.html
+
+
+
+
+[mydoc_python_operadores_relacionales]: mydoc_python_operadores_relacionales.html
+
+
+
+
+[mydoc_python_operadores_logicos]: mydoc_python_operadores_logicos.html
+
+
+
+
+[mydoc_python_estructuras_control]: mydoc_python_estructuras_control.html
+
+
+
+
+[mydoc_python_conjuntos]: mydoc_python_conjuntos.html
+
+
+
+
+[mydoc_python_diccionarios]: mydoc_python_diccionarios.html
+
+
+
+
+[mydoc_python_funciones]: mydoc_python_funciones.html
+
+
+
+
+[mydoc_python_errores]: mydoc_python_errores.html
+
+
+
+
+[mydoc_python_range]: mydoc_python_range.html
+
+
+
+
+[mydoc_python_continue_brake]: mydoc_python_continue_brake.html
+
+
+
+
+[mydoc_python_poo]: mydoc_python_poo.html
+
+
+
+
+[mydoc_python_aprender]: mydoc_python_aprender.html
+
+
+
+
+
+
+[mydoc_reco_nmap]: mydoc_reco_nmap.html
+
+
+
+
+
+
+[mydoc_writeup_scribd]: mydoc_writeup_scribd.html
+
+
+
+
+
+
+[mydoc_script_os]: mydoc_script_os.html
+
+
+
+
+[mydoc_script_sacarInfoLinux]: mydoc_script_sacarInfoLinux.html
+
+
+
+
+
+
+[mydoc_otw_bandit]: mydoc_otw_bandit.html
+
+
+
+
+[mydoc_otw_krypton]: mydoc_otw_krypton.html
+
+
+
+
+
+
+[mydoc_htb_goodgames]: mydoc_htb_goodgames.html
+
+
+
+
+
+
+[mydoc_otros_paginas_interes]: mydoc_otros_paginas_interes.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+[index]: index.html
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+:ET

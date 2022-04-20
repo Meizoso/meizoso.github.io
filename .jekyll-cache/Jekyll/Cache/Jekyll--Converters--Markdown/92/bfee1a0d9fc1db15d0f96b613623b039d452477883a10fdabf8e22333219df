@@ -1,0 +1,56 @@
+I"�<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-qué-hacen-continue-y-brake">1. ¿Qué hacen Continue y Brake?</h2>
+<p>Sirven para saltar o detener un bucle.</p>
+
+<h2 id="2-uso">2. Uso</h2>
+<p>Con <strong>continue</strong> salto el valor 3 y con <strong>brake</strong> le indico que si el valor es igual a 7 pare el bucle.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python range.py
+0
+1
+2
+4
+5
+6</pre></div>
+
+<h2 id="3-ejemplo">3. Ejemplo</h2>
+<h3 id="extraer-números-divisibles-de-un-número-que-nosostros-le-demos">Extraer números divisibles de un número que nosostros le demos</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Extraer los numeros divisibles de 5 en un range del 1 al 51:
+</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">51</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal"><pre id="terminal-pre">
+&gt;$ python continue.py
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50</pre></div>
+:ET

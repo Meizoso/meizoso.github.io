@@ -37,11 +37,11 @@
 
 
 {
-"title": "Todas las actualizaciones",
-"tags": "",
-"keywords": "actualizaciones",
-"url": "mydoc_actualizaciones.html",
-"summary": "Listado con todas las actualizaciones."
+"title": "HTB - GoodGames",
+"tags": "laboratorioHackTheBox",
+"keywords": "laboratorio, hackthebox",
+"url": "mydoc_htb_goodgames.html",
+"summary": "Maquina GoodGames de hack the box"
 }
 ,
 
@@ -83,7 +83,7 @@
 {
 "title": "Conceptos básicos de python",
 "tags": "programacionpython",
-"keywords": "programación, python",
+"keywords": "programación, python, operadores, variable, comentarios, holamundo",
 "url": "mydoc_python_basico.html",
 "summary": "Conceptos básicos de python"
 }
@@ -94,7 +94,7 @@
 {
 "title": "Cadenas de carácteres",
 "tags": "programacionpython",
-"keywords": "programación, python, cadenas",
+"keywords": "programación, python, cadenas, caracteres, concatenar, raw, string, longitud",
 "url": "mydoc_python_cadenas.html",
 "summary": "Cadenas en python"
 }
@@ -108,6 +108,17 @@
 "keywords": "programación, python, conjuntos",
 "url": "mydoc_python_conjuntos.html",
 "summary": "Conjuntos en python"
+}
+,
+
+
+
+{
+"title": "Continue y brake",
+"tags": "programacionpython",
+"keywords": "programación, python, continue, brake",
+"url": "mydoc_python_continue_brake.html",
+"summary": "Continue y brake en Python"
 }
 ,
 
@@ -130,6 +141,17 @@
 "keywords": "programación, python, diccionarios",
 "url": "mydoc_python_diccionarios.html",
 "summary": "Diccionarios en python"
+}
+,
+
+
+
+{
+"title": "Encapsulamiento",
+"tags": "programacionpython",
+"keywords": "programación, python, encapsulamiento",
+"url": "mydoc_python_encapsulamiento.html",
+"summary": "Encampsulamiento en Python"
 }
 ,
 
@@ -235,6 +257,17 @@
 
 
 {
+"title": "Range",
+"tags": "programacionpython",
+"keywords": "programación, python, range",
+"url": "mydoc_python_range.html",
+"summary": "Función range en Python"
+}
+,
+
+
+
+{
 "title": "Nmap",
 "tags": "softwarenmap",
 "keywords": "software, nmap",
@@ -262,17 +295,6 @@
 "keywords": "script, Linux, so",
 "url": "mydoc_script_sacarInfoLinux.html",
 "summary": "Script para extraer información de un sistema Linux"
-}
-,
-
-
-
-{
-"title": "Tags",
-"tags": "navigation",
-"keywords": "tags, navigation, buttons, links, association",
-"url": "mydoc_tags.html",
-"summary": "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
 }
 ,
 

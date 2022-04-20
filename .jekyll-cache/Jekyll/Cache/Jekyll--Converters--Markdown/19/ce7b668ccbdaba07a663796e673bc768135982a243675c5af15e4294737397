@@ -1,0 +1,28 @@
+I"�<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-operadores-matemáticos">1. Operadores matemáticos</h2>
+<p><strong>Suma</strong> = +
+<strong>Resta</strong> = -
+<strong>Multiplicación</strong> = *
+<strong>División</strong> = /
+<strong>Módulo</strong> = %
+<strong>Elevado</strong> = **</p>
+
+<h2 id="2-declarar-variable">2. Declarar variable</h2>
+<p>variable = contenido</p>
+
+<h2 id="3-comentarios">3. Comentarios</h2>
+<p>Comentario de una línea = <strong>#</strong>Comentario<br />
+Comentario multilínea = ‘'’varias<br />lineas<br />de<br />comentario’’’</p>
+
+<h2 id="4-hola-mundo">4. Hola Mundo</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hola Mundo"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="5-hola-mundo-con-variable">5. Hola Mundo con variable</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nombre</span> <span class="o">=</span> <span class="s">'Hola Mundo'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</code></pre></div></div>
+
+:ET

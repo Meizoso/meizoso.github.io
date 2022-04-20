@@ -1,0 +1,157 @@
+I"$0<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Esto <b>NO</b> es una guía de aprendizaje. Esto es una guía rapida para refrescar conocimientos. Si quieres aprender python te dejo unos enlaces en la sección <b>Aprender python</b>.
+ </div>
+
+<h2 id="1-diferencia-entre-los-conjuntos-y-las-listas">1. Diferencia entre los conjuntos y las listas</h2>
+<p>Los conjuntos guardan los datos de forma desordenada y no pueden tener elementos repetidos.</p>
+
+<h2 id="2-creación-de-un-conjunto">2. Creación de un conjunto</h2>
+<p>Para crear un conjunto se utilizan <strong>{ }</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+</code></pre></div></div>
+<p>Para crear un conjunto vacío se utiliza <strong>set()</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="3-añadir-elementos-add">3. Añadir elementos: add()</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Salida add():
+<!--TERMINAL--></p>
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python add.py<br />
+{8, 2, 3, 5}<br /></div>
+<p><br /></p>
+<div class="bs-callout bs-callout-primary">Si intentamos añadir un elemento que ya esta en el conjunto simplemente será ignorado.</div>
+
+<h2 id="4-eliminar-elementos-discard">4. Eliminar elementos: discard()</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Salida discard():
+<!--TERMINAL--></p>
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python discard.py<br />
+{8, 2}<br /></div>
+<p><br /></p>
+<div class="bs-callout bs-callout-primary">Si intentamos eliminar un elemento que no esta en el conjunto simplemente será ignorado.</div>
+
+<h2 id="5-eliminar-elementos-remove">5. Eliminar elementos: remove()</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Salida remove():
+<!--TERMINAL--></p>
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python remove.py<br />
+{8, 2}<br /></div>
+<p><br /></p>
+<div class="bs-callout bs-callout-primary">Si intentamos eliminar un elemento que no esta en el conjunto lanza una excepción <strong>KeyError</strong></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python remove.py<br />
+Traceback (most recent call last):<br />
+&nbsp;&nbsp;File "/home/meizoso/pruebas.py", line 2, in &lt; module&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;conjunto.remove(4)<br />
+KeyError: 4<br /></div>
+<p><br /></p>
+
+<h2 id="5-eliminar-elementos-de-forma-aleatoria-pop">5. Eliminar elementos de forma aleatoria: pop()</h2>
+<p>Ya que un conjunto no esta ordenado al usar pop() se eliminará un elemento de forma aleatoria.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python pop.py<br />
+{9, 2, 5}<br /></div>
+<p><br /></p>
+
+<h2 id="5-eliminar-todos-los-elementos-clear">5. Eliminar todos los elementos: clear()</h2>
+<p><strong>clear()</strong> elimina todos los elementos contenidos en un conjunto.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Antes de usar clear() = "</span><span class="p">,</span><span class="n">conjunto</span><span class="p">)</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Después de usar clear() = "</span><span class="p">,</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python clear.py<br />
+Antes de usar clear() =  {8, 9, 2, 5}<br />
+Después de usar clear() =  set()<br /></div>
+<p><br /></p>
+
+<h2 id="6-unión-de-conjuntos-">6. Unión de conjuntos |</h2>
+<p>Podemos unir dos conjuntos con el carácter <strong>|</strong>. En caso de que haya elementos repetidos solo se copiara uno de ellos.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">conjunto2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">conjunto3</span> <span class="o">=</span> <span class="n">conjunto1</span> <span class="o">|</span> <span class="n">conjunto2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto3</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python union.py<br />
+{2, 5, 8, 9}<br /></div>
+<p><br /></p>
+
+<h2 id="7-intersección-de-conjuntos-">7. Intersección de conjuntos &amp;</h2>
+<p>La intersección crea un nuevo conjunto con los elementos que se repitan entre los otros dos conjuntos.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">conjunto2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">conjunto3</span> <span class="o">=</span> <span class="n">conjunto1</span> <span class="o">&amp;</span> <span class="n">conjunto2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto3</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python interseccion.py<br />
+{9, 2}<br /></div>
+<p><br /></p>
+
+<h2 id="8-diferencia-de-conjuntos--">8. Diferencia de conjuntos -</h2>
+<p>la diferencia crea un nuevo conjunto con los elementos del conjunto1 que no se repiten entre los otros conjuntos.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conjunto1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">conjunto2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">conjunto3</span> <span class="o">=</span> <span class="n">conjunto1</span> <span class="o">-</span> <span class="n">conjunto2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">conjunto3</span><span class="p">)</span>
+</code></pre></div></div>
+<!--TERMINAL-->
+<link href="css/miEstilo.css" rel="stylesheet" type="text/css" />
+
+<div id="barra"><img src="images/terminal/botones.png" id="botones" /><center id="texto_barra">meizoso.github.io</center></div>
+<div id="terminal">
+&gt;$ python interseccion.py<br />
+{5}<br /></div>
+<p><br /></p>
+:ET
