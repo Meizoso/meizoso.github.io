@@ -19,13 +19,13 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Linux
-    output: web, pdf
-    folderitems:
+  #- title: Linux
+   # output: web, pdf
+    #folderitems:
 
-    - title: Instalar Arch
-      url: /mydoc_instalarArch.html
-      output: web, pdf
+    #- title: Instalar Arch
+     # url: /mydoc_instalarArch.html
+      #output: web, pdf
 
   - title: Teoría
     output: web, pdf
@@ -119,13 +119,13 @@ entries:
       url: /mydoc_reco_nmap.html
       output: web, pdf
 
-  - title: Write-ups
-    output: web, pdf
-    folderitems:
+#  - title: Write-ups
+#    output: web, pdf
+#    folderitems:
 
-    - title: Scribd
-      url: /mydoc_writeup_scribd.html
-      output: web, pdf
+#    - title: Scribd
+#      url: /mydoc_writeup_scribd.html
+#      output: web, pdf
 
   - title: Scripts
     output: web, pdf
@@ -151,9 +151,13 @@ entries:
       url: /mydoc_otw_krypton.html
       output: web, pdf
 
-  - title: Hack The Box
+  - title: Preparación de exámenes
     output: web, pdf
     folderitems:
+
+    - title: Gestión de bases de datos
+      url: /mydoc_examenes_gestionbbdd.html
+      output: web, pdf
 
   - title: Otros
     output: web, pdf

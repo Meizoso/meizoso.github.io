@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Test con 41 preguntas para la superación del examen de Gestion de Bases de Datos.">
+<meta name="keywords" content="gestionBasesDeDatostestbases de datos,  bases de datos, administracion, gestion">
+<title>Preparación para el examen de Gestion de Bases de Datos | Meizoso</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Javier Meizoso</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="index.html">Inicio</a></li>
+                
+                
+                
+                <li><a href="https://github.com/Verabelik" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:meizoso404@gmail.com?subject=Javier Meizoso Web&body='"><i class="fa fa-envelope-o"></i> Contacto</a>
+
+</li>
+
+
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Buscar...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Preparación para el examen de Gestion de Bases de Datos">{title}</a></li>',
+                    noResultsText: 'No hay ningún resultado.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Menu </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Teoría" href="#">Teoría</a>
+      <ul>
+          
+          
+          
+          <li><a title="IP" href="mydoc_teoria_IP.html">IP</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Topologías de red" href="mydoc_teoria_topologias_red.html">Topologías de red</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Python" href="#">Python</a>
+      <ul>
+          
+          
+          
+          <li><a title="Conceptos básicos" href="mydoc_python_basico.html">Conceptos básicos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Cadenas de carácteres" href="mydoc_python_cadenas.html">Cadenas de carácteres</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Listas y tuplas" href="mydoc_python_listas_tuplas.html">Listas y tuplas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Ingresar datos por teclado" href="mydoc_python_datos_teclado.html">Ingresar datos por teclado</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores aritméticos" href="mydoc_python_operadores_aritmeticos.html">Operadores aritméticos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores de asignaciones" href="mydoc_python_operadores_asignaciones.html">Operadores de asignaciones</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores relacionales" href="mydoc_python_operadores_relacionales.html">Operadores relacionales</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operadores lógicos" href="mydoc_python_operadores_logicos.html">Operadores lógicos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Estructuras de control" href="mydoc_python_estructuras_control.html">Estructuras de control</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conjuntos" href="mydoc_python_conjuntos.html">Conjuntos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Diccionarios" href="mydoc_python_diccionarios.html">Diccionarios</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Funciones" href="mydoc_python_funciones.html">Funciones</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Errores" href="mydoc_python_errores.html">Errores</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Range" href="mydoc_python_range.html">Range</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Continue y brake" href="mydoc_python_continue_brake.html">Continue y brake</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Programación Orientada a Objetos" href="mydoc_python_poo.html">Programación Orientada a Objetos</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Aprende python" href="mydoc_python_aprender.html">Aprende python</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Reconocimiento del objetivo" href="#">Reconocimiento del objetivo</a>
+      <ul>
+          
+          
+          
+          <li><a title="Nmap" href="mydoc_reco_nmap.html">Nmap</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripts" href="#">Scripts</a>
+      <ul>
+          
+          
+          
+          <li><a title="Detectar Sistema Operativo (TTL)" href="mydoc_script_os.html">Detectar Sistema Operativo (TTL)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Extraer información de un sistema Linux" href="mydoc_script_sacarInfoLinux.html">Extraer información de un sistema Linux</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="OverTheWire" href="#">OverTheWire</a>
+      <ul>
+          
+          
+          
+          <li><a title="Bandit (Nivel 0 a 14)" href="mydoc_otw_bandit.html">Bandit (Nivel 0 a 14)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Krypton (Nivel 0 a 2)" href="mydoc_otw_krypton.html">Krypton (Nivel 0 a 2)</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Preparación de exámenes" href="#">Preparación de exámenes</a>
+      <ul>
+          
+          
+          
+          <li class="active"><a title="Gestión de bases de datos" href="mydoc_examenes_gestionbbdd.html">Gestión de bases de datos</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Otros" href="#">Otros</a>
+      <ul>
+          
+          
+          
+          <li><a title="Páginas web de interés" href="mydoc_otros_paginas_interes.html">Páginas web de interés</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Preparación para el examen de Gestion de Bases de Datos</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Test con 41 preguntas para la superación del examen de Gestion de Bases de Datos.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+
+
+    
+
+
+    
+
+    <!--<a target="_blank" rel="noopener" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/examenes/mydoc_examenes_gestionbbdd.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
+
+    
+
+   <h2 id="1-cuál-de-las-siguientes-es-una-propiedad-de-los-sistemas-de-información-orientados-a-los-datos">1. ¿Cuál de las siguientes es una propiedad de los sistemas de información orientados a los datos?</h2>
+<ol type="a">
+    <li>Podemos encontrarnos con datos redundantes e inconsistentes</li>
+    <li>Dificultad en el acceso simultáneo de los datos</li>
+    <li>Cada aplicación almacena y utiliza sus propios datos</li>
+    <li>Los datos se centralizan en una base de datos</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="2-si-una-entidad-a-tiene-una-clave-primaria-compuesta-formada-por-dos-atributos">2. Si una entidad A tiene una clave primaria compuesta formada por dos atributos:</h2>
+<ol type="a">
+    <li>Todas son falsas</li>
+    <li>La clave ajena relacionada con la entidad A siempre estará formada por los dos atributos de la clave principal</li>
+    <li>La clave ajena estará relacionanada con un solo atributo de la clave primaria</li>
+    <li>No es posible definir una clave ajena de una entidad que tiene una clave primaria compuesta</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+<h2 id="3-decimos-que-una-relación-jerárquica-es-exclusiva-sin-solapamiento-si">3. Decimos que una relación jerárquica es exclusiva (sin solapamiento) si:</h2>
+<ol type="a">
+    <li>Todas las instancias de las subentidades son de la superentidad</li>
+    <li>Una instancia de la superentidad puede tener asociados instancias de cualquiera de las subentidades</li>
+    <li>Todas las instancias de la superentidad son de alguna de las subentidades</li>
+    <li>Una instancia de la superentidad sólo puede estar asociada a una única instancia de las subentidades</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="4-cuál-de-los-siguientes-no-es-un-requisito-para-que-un-atributo-sea-indentificador-o-llave">4. ¿Cuál de los siguientes NO es un requisito para que un atributo sea indentificador o llave?</h2>
+<ol type="a">
+    <li>Tiene que ser el mismo atributo para todos los ejemplares de una entidad</li>
+    <li>Tiene que distinguit cada ejemplar de la entidad o relacion</li>
+    <li>Puede estar formado por más de un atributo</li>
+    <li>Tiene que ser de tipo numérico, a poder ser entero</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="5-cuál-de-los-siguientes-no-es-un-tipo-de-fragmentación-en-las-bases-de-datos-distribuidas">5. ¿Cuál de los siguientes NO es un tipo de fragmentación en las bases de datos distribuidas?</h2>
+<ol type="a">
+    <li>Horizontal</li>
+    <li>Híbrida</li>
+    <li>Vertical</li>
+    <li>Modal</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="6-cuál-de-los-siguientes-no-es-un-tipo-de-usuario-dentro-de-un-sgbd">6. ¿Cuál de los siguientes NO es un tipo de usuario dentro de un SGBD?</h2>
+<ol type="a">
+    <li>Administrador</li>
+    <li>Usuario interno</li>
+    <li>Usuario externo</li>
+    <li>Usuario intermedio</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="7-el-modelo-entidad-relación-para-transformar-un-atributo-múltiple-al-modelo-relacional-tenemos-que">7. El modelo entidad relación para transformar un atributo múltiple al modelo relacional tenemos que:</h2>
+<ol type="a">
+    <li>Crear una nueva tabla con una relación 1 a N con la tabla que contenía el atributo múltiple en el modelo entidad relación</li>
+    <li>Crear una nueva tabla con una relación N a M con la tabla que contenía el atributo múltiple en el modelo entidad relación </li>
+    <li>Crear una nueva tabla con una relación 1 a 1 con la tabla que contenía el atributo múltiple en el modelo entidad relación</li>
+    <li>No es necesario crear ninguna tabla, ya que el modelo relacional permite almacenar atributos con múltiples valores.</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="8-para-crear-una-tabla-en-una-base-de-datos-utilizaré-el-lenguaje">8. Para crear una tabla en una base de datos utilizaré el lenguaje:</h2>
+<ol type="a">
+    <li>DCL</li>
+    <li>DLL</li>
+    <li>DML</li>
+    <li>DDL</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="9-al-pasar-una-relación-nm-entre-dos-tablas-a-y-b-del-modelo-entidad-relación-al-modelo-relacional-qué-obtenemos">9. Al pasar una relación N:M entre dos tablas (A y B) del modelo Entidad-Relación al modelo relacional, ¿qué obtenemos?</h2>
+<ol type="a">
+    <li>Tabla A con sus atributos. Tabla B con sus atributos más los de la clave primaria de la entidad A</li>
+    <li>Se obtienen tres tablas: Tabla A, Tabla B y Tabla R (la resultante de la relación)</li>
+    <li>Tabla A con sus atributos. Tabla B con sus atributos</li>
+    <li>Tabla B con sus atributos. Tabla A con sus atributos más los de la clave primaria de la entidad B.</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+<h2 id="10-si-queremos-borrar-un-registro-de-una-tabla-que-tiene-relación-con-registros-de-la-otra-tabla-cuál-de-las-siguientes-no-es-una-forma-de-garantizar-la-integridad-referencial">10. Si queremos borrar un registro de una tabla que tiene relación con registros de la otra tabla, ¿cuál de las siguientes no es una forma de garantizar la integridad referencial?</h2>
+<ol type="a">
+    <li>Eliminar la relación</li>
+    <li>Colocar valores nulos en la clave secundaria de la relación</li>
+    <li>Prohibir la operación</li>
+    <li>Transmitir la operación en cascada</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="11-en-las-relacinoes-11-en-que-las-dos-entidades-tienen-el-mismo-identificador-el-paso-al-modelo-relacional-nos-da">11. En las relacinoes 1:1 en que las dos entidades tienen el mismo identificador, el paso al modelo relacional nos da…</h2>
+<ol type="a">
+    <li>Una única tabla formada por los atributos de una de las dos entidades</li>
+    <li>Dos tablas con sus propios atributos y con una clave secundaria apuntando al identificador de la otra tabla</li>
+    <li>Tres tablas: una para cada entidad y una para la relación</li>
+    <li>Una única tabla formada por los atributos de las dos entidades</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="12-el-lenguaje-ddl-permite">12. El lenguaje DDL permite:</h2>
+<ol type="a">
+    <li>Creación de copias de seguridad y restauración de las mismas</li>
+    <li>Inserción, actualización consulta y eliminación de los datos de una base de datos</li>
+    <li>Definir y describir los objetos de la base de datos: creación de tablas, índices</li>
+    <li>Definir y describir la seguridad de los datos: privilegios, modos de acceso</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="13-al-proceso-de-introducir-datos-redundantes-de-manera-que-el-rendimiento-del-sistema-se-optimice-se-le-conoce-como">13. Al proceso de introducir datos redundantes de manera que el rendimiento del sistema se optimice se le conoce como:</h2>
+<ol type="a">
+    <li>Integridad referencial</li>
+    <li>Distribución de la base de datos</li>
+    <li>Persistencia de los datos</li>
+    <li>Desnormalización</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="14-cuál-de-los-siguientes-atributos-en-la-entidad-persona-sería-más-correcto-usar-como-identificador-o-llave">14. ¿Cuál de los siguientes atributos en la entidad Persona sería más correcto usar como identificador o llave?</h2>
+<ol type="a">
+    <li>DNI</li>
+    <li>Fecha de nacimiento</li>
+    <li>Apellidos</li>
+    <li>Nombre</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="15-en-el-modelo-relacional-una-clave-secundaria-es">15. En el modelo relacional una clave secundaria es…</h2>
+<ol type="a">
+    <li>Un atributo de una tabla cuyos valores coinciden con los valores de cualquier atributo de otra tabla</li>
+    <li>Un atributo de una tabla cuyos valores coinciden con los valores de otra tabla</li>
+    <li>Un atributo de una tabla cuyos valores coinciden con los valores de la clave alternativa de otra tabla</li>
+    <li>Un atributo de una tabla cuyos valores coinciden con los valores de la clave primaria de otra tabla</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="16-para-la-creación-y-asociación-de-permisos-a-los-usuarios-utilizaremos-el-lenguaje">16. Para la creación y asociación de permisos a los usuarios utilizaremos el lenguaje:</h2>
+<ol type="a">
+    <li>DCL</li>
+    <li>DML</li>
+    <li>DLL</li>
+    <li>DDL</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="17-para-modificar-el-dni-de-una-persona-alamacenado-en-una-tabla-utilizaré-el-lenguaje">17. Para modificar el DNI de una persona alamacenado en una tabla utilizaré el lenguaje:</h2>
+<ol type="a">
+    <li>DML</li>
+    <li>DDL</li>
+    <li>DCL</li>
+    <li>DLL</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="18-qué-ocurre-con-los-atributos-que-tiene-una-relación-nm-al-pasarla-al-modelo-relacional">18. ¿Qué ocurre con los atributos que tiene una relación N:M al pasarla al modelo relacional?</h2>
+<ol type="a">
+    <li>Pasan a una de las entidades relacionanadas</li>
+    <li>Pasan a una de las entidades relacionadas como claves secundarias</li>
+    <li>Pasan a la tabla resultante de la relación</li>
+    <li>Se eliminan</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="19-decimos-que-una-relación-jerárquica-es-total-si">19. Decimos que una relación jerárquica es total si:</h2>
+<ol type="a">
+    <li>Todas las instancias de la superentidad son de alguna de las subentidades</li>
+    <li>Una instancia de la superentidad sólo puede estar asociada a una única instancia de las subentidades</li>
+    <li>Una instancia de la seuperentidad puede tener asociadas instancias de cualquiera de las subentidades</li>
+    <li>Todas las instancias de las subentidades son de la superentidad</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="20-al-esquema-teórico-de-los-datos-descripción-y-relaciones-de-una-base-de-datos-se-le-conoce-como">20. Al esquema teórico de los datos (descripción y relaciones) de una base de datos se le conoce como…</h2>
+<ol type="a">
+    <li>Nivel externo</li>
+    <li>Nivel interno</li>
+    <li>Nivel físico</li>
+    <li>Nivel conceptual</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="21-dada-una-entidad-que-se-relaciona-con-otras-dos-pero-sólo-con-una-de-ellas-a-la-vez-qué-tipo-de-relacion-debemos-crear">21. Dada una entidad que se relaciona con otras dos, pero sólo con una de ellas a la vez, ¿qué tipo de relacion debemos crear?</h2>
+<ol type="a">
+    <li>Relación jerárquica</li>
+    <li>Relación N:M</li>
+    <li>Relación exclusiva</li>
+    <li>Relación refleciva</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="22-al-conjunto-de-todos-los-valores-posibles-que-puede-tomar-un-determinado-atributo-se-le-conoce-como">22. Al conjunto de todos los valores posibles que puede tomar un determinado atributo se le conoce como…</h2>
+<ol type="a">
+    <li>Grado</li>
+    <li>Cardinalidad</li>
+    <li>Dominio</li>
+    <li>Clave</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="23-si-una-entidad-a-tiene-una-clave-primaria-compuesta-formada-por-dos-atributos">23. Si una entidad A tiene una clave primaria compuesta formada por dos atributos:</h2>
+<ol type="a">
+    <li>Todas son falsas</li>
+    <li>La clave ajena estará relacionada con un solo atributo de la clave primaria</li>
+    <li>La clave ajena relacionada con la entidad A siempre estará formada por los dos atributos de la clave principal</li>
+    <li>No es posible definir una clave ajena de una entidad que tiene una clave primaria compuesta</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="24-a-qué-nos-referimos-con-integridad-de-la-clave">24. ¿A qué nos referimos con integridad de la clave?</h2>
+<ol type="a">
+    <li>Que una clave no puede tener valores repetidos</li>
+    <li>Que sus valores sólo podrán ser los que contenga la clave primaria de la tabla con la que se relaciona</li>
+    <li>Que una clave no puede cambiar su valor a lo largo del tiempo</li>
+    <li>Que una clave no puede tener valores nulos</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="25-cuál-de-las-siguientes-no-sería-una-función-de-un-administrador-de-bases-de-datos">25. ¿Cuál de las siguientes NO sería una función de un administrador de bases de datos?</h2>
+<ol type="a">
+    <li>Realización de copias de seguridad</li>
+    <li>Control del espacio en disco</li>
+    <li>Resolución de emergencias</li>
+    <li>Programación de las aplicaciones para acceder a los datos</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="26-una-entidad-débil-se-caracteriza-por">26. Una entidad débil se caracteriza por:</h2>
+<ol type="a">
+    <li>No tener ninguna relación con otras entidades</li>
+    <li>Todos sus atributos son candidatos</li>
+    <li>Depender de la existencia de una entidad fuerte</li>
+    <li>No admiten relación con otras entidades</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="27-un-registro-esta-formado-por">27. Un registro esta formado por…</h2>
+<ol type="a">
+    <li>Tablas</li>
+    <li>Campos</li>
+    <li>Ficheros</li>
+    <li>Instancias</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+<h2 id="28-en-el-caso-de-las-entidades-jugador-y-equipo-en-el-que-un-jugador-sólo-puede-estar-en-un-equipo-y-un-equipo-puede-tener-6-jugadores-la-cadinalidad-de-esta-relación-sería">28. En el caso de las entidades Jugador y Equipo, en el que un jugador sólo puede estar en un equipo y un equipo puede tener 6 jugadores, la cadinalidad de esta relación sería…</h2>
+<ol type="a">
+    <li>1:5</li>
+    <li>1:N</li>
+    <li>1:1</li>
+    <li>N:M</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+<h2 id="29-a-los-programas-que-se-ejecutan-automáticamente-cuando-se-cumple-una-determinada-condición-se-les-llama">29. A los programas que se ejecutan automáticamente cuando se cumple una determinada condición se les llama…</h2>
+<ol type="a">
+    <li>Tuplas</li>
+    <li>Reglas de integridad</li>
+    <li>Disparadores o triggers</li>
+    <li>Reglas de validación</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="30-el-modelo-de-base-de-datos-cliente-servidor-es">30. El modelo de base de datos cliente-servidor es…</h2>
+<ol type="a">
+    <li>Un sistema distribuido siempre</li>
+    <li>Un sistema centralizado siemrpe</li>
+    <li>Un sistema distribuido ya que se reparten los procesos entre clientes y servidor</li>
+    <li>Un sistema centralizado si se dispone de un único servidor de bases de datos</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="31-si-todos-los-atributos-de-una-tabla-son-indivisibles-atómicos-decimos-que-esa-tabla-está-en">31. Si todos los atributos de una tabla son indivisibles (atómicos) decimos que esa tabla está en…</h2>
+<ol type="a">
+    <li>La cuarta forma normal</li>
+    <li>La tercera forma normal</li>
+    <li>La segunda forma normal</li>
+    <li>La primera forma normal</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="32-cuál-de-las-siguientes-afirmaciones-es-falsa">32. ¿Cuál de las siguientes afirmaciones es falsa?</h2>
+<ol type="a">
+    <li>Una entidad tiene existencia propia</li>
+    <li>Las entidades de un mismo tipo están definidas en base a un mismo conjunto de atributos</li>
+    <li>Una entidad es distinguible del resto de entidades del sistema</li>
+    <li>Una entidad tiene diferentes atributos definidos para cada una de sus instancias</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="33-al-pasar-una-relación-1n-entre-dos-tablas-a-y-b-del-modelo-entidad-relación-al-modelo-relacional-qué-obtenemos">33. Al pasar una relación 1:N entre dos tablas (A y B) del modelo Entidad-Relación al modelo relacional, ¿qué obtenemos?</h2>
+<ol type="a">
+    <li>Se obtienen tres tablas: Tabla A, Tabla B y Tabla R (la resultante de la relación</li>
+    <li>Tabla B con sus atributos. Tabla A con sus atributos más los de la clave primaria de la entidad B</li>
+    <li>Tabla A con sus atributos. Tabla B con sus atributos más los de la clave primaria de la entidad A</li>
+    <li>Tabla A con sus atributos. Tabla B con sus atributos</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="34-qué-tenemos-que-hacer-con-los-atributos-múltiples-al-pasarlos-del-modelo-entidad-relación-al-modelo-relacional">34. ¿Qué tenemos que hacer con los atributos múltiples al pasarlos del modelo Entidad-Relación al modelo relacional?</h2>
+<ol type="a">
+    <li>Eliminarlos y crear diversos atributos simples</li>
+    <li>Eliminarlos dejando sólo uno</li>
+    <li>Eliminarlos y crear una nueva entidad</li>
+    <li>Dejarlos tal y como están</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="35-el-modelo-de-base-de-datos-que-usa-una-estructura-de-árbol-para-guardar-los-datos-se-conoce-como">35. El modelo de base de datos que usa una estructura de árbol para guardar los datos se conoce como…</h2>
+<ol type="a">
+    <li>Modelo relacional</li>
+    <li>Modelo dicotómico</li>
+    <li>Modelo jerárquico</li>
+    <li>Modelo de red</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="36-qué-es-el-grado-de-una-relación">36. ¿Qué es el grado de una relación?</h2>
+<ol type="a">
+    <li>El tamaño en base al número de atributos de una tabla</li>
+    <li>El tamaño de base al número de filas de una tabla</li>
+    <li>El tamaño de base al número de tuplas de una tabla</li>
+    <li>El tamaño de base al número de registros de una tabla</li>
+</ol>
+<h6 align="right">Solución: A</h6>
+
+<h2 id="37-mongodb-es-una-base-de-datos-de-tipo">37. MongoDB es una base de datos de tipo:</h2>
+<ol type="a">
+    <li>De red</li>
+    <li>Objeto-relacional</li>
+    <li>Relacional</li>
+    <li>No-relacional o NoSQL</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="38-a-los-atributos-formados-a-su-vez-por-otros-atributos-se-les-conoce-como">38. A los atributos formados a su vez por otros atributos se les conoce como…</h2>
+<ol type="a">
+    <li>Atributos débiles</li>
+    <li>Atributos múltiples</li>
+    <li>Atributos fuertes</li>
+    <li>Atributos compuestos</li>
+</ol>
+<h6 align="right">Solución: D</h6>
+
+<h2 id="39-cuál-de-las-sisguientes-no-es-una-propiedad-de-los-ficheros-secuenciales-de-acceso-indecado">39. ¿Cuál de las sisguientes NO es una propiedad de los ficheros secuenciales de acceso indecado?</h2>
+<ol type="a">
+    <li>Requieren una estructura adicional</li>
+    <li>Se generan índices de los campos por los que se van a realizar más accesos</li>
+    <li>La inserción de registros no se hace secuencialemnte al final del fichero</li>
+    <li>Mejoran el rendimiento del acceso de los datos</li>
+</ol>
+<h6 align="right">Solución: C</h6>
+
+<h2 id="40-el-diccionario-de-una-base-de-datos-contiene">40. El diccionario de una base de datos contiene</h2>
+<ol type="a">
+    <li>Es una copia de seguridad de la base de datos</li>
+    <li>Información que describe los datos de la base de datos (metadatos)</li>
+    <li>Contiene los datos introducidos por el usuario, por ejemplo, los datos de un trabajador</li>
+    <li>El copyright de la base de datos</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+<h2 id="41-en-el-modelo-relacional-el-concepto-de-clave-candidata-corresponde-a">41. En el modelo relacional el concepto de clave candidata corresponde a:</h2>
+<ol type="a">
+    <li>Es la clave principal de una entidad</li>
+    <li>Conjunto de atributos que identifican inequívocamente cada tupla de una relación. Una relación puede tener múltiples claves candidatas</li>
+    <li>Conjunto mínimo de atributos que me identifican inequívocamente cada tupla de una entidad. Una entidad solo puede tener una clave candidata</li>
+    <li>Uno o varios atributos del mismo tipo que me identifican inequívocamente cada tupla de una entidad</li>
+</ol>
+<h6 align="right">Solución: B</h6>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_gestionBasesDeDatos.html" class="btn btn-default navbar-btn cursorNorm" role="button">gestionBasesDeDatos</a>
+        
+        
+        
+        <a href="tag_test.html" class="btn btn-default navbar-btn cursorNorm" role="button">test</a>
+        
+        
+        
+        
+        
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2023 Meizoso. All rights reserved. <br />
+ Última actualización: 9 January 2023 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+
+
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
+
+

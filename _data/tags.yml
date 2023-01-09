@@ -26,5 +26,6 @@ allowed-tags:
   - news
   - troubleshooting
   - mobile
-
+  - test
+  - gestionBasesDeDatos
 # Copyright 2021 Google LLC

@@ -37,6 +37,17 @@
 
 
 {
+"title": "Preparación para el examen de Gestion de Bases de Datos",
+"tags": "gestionBasesDeDatostestbases de datos",
+"keywords": "bases de datos, administracion, gestion",
+"url": "mydoc_examenes_gestionbbdd.html",
+"summary": "Test con 41 preguntas para la superación del examen de Gestion de Bases de Datos."
+}
+,
+
+
+
+{
 "title": "HTB - GoodGames",
 "tags": "laboratorioHackTheBox",
 "keywords": "laboratorio, hackthebox",
@@ -330,6 +341,10 @@
 "summary": "En esta ocasión veremos como es posible ver documentos de la web Scribd sin registrarse."
 }
 ,
+
+
+
+
 
 
 
